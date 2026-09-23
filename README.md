@@ -16,11 +16,11 @@ Jev accepted none of the 27 flawed specs, but rejected 9 of 18 faithful ones. As
 
 A second applied study used Jev in an [AI-writing detector](reports/AI_TEXT_DETECTION.md). On 92 English texts, a fitted score flagged 30/48 Claude-written samples and 0/44 human samples at a threshold selected on the same set. In the in-sample style breakdown, it missed all seven casual-style Claude samples. The [data](data/ai-text-detection-v1/README.md), [code](experiments/ai_text_detection/README.md) and [saved responses](reports/ai-text-detection-v1/) are included so this result can be checked separately from the proof-spec study.
 
-## Headline result
+## Quick reproduction on one GPU
 
-On a frozen, independently written test, our selected checkpoint answers 617 of 700 judgments correctly (88.1%). Jev 1.13.0 answers 678 (96.9%). The checkpoint is Qwen3.5-2B with rank-8 LoRA adapters and two small readout heads, trained for about 68 minutes on one RTX 4080: 55.6 minutes on public research datasets, then 12.8 minutes on contrastive examples written in natural language.
+On a frozen, independently written test, a selected Qwen checkpoint answers 617 of 700 judgments correctly (88.1%). Jev 1.13.0 answers 678 (96.9%). The checkpoint is Qwen3.5-2B with rank-8 LoRA adapters and two small readout heads, trained for about 68 minutes on one RTX 4080: 55.6 minutes on public research datasets, then 12.8 minutes on contrastive examples written in natural language.
 
-The accuracy gap is 8.8 points. The selected Qwen checkpoint gives 55 wrong answers with at least 90% probability, and Jev gives one. Those are subsets of the errors already counted above, not extra mistakes.
+The gap is about 8.7 percentage points (61 more correct answers out of 700). The selected Qwen checkpoint gives 55 wrong answers with at least 90% probability, and Jev gives one. Those are subsets of the errors already counted above, not extra mistakes.
 
 | System | All 800 judgments | Wrong at ≥ 0.90 | 35 untouched families (700) | Wrong at ≥ 0.90 |
 |---|---:|---:|---:|---:|
