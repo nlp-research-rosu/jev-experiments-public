@@ -32,7 +32,7 @@ On 92 English texts, it flagged 30/48 Claude-written samples and 0/44 human samp
 
 That gave us a useful lesson about turning fast judgments into decisions: the question design and the cases you test can change the story. Our next test was closer to the work we actually want to do.
 
-![In a separate AI-text detection study using Jev, a fitted rule flagged 0 of 44 human-written texts and 30 of 48 Claude-written texts, or 62.5%, as likely AI. It missed all seven casual-style Claude texts in an in-sample breakdown. The flag threshold was chosen on these same 92 texts, and all AI texts came from Claude.](03-ai-text-detection-results.png)
+![A pie divides 92 AI-text detection examples into 44 human-written texts left unflagged, 18 Claude-written texts missed, and 30 Claude-written texts flagged. An arrow marks the detector's flag cutoff between the missed and flagged Claude slices. The threshold was chosen on these same 92 texts, and all AI texts came from Claude.](03-ai-text-detection-results.png)
 
 ## 4/5
 
