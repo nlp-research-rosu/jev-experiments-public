@@ -1,6 +1,6 @@
 # Content of the tweets
 
-> **For posting:** Publish each numbered section as one extended post, including its number. Attach the diagram beneath posts 1, 2, 4 and 5; post 3 is text only. Keep external links in the final post. The title, this note and the image descriptions are not part of the post text.
+> **For posting:** Publish each numbered section as one extended post, including its number. Attach its diagram beneath each post. Keep external links in the final post. The title, this note and the image descriptions are not part of the post text.
 
 ## 1/5
 
@@ -31,6 +31,8 @@ We then tried Jev in a different applied setting: an AI-writing detector. It ans
 On 92 English texts, it flagged 30/48 Claude-written samples and 0/44 human samples at the chosen threshold. But that threshold was selected on the same small set. In an in-sample style breakdown, none of seven Claude texts prompted to sound casual were flagged. The full report includes the texts, saved responses and evaluation code.
 
 That gave us a useful lesson about turning fast judgments into decisions: the question design and the cases you test can change the story. Our next test was closer to the work we actually want to do.
+
+![In a separate AI-text detection study using Jev, a fitted rule flagged 0 of 44 human-written texts and 30 of 48 Claude-written texts, or 62.5%, as likely AI. It missed all seven casual-style Claude texts in an in-sample breakdown. The flag threshold was chosen on these same 92 texts, and all AI texts came from Claude.](03-ai-text-detection-results.png)
 
 ## 4/5
 
