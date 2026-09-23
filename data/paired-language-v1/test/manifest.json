@@ -1,0 +1,23 @@
+{
+  "suite_sha256": "e6c0b4f5148538427ffce282f2ac475681551ee774eb2970a2e1430372d8ab89",
+  "cases": 160,
+  "judgments": 800,
+  "families": 40,
+  "category_counts": {
+    "claim_vs_completion": 16,
+    "permission_vs_execution": 16,
+    "unknown_vs_failure": 16,
+    "attribution_and_endorsement": 16,
+    "entity_binding": 16,
+    "action_binding": 16,
+    "temporal_scope": 16,
+    "reversal_and_current_state": 16,
+    "negation_and_quantifiers": 16,
+    "ordered_rubrics": 16
+  },
+  "relation_counts": {
+    "flip": 100,
+    "question_contrast": 80,
+    "invariant": 40
+  }
+}

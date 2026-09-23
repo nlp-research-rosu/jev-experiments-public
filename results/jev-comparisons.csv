@@ -1,0 +1,33 @@
+test,judgments,system,correct,accuracy_percent,notes,report
+paired-language (35 untouched families),700,Public-data base v0.2,579,82.7,Frozen before training language was generated; five families with hidden definitions excluded,research-log/reports/paired-language-v1/RESULTS.md
+paired-language (35 untouched families),700,Natural language update 500,617,88.1,Selected on validation; 55 wrong answers at probability 0.90 or more,research-log/reports/paired-language-v1/RESULTS.md
+paired-language (35 untouched families),700,Jev 1.13.0,678,96.9,1 wrong answer at probability 0.90 or more,research-log/reports/paired-language-v1/RESULTS.md
+paired-language (all 40 families),800,Public-data base v0.2,650,81.25,Original frozen scoring,research-log/reports/paired-language-v1/ORIGINAL_RESULTS.md
+paired-language (all 40 families),800,Templated language update 1000,675,84.4,Equal-budget language comparison,research-log/reports/paired-language-v1/ORIGINAL_RESULTS.md
+paired-language (all 40 families),800,Natural language update 1000,682,85.25,Equal-budget language comparison,research-log/reports/paired-language-v1/ORIGINAL_RESULTS.md
+paired-language (all 40 families),800,Natural language update 500,696,87.0,65 wrong answers at probability 0.90 or more,research-log/reports/paired-language-v1/ORIGINAL_RESULTS.md
+paired-language (all 40 families),800,Jev 1.13.0,764,95.5,2 wrong answers at probability 0.90 or more,research-log/reports/paired-language-v1/ORIGINAL_RESULTS.md
+paired-language (definitions exposed; post hoc),800,Public-data base v0.2,657,82.1,Definitions copied into the shared state for five families after selection,research-log/reports/paired-language-v1/RESULTS.md
+paired-language (definitions exposed; post hoc),800,Natural language update 500,697,87.1,Post-hoc sensitivity analysis,research-log/reports/paired-language-v1/RESULTS.md
+paired-language (definitions exposed; post hoc),800,Jev 1.13.0,777,97.1,Jev went from 86 to 99 correct on the 100 re-run judgments,research-log/reports/paired-language-v1/RESULTS.md
+contrast-pilot fresh test,700,Public-data base v0.2,449,64.1,New domains; held-out wording and layout,research-log/reports/CONTRAST_PILOT.md
+contrast-pilot fresh test,700,Original-data control,500,71.4,Matched continuation without contrast data,research-log/reports/CONTRAST_PILOT.md
+contrast-pilot fresh test,700,Contrast mixture,667,95.3,Broad-task accuracy fell to 83.7%,research-log/reports/CONTRAST_PILOT.md
+contrast-pilot fresh test,700,Jev 1.13.0,696,99.4,,research-log/reports/CONTRAST_PILOT.md
+revised contrast test,1185,Public-data base v0.2,579,48.9,Families from the same generator as the revised training data,research-log/reports/REVISED_INITIALIZATION.md
+revised contrast test,1185,Fresh initialization update 1000,1170,98.7,,research-log/reports/REVISED_INITIALIZATION.md
+revised contrast test,1185,Continued from v0.2 update 250,1166,98.4,,research-log/reports/REVISED_INITIALIZATION.md
+revised contrast test,1185,Jev 1.13.0,1128,95.2,Most misses treated stale or future snapshots as current; six came from ambiguous labels,research-log/reports/REVISED_INITIALIZATION.md
+original semantic-contrast suite,764,Public-data base v0.2,463,60.6,Frozen diagnostic; inspected repeatedly during development,research-log/reports/SEMANTIC_CONTRASTS.md
+original semantic-contrast suite,764,Contrast mixture (pilot),623,81.5,,research-log/reports/CONTRAST_PILOT.md
+original semantic-contrast suite,764,Continued from v0.2 update 250 (revised),638,83.5,,research-log/reports/REVISED_INITIALIZATION.md
+original semantic-contrast suite,764,Jev 1.13.0,760,99.5,,research-log/reports/CONTRAST_PILOT.md
+live check (eight selected requests),51,Untrained interface,25,49.0,Selected to exercise known gaps,research-log/reports/JEV_LIVE_SMOKE.md
+live check (eight selected requests),51,Public-data base v0.2,30,58.8,,research-log/reports/JEV_LIVE_SMOKE.md
+live check (eight selected requests),51,Jev 1.13.0,51,100.0,,research-log/reports/JEV_LIVE_SMOKE.md
+teacher audit (80 development cases),400,Public-data base v0.2,,58.0,Development subset used to vet teachers,research-log/reports/calibrated-screen-v1/RESULTS.md
+teacher audit (80 development cases),400,Qwen3.5-4B (no thinking),,60.0,,research-log/reports/calibrated-screen-v1/RESULTS.md
+teacher audit (80 development cases),400,Jev 1.13.0,,96.5,,research-log/reports/calibrated-screen-v1/RESULTS.md
+TypeSafe published example workflows (reference agreement),336,Untrained interface,241,71.7,Agreement with published reference labels; stored Jev answers from TypeSafe's site,research-log/reports/PUBLISHED_CASES.md
+TypeSafe published example workflows (reference agreement),336,Public-data base v0.2,272,81.0,,research-log/reports/PUBLISHED_CASES.md
+TypeSafe published example workflows (reference agreement),336,Jev (stored answers),306,91.1,,research-log/reports/PUBLISHED_CASES.md

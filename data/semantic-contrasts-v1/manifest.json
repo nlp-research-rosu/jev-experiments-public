@@ -1,0 +1,32 @@
+{
+  "frozen_utc": "2026-09-20T08:10:33.156948+00:00",
+  "role": "diagnostic evaluation only; not training data",
+  "suite_sha256": "acdfa86007eb167ba5716d61d22b8567a7cfc4f0b28cfa42daf2c9d90960ad93",
+  "cases": 114,
+  "questions": 764,
+  "families": [
+    "action/access",
+    "action/appointment",
+    "action/refund",
+    "action/support",
+    "payment_destination_change",
+    "shipping_destination_change"
+  ],
+  "relations": {
+    "flip": 90,
+    "question_contrast": 42,
+    "invariant": 128
+  },
+  "invariance_tv_tolerance": 0.05,
+  "source_sha256": {
+    "experiments/semantic_contrasts.py": "b951c6952b9cd846a0de5f6aa7d5a0580c2c8c57c17ef465ea4469ba6051c535",
+    "experiments/contrast_action_cases.py": "d73c34b99a5a5a814ed2a4a9b47c6755e1785ddced4779f8eb0c3d3aa2faab6b",
+    "experiments/contrast_bank_cases.py": "ca28633535979956b78e99929b5e46b840b74191b1bf56c2b5cb469195f572fd"
+  },
+  "label_policy": "Explicit evidence-relative synthetic contracts, hand-assigned labels reviewed before model evaluation. No soft probability gold. Claim and fact are distinct, not complements.",
+  "reference_methodology": [
+    "https://aclanthology.org/2020.acl-main.442/",
+    "https://aclanthology.org/2020.findings-emnlp.117/"
+  ],
+  "limits": "Authored templates, six families, correlated views; not population accuracy or untouched generalization after inspection. Some checks are exactly computable in software."
+}

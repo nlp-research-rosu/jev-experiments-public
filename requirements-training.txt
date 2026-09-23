@@ -1,0 +1,8 @@
+# Additional pinned packages used with the unchanged baseline environment.
+# Reproduce the isolated overlay:
+# uv pip install --python .venv/bin/python --target .runtime-training --no-deps -r requirements-training.txt
+peft==0.21.0
+pyarrow==21.0.0
+fla-core==0.5.2
+flash-linear-attention==0.5.2
+einops==0.8.2

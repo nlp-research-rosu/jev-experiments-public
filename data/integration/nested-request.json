@@ -1,0 +1,25 @@
+{
+  "model": "openjev-judgment-v0.2",
+  "state": {
+    "customer": {"message": "I was charged twice for the same order. Please return the duplicate payment.", "language": "English"},
+    "order": {"payments": [{"amount": 24.5, "currency": "USD"}, {"amount": 24.5, "currency": "USD"}], "fulfilled": true},
+    "policy": {"refund": "Duplicate payments should be refunded.", "source": {"id": "caller-owned-content"}}
+  },
+  "questions": {
+    "support": {
+      "routing": {
+        "type": "choice",
+        "instructions": {"task": "Select the department best suited to resolve the customer request."},
+        "criteria": {"billing": "Charges, duplicate payments, and refunds.", "technical": "Software faults and troubleshooting.", "sales": "Questions about purchasing new products."}
+      },
+      "checks": [
+        {"type": "noul", "instructions": "Does the customer explicitly request money back?", "criteria": {"true": "The customer asks for money already paid to be returned.", "false": "The customer does not ask for money already paid to be returned."}},
+        {"type": "score", "instructions": ["How strongly does the stated policy support returning money?", {"rule": "Use only the supplied customer message, order and policy."}], "criteria": [{"description": "The policy contradicts returning money."}, {"description": "The policy is unclear or the evidence is insufficient."}, {"description": "The stated policy clearly supports returning money."}]},
+        {},
+        []
+      ]
+    },
+    "reserved": {"type": {"type": "noul", "instructions": "Were two equal payment amounts recorded?"}},
+    "empty": []
+  }
+}

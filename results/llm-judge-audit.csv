@@ -1,0 +1,6 @@
+judge,cases,accuracy_percent,flawed_accepted,flawed_cases,faithful_rejected,faithful_cases,latency_seconds,cost_per_case_usd_openrouter,notes
+Jev,45,80.0,0,27,9,18,1.1,0.0006,
+Sonnet,45,100.0,0,27,0,18,45.7,0.17,Could use tools over several turns
+Luna,45,95.6,2,27,0,18,69.6,0.002,Could use tools over several turns
+Sonnet (one turn),45,100.0,0,27,0,18,42.6,0.12,Single response without tools
+Luna (one turn),45,97.8,1,27,0,18,24.6,0.002,Single response without tools

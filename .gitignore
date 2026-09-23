@@ -1,0 +1,22 @@
+# Environments and caches
+.venv/
+venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+.cache/
+.runtime-kernels/
+.runtime-training/
+*.egg-info/
+
+# Regenerated corpora, local outputs and checkpoints
+/data/raw-v0.2/
+/data/processed-v0.2/
+/checkpoints/
+/reports/
+
+# Credentials
+.secrets/
+.env
+.env.*

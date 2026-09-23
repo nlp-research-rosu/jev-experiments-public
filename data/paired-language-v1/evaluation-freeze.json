@@ -1,0 +1,25 @@
+{
+  "status": "frozen_before_training_language_generation",
+  "frozen_utc": "2026-09-21T04:42:51.337266+00:00",
+  "suite_sha256": "e6c0b4f5148538427ffce282f2ac475681551ee774eb2970a2e1430372d8ab89",
+  "validation_suite_sha256": "5f83de5d266f441a7a435fe0a61004398539f627bf369fc54b5bd10457e0575e",
+  "suites": {
+    "validation": {
+      "path": "data/paired-language-v1/validation/suite.json",
+      "sha256": "5f83de5d266f441a7a435fe0a61004398539f627bf369fc54b5bd10457e0575e"
+    },
+    "test": {
+      "path": "data/paired-language-v1/test/suite.json",
+      "sha256": "e6c0b4f5148538427ffce282f2ac475681551ee774eb2970a2e1430372d8ab89"
+    }
+  },
+  "review_hashes": {
+    "data/paired-language-v1/reviews/eval-b-corrected-review.jsonl": "dbf549287baa969dd7b5c99d3df86913789f3817ae12049fcfb4273cd3af0e16",
+    "data/paired-language-v1/reviews/eval-a-corrected-review.jsonl": "4cf69a2c153ae2eb8ca9994eb9cd3a38a3204533914df4cf1b1a52df37130026",
+    "data/paired-language-v1/reviews/eval-b-blind-review.jsonl": "be503357ea65e2745e8d0e3d1325800345a4d0ae9b6902021d33608a670e8b22",
+    "data/paired-language-v1/reviews/eval-a-blind-review.jsonl": "86d4e5528e72004fc8bff8eec2dc126d5f0712483ff93d3460df9cc95c8cae9a"
+  },
+  "primary_final_adjudication": "reports/paired-language-v1/final-scope-corrections.json",
+  "label_corrections": "Four Score labels corrected in eval_b; all other intended labels unchanged. Four missing referents and one documented-stage wording clarified by primary after cross-review.",
+  "limitations": "40test/20validation authored families, correlated variants and two authors. Shared conceptual categories with training by design. Independent language does not prove complete independence from pretraining."
+}

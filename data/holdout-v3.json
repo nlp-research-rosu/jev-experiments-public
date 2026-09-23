@@ -1,0 +1,389 @@
+{
+  "description": "Frozen synthetic holdout for aligned single-code demonstrations; no prompt selection or retuning on this set. 32 requests, eight per department, sixteen urgent and sixteen phone requests. Same author and domain as earlier sets; not an independent real-world benchmark.",
+  "schema": {
+    "department": {
+      "type": "enum",
+      "description": "Route by the main requested action: billing for charges, invoices, refunds; technical for broken product functionality or outages; account_access for login, password, or account access; sales for pre-purchase pricing or feature questions. Explicitly prioritize the main request over background context.",
+      "choices": [
+        "billing",
+        "technical",
+        "account_access",
+        "sales"
+      ]
+    },
+    "refund_requested": {
+      "type": "boolean",
+      "description": "Does the customer explicitly ask to return or reverse money already paid? A denied, negated, hypothetical, or historical refund request is false."
+    },
+    "production_outage": {
+      "type": "boolean",
+      "description": "Does the message report that the production service is currently unavailable? Past resolved outages, staging/test failures, login problems for one user, and hypothetical outages are false."
+    },
+    "phone_call_requested": {
+      "type": "boolean",
+      "description": "Does the customer explicitly request a phone call or live telephone bridge? Email replies, past calls, and explicitly rejecting calls are false."
+    },
+    "priority": {
+      "type": "enum",
+      "description": "urgent if there is a current production outage OR the customer explicitly requests action immediately/today, or states a deadline today. Otherwise normal. A negated urgency or hypothetical deadline does not count.",
+      "choices": [
+        "normal",
+        "urgent"
+      ]
+    }
+  },
+  "cases": [
+    {
+      "id": "v3_b01",
+      "context": "Two annual membership payments appeared on my statement. Please reimburse the extra one when convenient and send confirmation by email.",
+      "expected": {
+        "department": "billing",
+        "refund_requested": true,
+        "production_outage": false,
+        "phone_call_requested": false,
+        "priority": "normal"
+      }
+    },
+    {
+      "id": "v3_b02",
+      "context": "The tax amount on our invoice looks wrong. Please ring me next Tuesday to go through the calculation; there is no rush.",
+      "expected": {
+        "department": "billing",
+        "refund_requested": false,
+        "production_outage": false,
+        "phone_call_requested": true,
+        "priority": "normal"
+      }
+    },
+    {
+      "id": "v3_b03",
+      "context": "You charged for an add-on I canceled. Credit that payment back immediately. I cannot take a call, so write to me.",
+      "expected": {
+        "department": "billing",
+        "refund_requested": true,
+        "production_outage": false,
+        "phone_call_requested": false,
+        "priority": "urgent"
+      }
+    },
+    {
+      "id": "v3_b04",
+      "context": "We need a corrected invoice before our books close today. Telephone our bookkeeper to confirm the company address. No money needs to be returned.",
+      "expected": {
+        "department": "billing",
+        "refund_requested": false,
+        "production_outage": false,
+        "phone_call_requested": true,
+        "priority": "urgent"
+      }
+    },
+    {
+      "id": "v3_b05",
+      "context": "Last month I requested a refund, but it has arrived and that issue is closed. Please email a receipt for the remaining purchase next week.",
+      "expected": {
+        "department": "billing",
+        "refund_requested": false,
+        "production_outage": false,
+        "phone_call_requested": false,
+        "priority": "normal"
+      }
+    },
+    {
+      "id": "v3_b06",
+      "context": "Return the fee for the unused service, please. A telephone conversation next month would suit me; I am not asking for action today.",
+      "expected": {
+        "department": "billing",
+        "refund_requested": true,
+        "production_outage": false,
+        "phone_call_requested": true,
+        "priority": "normal"
+      }
+    },
+    {
+      "id": "v3_b07",
+      "context": "The product is working. My main request is for an explanation of the renewal charge today. Email the breakdown and do not reverse the payment.",
+      "expected": {
+        "department": "billing",
+        "refund_requested": false,
+        "production_outage": false,
+        "phone_call_requested": false,
+        "priority": "urgent"
+      }
+    },
+    {
+      "id": "v3_b08",
+      "context": "Please call immediately to arrange the return of the deposit we already paid. We have decided against the order.",
+      "expected": {
+        "department": "billing",
+        "refund_requested": true,
+        "production_outage": false,
+        "phone_call_requested": true,
+        "priority": "urgent"
+      }
+    },
+    {
+      "id": "v3_t01",
+      "context": "The report exporter omits the final column. It is a minor bug and the production service remains available. Send an email when you can investigate.",
+      "expected": {
+        "department": "technical",
+        "refund_requested": false,
+        "production_outage": false,
+        "phone_call_requested": false,
+        "priority": "normal"
+      }
+    },
+    {
+      "id": "v3_t02",
+      "context": "Our test environment cannot generate previews, although production is fine. Please telephone us next week about fixing it.",
+      "expected": {
+        "department": "technical",
+        "refund_requested": false,
+        "production_outage": false,
+        "phone_call_requested": true,
+        "priority": "normal"
+      }
+    },
+    {
+      "id": "v3_t03",
+      "context": "All production tenants are seeing service unavailable errors right now. Restore the service and keep us informed by email.",
+      "expected": {
+        "department": "technical",
+        "refund_requested": false,
+        "production_outage": true,
+        "phone_call_requested": false,
+        "priority": "urgent"
+      }
+    },
+    {
+      "id": "v3_t04",
+      "context": "Every production endpoint is unreachable at the moment. Start a live telephone bridge for the recovery effort.",
+      "expected": {
+        "department": "technical",
+        "refund_requested": false,
+        "production_outage": true,
+        "phone_call_requested": true,
+        "priority": "urgent"
+      }
+    },
+    {
+      "id": "v3_t05",
+      "context": "The outage ended yesterday and customers can work again. My main request is to fix the incorrect chart colors next month. Also reimburse the incident fee we paid. Email is sufficient.",
+      "expected": {
+        "department": "technical",
+        "refund_requested": true,
+        "production_outage": false,
+        "phone_call_requested": false,
+        "priority": "normal"
+      }
+    },
+    {
+      "id": "v3_t06",
+      "context": "I mainly want the broken search filter repaired whenever convenient. Please phone me to discuss it, and also return the support fee already collected. Production is available.",
+      "expected": {
+        "department": "technical",
+        "refund_requested": true,
+        "production_outage": false,
+        "phone_call_requested": true,
+        "priority": "normal"
+      }
+    },
+    {
+      "id": "v3_t07",
+      "context": "The desktop editor crashes on saving. Production is still available, but please fix this today and respond in writing. I am not seeking a refund.",
+      "expected": {
+        "department": "technical",
+        "refund_requested": false,
+        "production_outage": false,
+        "phone_call_requested": false,
+        "priority": "urgent"
+      }
+    },
+    {
+      "id": "v3_t08",
+      "context": "Our public production site is currently down for all customers. My main request is recovery, plus reimbursement of the emergency fee I paid. Call me now.",
+      "expected": {
+        "department": "technical",
+        "refund_requested": true,
+        "production_outage": true,
+        "phone_call_requested": true,
+        "priority": "urgent"
+      }
+    },
+    {
+      "id": "v3_a01",
+      "context": "I changed phones and need to enroll my new authenticator for sign-in. Email the steps next week; my teammates have normal access.",
+      "expected": {
+        "department": "account_access",
+        "refund_requested": false,
+        "production_outage": false,
+        "phone_call_requested": false,
+        "priority": "normal"
+      }
+    },
+    {
+      "id": "v3_a02",
+      "context": "Help me recover the username for my own account. You can phone me whenever convenient; no deadline applies.",
+      "expected": {
+        "department": "account_access",
+        "refund_requested": false,
+        "production_outage": false,
+        "phone_call_requested": true,
+        "priority": "normal"
+      }
+    },
+    {
+      "id": "v3_a03",
+      "context": "Send instructions today to reset the password on my personal account. Everyone else is using the service successfully. Please use email.",
+      "expected": {
+        "department": "account_access",
+        "refund_requested": false,
+        "production_outage": false,
+        "phone_call_requested": false,
+        "priority": "urgent"
+      }
+    },
+    {
+      "id": "v3_a04",
+      "context": "I need my locked login restored before an appointment today. Please ring my mobile. This affects only me.",
+      "expected": {
+        "department": "account_access",
+        "refund_requested": false,
+        "production_outage": false,
+        "phone_call_requested": true,
+        "priority": "urgent"
+      }
+    },
+    {
+      "id": "v3_a05",
+      "context": "My main request is to change the recovery address on my login next month. Also return the duplicate verification fee I paid. Do not telephone me.",
+      "expected": {
+        "department": "account_access",
+        "refund_requested": true,
+        "production_outage": false,
+        "phone_call_requested": false,
+        "priority": "normal"
+      }
+    },
+    {
+      "id": "v3_a06",
+      "context": "The reimbursement was completed last week. What I need now is a phone conversation next week about recovering my personal account.",
+      "expected": {
+        "department": "account_access",
+        "refund_requested": false,
+        "production_outage": false,
+        "phone_call_requested": true,
+        "priority": "normal"
+      }
+    },
+    {
+      "id": "v3_a07",
+      "context": "Please remove the lock on my individual account immediately and email confirmation. The service is healthy for other users. I no longer want a refund.",
+      "expected": {
+        "department": "account_access",
+        "refund_requested": false,
+        "production_outage": false,
+        "phone_call_requested": false,
+        "priority": "urgent"
+      }
+    },
+    {
+      "id": "v3_a08",
+      "context": "My main request is help replacing lost sign-in backup codes today. Call me to do that, and separately reverse the recovery charge I already paid.",
+      "expected": {
+        "department": "account_access",
+        "refund_requested": true,
+        "production_outage": false,
+        "phone_call_requested": true,
+        "priority": "urgent"
+      }
+    },
+    {
+      "id": "v3_s01",
+      "context": "We are comparing products before our first purchase. Email a list of integrations next month; we have no deadline.",
+      "expected": {
+        "department": "sales",
+        "refund_requested": false,
+        "production_outage": false,
+        "phone_call_requested": false,
+        "priority": "normal"
+      }
+    },
+    {
+      "id": "v3_s02",
+      "context": "Could someone telephone us next week to explain the cost of a first subscription? We have not paid you anything.",
+      "expected": {
+        "department": "sales",
+        "refund_requested": false,
+        "production_outage": false,
+        "phone_call_requested": true,
+        "priority": "normal"
+      }
+    },
+    {
+      "id": "v3_s03",
+      "context": "Before we decide whether to buy, send an email today confirming whether the enterprise plan includes audit logs.",
+      "expected": {
+        "department": "sales",
+        "refund_requested": false,
+        "production_outage": false,
+        "phone_call_requested": false,
+        "priority": "urgent"
+      }
+    },
+    {
+      "id": "v3_s04",
+      "context": "Our procurement decision is due today. Please phone with a quote for a new subscription we have never purchased.",
+      "expected": {
+        "department": "sales",
+        "refund_requested": false,
+        "production_outage": false,
+        "phone_call_requested": true,
+        "priority": "urgent"
+      }
+    },
+    {
+      "id": "v3_s05",
+      "context": "We might ask for an immediate refund if we ever buy and dislike the product. We have bought nothing; the actual request is an email about plan features next quarter.",
+      "expected": {
+        "department": "sales",
+        "refund_requested": false,
+        "production_outage": false,
+        "phone_call_requested": false,
+        "priority": "normal"
+      }
+    },
+    {
+      "id": "v3_s06",
+      "context": "For a possible purchase next year, please arrange a phone call next month about the available plans. There is no urgency and no existing payment.",
+      "expected": {
+        "department": "sales",
+        "refund_requested": false,
+        "production_outage": false,
+        "phone_call_requested": true,
+        "priority": "normal"
+      }
+    },
+    {
+      "id": "v3_s07",
+      "context": "Email the pre-purchase feature comparison immediately. A sales brochure mentions past service outages, but I am not reporting an outage or requesting a phone call.",
+      "expected": {
+        "department": "sales",
+        "refund_requested": false,
+        "production_outage": false,
+        "phone_call_requested": false,
+        "priority": "urgent"
+      }
+    },
+    {
+      "id": "v3_s08",
+      "context": "We have paid nothing and want to choose a plan today. Telephone us to explain refund eligibility after a future purchase; this is not a request to return money.",
+      "expected": {
+        "department": "sales",
+        "refund_requested": false,
+        "production_outage": false,
+        "phone_call_requested": true,
+        "priority": "urgent"
+      }
+    }
+  ]
+}
