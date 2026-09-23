@@ -1,0 +1,828 @@
+{
+  "dir": ".\\data\\ai-text-detection-v1",
+  "provider": "typesafe",
+  "model": "jev-1.13.0",
+  "sampleCounts": {
+    "human": 44,
+    "ai": 48
+  },
+  "perSignalByLabel": {
+    "human": {
+      "ai_written": {
+        "mean": 0.537,
+        "sd": 0.237,
+        "n": 44
+      },
+      "tells": {
+        "mean": 0.693,
+        "sd": 0.362,
+        "n": 44
+      },
+      "staging": {
+        "mean": 0.247,
+        "sd": 0.191,
+        "n": 44
+      },
+      "rhythm": {
+        "mean": 0.161,
+        "sd": 0.11,
+        "n": 44
+      },
+      "inflation": {
+        "mean": 0.148,
+        "sd": 0.104,
+        "n": 44
+      },
+      "formatting": {
+        "mean": 0.09,
+        "sd": 0.02,
+        "n": 44
+      },
+      "chat_residue": {
+        "mean": 0.057,
+        "sd": 0.07,
+        "n": 44
+      },
+      "specifics": {
+        "mean": 0.185,
+        "sd": 0.239,
+        "n": 44
+      }
+    },
+    "ai": {
+      "ai_written": {
+        "mean": 0.829,
+        "sd": 0.107,
+        "n": 48
+      },
+      "tells": {
+        "mean": 1.265,
+        "sd": 0.599,
+        "n": 48
+      },
+      "staging": {
+        "mean": 0.35,
+        "sd": 0.248,
+        "n": 48
+      },
+      "rhythm": {
+        "mean": 0.129,
+        "sd": 0.064,
+        "n": 48
+      },
+      "inflation": {
+        "mean": 0.266,
+        "sd": 0.282,
+        "n": 48
+      },
+      "formatting": {
+        "mean": 0.144,
+        "sd": 0.154,
+        "n": 48
+      },
+      "chat_residue": {
+        "mean": 0.096,
+        "sd": 0.221,
+        "n": 48
+      },
+      "specifics": {
+        "mean": 0.067,
+        "sd": 0.077,
+        "n": 48
+      }
+    }
+  },
+  "aucOverall": 0.976,
+  "aucPerSignal": {
+    "ai_written": 0.914,
+    "tells": 0.801,
+    "staging": 0.634,
+    "rhythm": 0.4,
+    "inflation": 0.615,
+    "formatting": 0.556,
+    "chat_residue": 0.484,
+    "specifics": 0.283
+  },
+  "confusionMatrix": {
+    "human": {
+      "likely_human": 30,
+      "unclear": 14,
+      "likely_ai": 0,
+      "very_likely_ai": 0,
+      "too_short": 0
+    },
+    "ai": {
+      "likely_human": 1,
+      "unclear": 17,
+      "likely_ai": 8,
+      "very_likely_ai": 22,
+      "too_short": 0
+    }
+  },
+  "falsePositiveRateHuman": 0,
+  "falsePositiveRateHumanUpper95": 0.066,
+  "falseNegativeRateAi": 0.021,
+  "misclassified": [
+    {
+      "file": "matched-stackexchange-academia-77443.txt",
+      "label": "ai",
+      "words": 199,
+      "chunkCount": 1,
+      "judgedChunkCount": 1,
+      "probability": 0.196,
+      "verdict": "likely_human",
+      "confidence": "medium",
+      "signals": {
+        "ai_written": 0.54,
+        "tells": 0.6,
+        "staging": 0.34,
+        "rhythm": 0.11,
+        "inflation": 0.04,
+        "formatting": 0.09,
+        "chat_residue": 0.03,
+        "specifics": 0.04
+      }
+    }
+  ],
+  "unclear": [
+    {
+      "file": "stackexchange-academia-77443.txt",
+      "label": "human",
+      "words": 168,
+      "chunkCount": 1,
+      "judgedChunkCount": 1,
+      "probability": 0.434,
+      "verdict": "unclear",
+      "confidence": "low",
+      "signals": {
+        "ai_written": 0.78,
+        "tells": 0.43,
+        "staging": 0.2,
+        "rhythm": 0.09,
+        "inflation": 0.06,
+        "formatting": 0.08,
+        "chat_residue": 0.04,
+        "specifics": 0.03
+      }
+    },
+    {
+      "file": "stackexchange-cooking-84325.txt",
+      "label": "human",
+      "words": 383,
+      "chunkCount": 2,
+      "judgedChunkCount": 2,
+      "probability": 0.336,
+      "verdict": "unclear",
+      "confidence": "low",
+      "signals": {
+        "ai_written": 0.557,
+        "tells": 0.867,
+        "staging": 0.362,
+        "rhythm": 0.158,
+        "inflation": 0.08,
+        "formatting": 0.09,
+        "chat_residue": 0.113,
+        "specifics": 0.065
+      }
+    },
+    {
+      "file": "stackexchange-diy-21461.txt",
+      "label": "human",
+      "words": 309,
+      "chunkCount": 2,
+      "judgedChunkCount": 2,
+      "probability": 0.388,
+      "verdict": "unclear",
+      "confidence": "low",
+      "signals": {
+        "ai_written": 0.73,
+        "tells": 0.495,
+        "staging": 0.154,
+        "rhythm": 0.105,
+        "inflation": 0.068,
+        "formatting": 0.071,
+        "chat_residue": 0.425,
+        "specifics": 0.025
+      }
+    },
+    {
+      "file": "stackexchange-english-395385.txt",
+      "label": "human",
+      "words": 382,
+      "chunkCount": 2,
+      "judgedChunkCount": 2,
+      "probability": 0.317,
+      "verdict": "unclear",
+      "confidence": "low",
+      "signals": {
+        "ai_written": 0.548,
+        "tells": 0.843,
+        "staging": 0.515,
+        "rhythm": 0.162,
+        "inflation": 0.15,
+        "formatting": 0.15,
+        "chat_residue": 0.159,
+        "specifics": 0.405
+      }
+    },
+    {
+      "file": "stackexchange-travel-20208.txt",
+      "label": "human",
+      "words": 320,
+      "chunkCount": 2,
+      "judgedChunkCount": 2,
+      "probability": 0.635,
+      "verdict": "unclear",
+      "confidence": "low",
+      "signals": {
+        "ai_written": 0.697,
+        "tells": 0.949,
+        "staging": 0.379,
+        "rhythm": 0.122,
+        "inflation": 0.226,
+        "formatting": 0.116,
+        "chat_residue": 0.185,
+        "specifics": 0.09
+      }
+    },
+    {
+      "file": "stackexchange-workplace-124717.txt",
+      "label": "human",
+      "words": 198,
+      "chunkCount": 1,
+      "judgedChunkCount": 1,
+      "probability": 0.55,
+      "verdict": "unclear",
+      "confidence": "low",
+      "signals": {
+        "ai_written": 0.54,
+        "tells": 1.42,
+        "staging": 0.71,
+        "rhythm": 0.16,
+        "inflation": 0.57,
+        "formatting": 0.09,
+        "chat_residue": 0.13,
+        "specifics": 0.51
+      }
+    },
+    {
+      "file": "wikipedia-cricket.txt",
+      "label": "human",
+      "words": 260,
+      "chunkCount": 1,
+      "judgedChunkCount": 1,
+      "probability": 0.313,
+      "verdict": "unclear",
+      "confidence": "low",
+      "signals": {
+        "ai_written": 0.82,
+        "tells": 0.24,
+        "staging": 0.05,
+        "rhythm": 0.11,
+        "inflation": 0.05,
+        "formatting": 0.08,
+        "chat_residue": 0.02,
+        "specifics": 0.03
+      }
+    },
+    {
+      "file": "wikipedia-fall-of-the-berlin-wall.txt",
+      "label": "human",
+      "words": 399,
+      "chunkCount": 2,
+      "judgedChunkCount": 2,
+      "probability": 0.372,
+      "verdict": "unclear",
+      "confidence": "low",
+      "signals": {
+        "ai_written": 0.681,
+        "tells": 0.83,
+        "staging": 0.065,
+        "rhythm": 0.08,
+        "inflation": 0.247,
+        "formatting": 0.093,
+        "chat_residue": 0.02,
+        "specifics": 0.12
+      }
+    },
+    {
+      "file": "wikipedia-ganges.txt",
+      "label": "human",
+      "words": 369,
+      "chunkCount": 2,
+      "judgedChunkCount": 2,
+      "probability": 0.426,
+      "verdict": "unclear",
+      "confidence": "low",
+      "signals": {
+        "ai_written": 0.684,
+        "tells": 0.89,
+        "staging": 0.137,
+        "rhythm": 0.103,
+        "inflation": 0.245,
+        "formatting": 0.073,
+        "chat_residue": 0.023,
+        "specifics": 0.057
+      }
+    },
+    {
+      "file": "wikipedia-golden-gate-bridge.txt",
+      "label": "human",
+      "words": 311,
+      "chunkCount": 2,
+      "judgedChunkCount": 2,
+      "probability": 0.327,
+      "verdict": "unclear",
+      "confidence": "low",
+      "signals": {
+        "ai_written": 0.731,
+        "tells": 0.558,
+        "staging": 0.07,
+        "rhythm": 0.168,
+        "inflation": 0.178,
+        "formatting": 0.08,
+        "chat_residue": 0.02,
+        "specifics": 0.073
+      }
+    },
+    {
+      "file": "wikipedia-mount-kilimanjaro.txt",
+      "label": "human",
+      "words": 266,
+      "chunkCount": 1,
+      "judgedChunkCount": 1,
+      "probability": 0.357,
+      "verdict": "unclear",
+      "confidence": "low",
+      "signals": {
+        "ai_written": 0.78,
+        "tells": 0.58,
+        "staging": 0.05,
+        "rhythm": 0.13,
+        "inflation": 0.08,
+        "formatting": 0.07,
+        "chat_residue": 0.03,
+        "specifics": 0.11
+      }
+    },
+    {
+      "file": "wikipedia-poutine.txt",
+      "label": "human",
+      "words": 330,
+      "chunkCount": 2,
+      "judgedChunkCount": 2,
+      "probability": 0.389,
+      "verdict": "unclear",
+      "confidence": "low",
+      "signals": {
+        "ai_written": 0.702,
+        "tells": 0.652,
+        "staging": 0.086,
+        "rhythm": 0.12,
+        "inflation": 0.167,
+        "formatting": 0.084,
+        "chat_residue": 0.02,
+        "specifics": 0.109
+      }
+    },
+    {
+      "file": "wikipedia-radiohead.txt",
+      "label": "human",
+      "words": 340,
+      "chunkCount": 2,
+      "judgedChunkCount": 2,
+      "probability": 0.495,
+      "verdict": "unclear",
+      "confidence": "low",
+      "signals": {
+        "ai_written": 0.809,
+        "tells": 0.645,
+        "staging": 0.049,
+        "rhythm": 0.105,
+        "inflation": 0.133,
+        "formatting": 0.083,
+        "chat_residue": 0.02,
+        "specifics": 0.031
+      }
+    },
+    {
+      "file": "wikipedia-tuberculosis.txt",
+      "label": "human",
+      "words": 372,
+      "chunkCount": 2,
+      "judgedChunkCount": 2,
+      "probability": 0.31,
+      "verdict": "unclear",
+      "confidence": "low",
+      "signals": {
+        "ai_written": 0.816,
+        "tells": 0.193,
+        "staging": 0.047,
+        "rhythm": 0.073,
+        "inflation": 0.047,
+        "formatting": 0.07,
+        "chat_residue": 0.02,
+        "specifics": 0.027
+      }
+    },
+    {
+      "file": "matched-gutenberg-walking-1.txt",
+      "label": "ai",
+      "words": 265,
+      "chunkCount": 1,
+      "judgedChunkCount": 1,
+      "probability": 0.699,
+      "verdict": "unclear",
+      "confidence": "low",
+      "signals": {
+        "ai_written": 0.58,
+        "tells": 1.4,
+        "staging": 0.68,
+        "rhythm": 0.26,
+        "inflation": 0.17,
+        "formatting": 0.08,
+        "chat_residue": 0.02,
+        "specifics": 0.33
+      }
+    },
+    {
+      "file": "matched-stackexchange-academia-92903.txt",
+      "label": "ai",
+      "words": 289,
+      "chunkCount": 1,
+      "judgedChunkCount": 1,
+      "probability": 0.387,
+      "verdict": "unclear",
+      "confidence": "low",
+      "signals": {
+        "ai_written": 0.73,
+        "tells": 0.82,
+        "staging": 0.16,
+        "rhythm": 0.11,
+        "inflation": 0.1,
+        "formatting": 0.06,
+        "chat_residue": 0.03,
+        "specifics": 0.23
+      }
+    },
+    {
+      "file": "matched-stackexchange-cooking-22409.txt",
+      "label": "ai",
+      "words": 283,
+      "chunkCount": 1,
+      "judgedChunkCount": 1,
+      "probability": 0.585,
+      "verdict": "unclear",
+      "confidence": "low",
+      "signals": {
+        "ai_written": 0.83,
+        "tells": 0.85,
+        "staging": 0.18,
+        "rhythm": 0.15,
+        "inflation": 0.1,
+        "formatting": 0.07,
+        "chat_residue": 0.14,
+        "specifics": 0.27
+      }
+    },
+    {
+      "file": "matched-stackexchange-cooking-81043.txt",
+      "label": "ai",
+      "words": 275,
+      "chunkCount": 1,
+      "judgedChunkCount": 1,
+      "probability": 0.357,
+      "verdict": "unclear",
+      "confidence": "low",
+      "signals": {
+        "ai_written": 0.58,
+        "tells": 0.62,
+        "staging": 0.5,
+        "rhythm": 0.1,
+        "inflation": 0.08,
+        "formatting": 0.11,
+        "chat_residue": 0.04,
+        "specifics": 0.04
+      }
+    },
+    {
+      "file": "matched-stackexchange-cooking-84325.txt",
+      "label": "ai",
+      "words": 301,
+      "chunkCount": 1,
+      "judgedChunkCount": 1,
+      "probability": 0.634,
+      "verdict": "unclear",
+      "confidence": "low",
+      "signals": {
+        "ai_written": 0.83,
+        "tells": 0.63,
+        "staging": 0.2,
+        "rhythm": 0.09,
+        "inflation": 0.07,
+        "formatting": 0.11,
+        "chat_residue": 0.05,
+        "specifics": 0.03
+      }
+    },
+    {
+      "file": "matched-stackexchange-diy-20876.txt",
+      "label": "ai",
+      "words": 261,
+      "chunkCount": 1,
+      "judgedChunkCount": 1,
+      "probability": 0.578,
+      "verdict": "unclear",
+      "confidence": "low",
+      "signals": {
+        "ai_written": 0.87,
+        "tells": 0.55,
+        "staging": 0.07,
+        "rhythm": 0.12,
+        "inflation": 0.08,
+        "formatting": 0.52,
+        "chat_residue": 0.03,
+        "specifics": 0.03
+      }
+    },
+    {
+      "file": "matched-stackexchange-diy-71591.txt",
+      "label": "ai",
+      "words": 261,
+      "chunkCount": 1,
+      "judgedChunkCount": 1,
+      "probability": 0.609,
+      "verdict": "unclear",
+      "confidence": "low",
+      "signals": {
+        "ai_written": 0.78,
+        "tells": 0.75,
+        "staging": 0.22,
+        "rhythm": 0.08,
+        "inflation": 0.08,
+        "formatting": 0.08,
+        "chat_residue": 0.06,
+        "specifics": 0.04
+      }
+    },
+    {
+      "file": "matched-stackexchange-english-329192.txt",
+      "label": "ai",
+      "words": 289,
+      "chunkCount": 1,
+      "judgedChunkCount": 1,
+      "probability": 0.736,
+      "verdict": "unclear",
+      "confidence": "low",
+      "signals": {
+        "ai_written": 0.74,
+        "tells": 0.65,
+        "staging": 0.6,
+        "rhythm": 0.14,
+        "inflation": 0.12,
+        "formatting": 0.1,
+        "chat_residue": 0.05,
+        "specifics": 0.04
+      }
+    },
+    {
+      "file": "matched-stackexchange-english-342281.txt",
+      "label": "ai",
+      "words": 275,
+      "chunkCount": 1,
+      "judgedChunkCount": 1,
+      "probability": 0.619,
+      "verdict": "unclear",
+      "confidence": "low",
+      "signals": {
+        "ai_written": 0.84,
+        "tells": 0.53,
+        "staging": 0.25,
+        "rhythm": 0.08,
+        "inflation": 0.09,
+        "formatting": 0.09,
+        "chat_residue": 0.03,
+        "specifics": 0.06
+      }
+    },
+    {
+      "file": "matched-stackexchange-english-395385.txt",
+      "label": "ai",
+      "words": 264,
+      "chunkCount": 1,
+      "judgedChunkCount": 1,
+      "probability": 0.698,
+      "verdict": "unclear",
+      "confidence": "low",
+      "signals": {
+        "ai_written": 0.84,
+        "tells": 0.79,
+        "staging": 0.2,
+        "rhythm": 0.12,
+        "inflation": 0.15,
+        "formatting": 0.1,
+        "chat_residue": 0.1,
+        "specifics": 0.08
+      }
+    },
+    {
+      "file": "matched-stackexchange-travel-38180.txt",
+      "label": "ai",
+      "words": 295,
+      "chunkCount": 1,
+      "judgedChunkCount": 1,
+      "probability": 0.705,
+      "verdict": "unclear",
+      "confidence": "low",
+      "signals": {
+        "ai_written": 0.88,
+        "tells": 0.53,
+        "staging": 0.24,
+        "rhythm": 0.09,
+        "inflation": 0.05,
+        "formatting": 0.08,
+        "chat_residue": 0.06,
+        "specifics": 0.02
+      }
+    },
+    {
+      "file": "matched-stackexchange-workplace-93717.txt",
+      "label": "ai",
+      "words": 289,
+      "chunkCount": 1,
+      "judgedChunkCount": 1,
+      "probability": 0.727,
+      "verdict": "unclear",
+      "confidence": "low",
+      "signals": {
+        "ai_written": 0.54,
+        "tells": 1.12,
+        "staging": 0.81,
+        "rhythm": 0.12,
+        "inflation": 0.07,
+        "formatting": 0.07,
+        "chat_residue": 0.07,
+        "specifics": 0.07
+      }
+    },
+    {
+      "file": "matched-wikipedia-cricket.txt",
+      "label": "ai",
+      "words": 290,
+      "chunkCount": 1,
+      "judgedChunkCount": 1,
+      "probability": 0.67,
+      "verdict": "unclear",
+      "confidence": "low",
+      "signals": {
+        "ai_written": 0.91,
+        "tells": 0.59,
+        "staging": 0.06,
+        "rhythm": 0.1,
+        "inflation": 0.2,
+        "formatting": 0.08,
+        "chat_residue": 0.02,
+        "specifics": 0.02
+      }
+    },
+    {
+      "file": "matched-wikipedia-office-for-national-statistics.txt",
+      "label": "ai",
+      "words": 281,
+      "chunkCount": 1,
+      "judgedChunkCount": 1,
+      "probability": 0.687,
+      "verdict": "unclear",
+      "confidence": "low",
+      "signals": {
+        "ai_written": 0.88,
+        "tells": 0.75,
+        "staging": 0.06,
+        "rhythm": 0.08,
+        "inflation": 0.12,
+        "formatting": 0.06,
+        "chat_residue": 0.02,
+        "specifics": 0.03
+      }
+    },
+    {
+      "file": "matched-wikipedia-poutine.txt",
+      "label": "ai",
+      "words": 295,
+      "chunkCount": 1,
+      "judgedChunkCount": 1,
+      "probability": 0.339,
+      "verdict": "unclear",
+      "confidence": "low",
+      "signals": {
+        "ai_written": 0.54,
+        "tells": 1.12,
+        "staging": 0.27,
+        "rhythm": 0.08,
+        "inflation": 0.14,
+        "formatting": 0.09,
+        "chat_residue": 0.03,
+        "specifics": 0.1
+      }
+    },
+    {
+      "file": "matched-wikipedia-radiohead.txt",
+      "label": "ai",
+      "words": 295,
+      "chunkCount": 1,
+      "judgedChunkCount": 1,
+      "probability": 0.678,
+      "verdict": "unclear",
+      "confidence": "low",
+      "signals": {
+        "ai_written": 0.65,
+        "tells": 1.31,
+        "staging": 0.27,
+        "rhythm": 0.08,
+        "inflation": 0.2,
+        "formatting": 0.09,
+        "chat_residue": 0.03,
+        "specifics": 0.04
+      }
+    },
+    {
+      "file": "matched-wikipedia-tuberculosis.txt",
+      "label": "ai",
+      "words": 289,
+      "chunkCount": 1,
+      "judgedChunkCount": 1,
+      "probability": 0.637,
+      "verdict": "unclear",
+      "confidence": "low",
+      "signals": {
+        "ai_written": 0.88,
+        "tells": 0.59,
+        "staging": 0.09,
+        "rhythm": 0.08,
+        "inflation": 0.07,
+        "formatting": 0.11,
+        "chat_residue": 0.02,
+        "specifics": 0.02
+      }
+    }
+  ],
+  "byAiStyle": [
+    {
+      "key": "default",
+      "count": 24,
+      "meanProbability": 0.762,
+      "share": 0.542
+    },
+    {
+      "key": "engaging",
+      "count": 9,
+      "meanProbability": 0.927,
+      "share": 1
+    },
+    {
+      "key": "stereotyped",
+      "count": 8,
+      "meanProbability": 0.985,
+      "share": 1
+    },
+    {
+      "key": "casual-disguised",
+      "count": 7,
+      "meanProbability": 0.533,
+      "share": 0
+    }
+  ],
+  "byHumanSource": [
+    {
+      "key": "stackexchange",
+      "count": 20,
+      "meanProbability": 0.251,
+      "share": 0.7
+    },
+    {
+      "key": "wikipedia",
+      "count": 15,
+      "meanProbability": 0.297,
+      "share": 0.467
+    },
+    {
+      "key": "gutenberg",
+      "count": 8,
+      "meanProbability": 0.026,
+      "share": 1
+    },
+    {
+      "key": "govweb",
+      "count": 1,
+      "meanProbability": 0.074,
+      "share": 1
+    }
+  ],
+  "tokens": {
+    "requests": 0,
+    "cacheHits": 123,
+    "droppedChunks": 0,
+    "inputTokens": 0,
+    "estimatedCostUsd": 0
+  }
+}

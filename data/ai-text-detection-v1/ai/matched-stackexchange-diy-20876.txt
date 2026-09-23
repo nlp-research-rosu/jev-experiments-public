@@ -1,0 +1,9 @@
+This tool is a combination wire stripper, cutter, and crimper, and it typically includes several functions in one handheld device:
+
+- **Wire stripping notches**: A series of graduated notches, usually ranging from around 10 AWG down to 22 AWG, each sized to strip the insulation from a specific wire gauge without nicking the copper underneath. Simply place the wire in the correctly sized notch, close the handles partway, and pull to remove the insulation cleanly.
+- **Cutting jaws**: Located near the pivot point, these are used for cutting wire and small cables to length.
+- **Bolt/screw shearing holes**: A set of smaller threaded holes are often included for trimming small screws or bolts down to a specific length. You simply thread the fastener into the appropriately sized hole and squeeze the handles, which shears off the excess length cleanly without damaging the remaining threads.
+- **Crimping sections**: Most of these tools also include one or more crimping dies, typically color-coded to match standard wire terminal sizes (commonly red, blue, and yellow for smaller, medium, and larger gauge terminals respectively). These are used to firmly attach connector terminals onto stripped wire ends.
+- **Loop-forming hole**: A small round hole near the tip is often included for bending the end of a stripped wire into a hook shape, which is useful when attaching wires to old-style screw terminals rather than modern push-in connectors.
+
+Altogether, this design lets you strip, cut, crimp, and even trim small hardware using a single multi-purpose tool, which is why it's a staple in most electricians' and hobbyists' toolkits.

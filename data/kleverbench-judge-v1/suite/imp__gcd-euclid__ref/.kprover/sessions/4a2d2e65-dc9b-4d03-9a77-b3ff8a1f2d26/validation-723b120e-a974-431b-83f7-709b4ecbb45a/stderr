@@ -1,0 +1,12 @@
+[Warning] Compiler: Variable 'L' defined but not used. Prefix variable name
+with underscore if this is intentional.
+	Source(/data/tasks/723b120e-a974-431b-83f7-709b4ecbb45a/input/spec.k)
+	Location(10,18,10,19)
+	10 |	        <locals> L:Map </locals> <stack> St:List </stack> <ret> 0 </ret>
+	   .	                 ^
+[Warning] Compiler: Variable 'St' defined but not used. Prefix variable name
+with underscore if this is intentional.
+	Source(/data/tasks/723b120e-a974-431b-83f7-709b4ecbb45a/input/spec.k)
+	Location(10,42,10,44)
+	10 |	        <locals> L:Map </locals> <stack> St:List </stack> <ret> 0 </ret>
+	   .	                                         ^~

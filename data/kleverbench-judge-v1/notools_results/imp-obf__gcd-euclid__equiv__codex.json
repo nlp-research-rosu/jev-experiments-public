@@ -1,0 +1,9 @@
+{
+  "case": "imp-obf__gcd-euclid__equiv",
+  "judge": "codex",
+  "verdict": "YES",
+  "tokens": 16493,
+  "seconds": 55.6,
+  "stderr": " } x \ud801\udd35 a ; y \ud801\udd35 b ; \ud801\udd3e (\ud801\udd39 (y \ud801\udd38 0)) { x \ud801\udd35 s(x, y) ; } => .K ... </k>\n        <funs> .Map => s |-> fun2(p, q, { y \ud801\udd35 p \ud801\udd34 q ; \ud801\udd41 q ; }) </funs>\n        <stack> .List </stack> <ret> 0 </ret>\n        <state> a |-> P:Int b |-> Q:Int x |-> (_ => gcdSpec(P, Q)) y |-> (_ => 0) </state>\n    requires P >Int 0 andBool Q >Int 0\n\n  claim <k> \ud801\udd3e (\ud801\udd39 (y \ud801\udd38 0)) { x \ud801\udd35 s(x, y) ; } => .K ... </k>\n        <funs> s |-> fun2(p, q, { y \ud801\udd35 p \ud801\udd34 q ; \ud801\udd41 q ; }) </funs>\n        <locals> G:Map </locals> <stack> Sv:List </stack> <ret> 0 </ret>\n        <state> a |-> _A:Int b |-> _B:Int x |-> (U:Int => gcdSpec(U, V)) y |-> (V:Int => 0) </state>\n    requires U >Int 0 andBool V >=Int 0\nendmodule\n\n\n=== criterion ===\nDoes the claim in `candidate_spec` state exactly the property described in `task_intent`, over the full domain `task_intent` describes, rather than a narrowed, bounded, single-point, vacuous or otherwise weaker property? Read `program` through `semantics`, which defines what the program's operators actually mean.\nwarning: Codex could not find bubblewrap on PATH. Install bubblewrap with your OS package manager. See the sandbox prerequisites: https://developers.openai.com/codex/concepts/sandboxing#prerequisites. Codex will use the bundled bubblewrap in the meantime.\nwarning: Skill descriptions were shortened to fit the skills context budget. Codex can still see every skill, but some descriptions are shorter. Disable unused skills or plugins to leave more room for the rest.\ncodex\nVERDICT: YES\ntokens used\n16,493\n",
+  "raw_tail": "VERDICT: YES\n"
+}

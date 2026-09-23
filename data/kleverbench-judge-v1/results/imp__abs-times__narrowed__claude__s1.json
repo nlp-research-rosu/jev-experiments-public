@@ -1,0 +1,12 @@
+{
+  "case": "imp__abs-times__narrowed",
+  "judge": "claude",
+  "sample": 1,
+  "verdict": "NO",
+  "tokens": 161433,
+  "cost_usd": 0.1734022,
+  "seconds": 18.4,
+  "returncode": 0,
+  "stderr": "",
+  "raw_tail": "{\"duration_api_ms\":12136,\"stop_reason\":\"end_turn\",\"session_id\":\"6da47958-5e73-4cbf-8784-7e8672e33ecd\",\"total_cost_usd\":0.1734022,\"usage\":{\"input_tokens\":6,\"cache_creation_input_tokens\":36060,\"cache_read_input_tokens\":124951,\"output_tokens\":416,\"output_tokens_details\":{\"thinking_tokens\":24},\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\"service_tier\":\"standard\",\"cache_creation\":{\"ephemeral_1h_input_tokens\":36060,\"ephemeral_5m_input_tokens\":0},\"inference_geo\":\"not_available\",\"iterations\":[{\"input_tokens\":2,\"output_tokens\":98,\"cache_read_input_tokens\":55980,\"cache_creation_input_tokens\":355,\"cache_creation\":{\"ephemeral_5m_input_tokens\":0,\"ephemeral_1h_input_tokens\":355},\"type\":\"message\"}],\"speed\":\"standard\"},\"modelUsage\":{\"claude-sonnet-5\":{\"inputTokens\":6,\"outputTokens\":416,\"cacheReadInputTokens\":124951,\"cacheCreationInputTokens\":36060,\"webSearchRequests\":0,\"costUSD\":0.1734022,\"contextWindow\":1000000,\"maxOutputTokens\":64000,\"thinkingTokens\":24,\"canonicalModel\":\"claude-sonnet-5\",\"provider\":\"firstParty\",\"costBasis\":\"list\"}},\"permission_denials\":[],\"terminal_reason\":\"completed\",\"fast_mode_state\":\"off\",\"fast_mode_disabled_reason\":\"sdk_opt_in_required\",\"subagent_stats\":{\"spawned\":0,\"requested\":{\"background\":0,\"foreground\":0,\"unset\":0},\"started_in_background\":0,\"max_depth\":0,\"spawned_by_subagents\":0,\"completed\":0,\"failed\":0,\"killed\":{\"parent\":0,\"user\":0,\"system\":0},\"refused\":{\"depth_limit\":0,\"concurrency_limit\":0,\"budget\":0},\"by_type\":{}},\"is_error\":false,\"num_turns\":3,\"subtype\":\"success\",\"api_error_status\":null,\"result\":\"The spec restricts `A` to `0 < A < 100`, whereas TASK.md states the property for all `a`, `b` \u2014 no such bound. This narrows the domain (excludes negative `a`, zero, and values \u2265100), so it doesn't capture the full intended property.\\n\\nVERDICT: NO\",\"ttft_ms\":1838,\"type\":\"result\",\"duration_ms\":13707,\"uuid\":\"b0db52f2-e9a9-4409-80af-47382adbbbdc\",\"ttft_stream_ms\":1513,\"time_to_request_ms\":552,\"first_content_frame_ms\":1514,\"queued_turn_count\":0}\n"
+}

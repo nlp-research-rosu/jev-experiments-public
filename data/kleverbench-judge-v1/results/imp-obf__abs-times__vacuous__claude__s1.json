@@ -1,0 +1,12 @@
+{
+  "case": "imp-obf__abs-times__vacuous",
+  "judge": "claude",
+  "sample": 1,
+  "verdict": "NO",
+  "tokens": 161143,
+  "cost_usd": 0.177508,
+  "seconds": 34.4,
+  "returncode": 0,
+  "stderr": "",
+  "raw_tail": "{\"duration_api_ms\":28906,\"stop_reason\":\"end_turn\",\"session_id\":\"10571f20-47d1-42ce-8b11-d3a733ac19a0\",\"total_cost_usd\":0.177508,\"usage\":{\"input_tokens\":6,\"cache_creation_input_tokens\":35874,\"cache_read_input_tokens\":124350,\"output_tokens\":913,\"output_tokens_details\":{\"thinking_tokens\":276},\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\"service_tier\":\"standard\",\"cache_creation\":{\"ephemeral_1h_input_tokens\":35874,\"ephemeral_5m_input_tokens\":0},\"inference_geo\":\"not_available\",\"iterations\":[{\"input_tokens\":2,\"output_tokens\":369,\"cache_read_input_tokens\":55309,\"cache_creation_input_tokens\":840,\"cache_creation\":{\"ephemeral_5m_input_tokens\":0,\"ephemeral_1h_input_tokens\":840},\"type\":\"message\"}],\"speed\":\"standard\"},\"modelUsage\":{\"claude-sonnet-5\":{\"inputTokens\":6,\"outputTokens\":913,\"cacheReadInputTokens\":124350,\"cacheCreationInputTokens\":35874,\"webSearchRequests\":0,\"costUSD\":0.177508,\"contextWindow\":1000000,\"maxOutputTokens\":64000,\"thinkingTokens\":276,\"canonicalModel\":\"claude-sonnet-5\",\"provider\":\"firstParty\",\"costBasis\":\"list\"}},\"permission_denials\":[],\"terminal_reason\":\"completed\",\"fast_mode_state\":\"off\",\"fast_mode_disabled_reason\":\"sdk_opt_in_required\",\"subagent_stats\":{\"spawned\":0,\"requested\":{\"background\":0,\"foreground\":0,\"unset\":0},\"started_in_background\":0,\"max_depth\":0,\"spawned_by_subagents\":0,\"completed\":0,\"failed\":0,\"killed\":{\"parent\":0,\"user\":0,\"system\":0},\"refused\":{\"depth_limit\":0,\"concurrency_limit\":0,\"budget\":0},\"by_type\":{}},\"is_error\":false,\"num_turns\":5,\"subtype\":\"success\",\"api_error_status\":null,\"result\":\"The `requires` clause in `spec.k` restricts the claim to the single point `A ==Int 1 andBool B ==Int 1`, rather than covering all integers `A` and `B` as `TASK.md` intends (\\\"t = |a|, then res = |a| * b\\\" for arbitrary `a`, `b`). This is a vacuous/single-point narrowing of the full intended domain.\\n\\nVERDICT: NO\",\"ttft_ms\":1686,\"type\":\"result\",\"duration_ms\":29900,\"uuid\":\"a4d97196-5564-46f7-a92e-5e3fdca1ed54\",\"ttft_stream_ms\":1335,\"time_to_request_ms\":491,\"first_content_frame_ms\":1336,\"queued_turn_count\":0}\n"
+}

@@ -1,0 +1,12 @@
+{
+  "case": "imp__array-sum__weakened",
+  "judge": "codex",
+  "sample": 2,
+  "verdict": "NO",
+  "tokens": null,
+  "cost_usd": null,
+  "seconds": 99.9,
+  "returncode": 0,
+  "stderr": " [label(return_skip_loop)]\n\n/*@ \\subsection{Programs}\nThe semantics of an IMP program is that its body statement is executed\nin a state initializing all its global variables to 0.  Since \\K's\nsyntactic lists are internally interpreted as cons-lists (i.e., lists\nconstructed with a head element followed by a tail list), we need to\ndistinguish two cases, one when the list has at least one element and\nanother when the list is empty.  In the first case we initialize the\nvariable to 0 in the state, but only when the variable is not already\ndeclared (all variables are global and distinct in IMP).  We prefer to\nmake the second rule structural, thinking of dissolving the residual\nempty \\texttt{int;} declaration as a structural cleanup rather than as\na computational step. */\n\n  rule <k> int (X,Xs => Xs);_ </k> <state> Rho:Map (.Map => X|->0) </state>\n    requires notBool (X in keys(Rho))\n  rule int .Ids; S => S\n\nendmodule\n\nexec\n/bin/bash -lc 'ls -la && find . -maxdepth 1 -type f -print' in /tmp/claude-0/-root/59cb9ff9-528b-4335-9aa4-712256bbc9fc/scratchpad/jev-judge-eval/suite/imp__array-sum__weakened\n succeeded in 0ms:\ntotal 72\ndrwxr-xr-x  3 root root  4096 Sep 22 13:05 .\ndrwxr-xr-x 47 root root  4096 Sep 22 12:59 ..\ndrwxr-xr-x  3 root root  4096 Sep 22 13:05 .kprover\n-rw-r--r--  1 root root   185 Sep 22 12:59 TASK.md\n-rw-r--r--  1 root root    75 Sep 22 12:59 program.imp\n-rw-r--r--  1 root root 26148 Sep 22 12:59 semantics.k\n-rw-r--r--  1 root root   467 Sep 22 12:59 spec.k\n-rw-r--r--  1 root root 17260 Sep 22 12:59 verification.k\n./spec.k\n./semantics.k\n./program.imp\n./verification.k\n./TASK.md\n\nexec\n/bin/bash -lc 'find .kprover -maxdepth 3 -type f -print | sort | head -50' in /tmp/claude-0/-root/59cb9ff9-528b-4335-9aa4-712256bbc9fc/scratchpad/jev-judge-eval/suite/imp__array-sum__weakened\n succeeded in 0ms:\n.kprover/sessions/e1624c13-8920-4bda-9a04-ec47c63a0f2b/spec.k\n.kprover/sessions/e1624c13-8920-4bda-9a04-ec47c63a0f2b/verification.k\n\ncodex\nVERDICT: NO\ntokens used\n46,963\n",
+  "raw_tail": "VERDICT: NO\n"
+}

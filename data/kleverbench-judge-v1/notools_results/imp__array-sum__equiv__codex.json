@@ -1,0 +1,9 @@
+{
+  "case": "imp__array-sum__equiv",
+  "judge": "codex",
+  "verdict": "YES",
+  "tokens": 13663,
+  "seconds": 14.6,
+  "stderr": "dBool 0 <=Int I andBool I <Int size(L)      [simplification]\n\nendmodule\n\n\n=== candidate_spec ===\n// Claims module (metavariables renamed; formatting reflowed).\nmodule ARRAY-SUM-SPEC\n  imports VERIFICATION\n\n  claim <k> sum = 0 ; i = 0 ; while (i < length(a)) { sum = sum + a[i] ; i = i + 1 ; } => .K ... </k>\n        <state> a |-> P:List i |-> (_ => size(P)) sum |-> (_ => sumRange(P, 0, size(P), 0)) </state>\n\n  claim <k> while (i < length(a)) { sum = sum + a[i] ; i = i + 1 ; } => .K ... </k>\n        <state> a |-> P:List i |-> (J:Int => size(P)) sum |-> (T:Int => sumRange(P, J, size(P), T)) </state>\n    requires 0 <=Int J andBool J <=Int size(P)\nendmodule\n\n\n=== criterion ===\nDoes the claim in `candidate_spec` state exactly the property described in `task_intent`, over the full domain `task_intent` describes, rather than a narrowed, bounded, single-point, vacuous or otherwise weaker property? Read `program` through `semantics`, which defines what the program's operators actually mean.\nwarning: Codex could not find bubblewrap on PATH. Install bubblewrap with your OS package manager. See the sandbox prerequisites: https://developers.openai.com/codex/concepts/sandboxing#prerequisites. Codex will use the bundled bubblewrap in the meantime.\nwarning: Skill descriptions were shortened to fit the skills context budget. Codex can still see every skill, but some descriptions are shorter. Disable unused skills or plugins to leave more room for the rest.\ncodex\nVERDICT: YES\ntokens used\n13,663\n",
+  "raw_tail": "VERDICT: YES\n"
+}

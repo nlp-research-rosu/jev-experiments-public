@@ -1,0 +1,12 @@
+[Warning] Compiler: Variable 'G' defined but not used. Prefix variable name
+with underscore if this is intentional.
+	Source(/data/tasks/c5817628-ffdc-4f8f-9e8e-9ab343b650e4/input/spec.k)
+	Location(13,18,13,19)
+	13 |	        <locals> G:Map </locals> <stack> Sv:List </stack> <ret> 0 </ret>
+	   .	                 ^
+[Warning] Compiler: Variable 'Sv' defined but not used. Prefix variable name
+with underscore if this is intentional.
+	Source(/data/tasks/c5817628-ffdc-4f8f-9e8e-9ab343b650e4/input/spec.k)
+	Location(13,42,13,44)
+	13 |	        <locals> G:Map </locals> <stack> Sv:List </stack> <ret> 0 </ret>
+	   .	                                         ^~

@@ -1,0 +1,2 @@
+# Keep sample texts byte-identical across platforms: the response cache is keyed by exact text.
+* text eol=lf

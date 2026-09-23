@@ -43,24 +43,26 @@ From our error analyses ([paired language](../research-log/reports/paired-langua
 
 None of this contradicts TypeSafe's own list of known weaknesses, which includes incorrect decisions and no guaranteed consistency between related questions.
 
-## Jev and LLM judges in a formal-verification audit
+## Jev and LLM judges on KleverBench
 
-In a separate experiment, each judge received an intended behavior and a formal semantics written for it, and decided whether the semantics truly represents the intent. There were 45 cases: 27 flawed and 18 faithful.
+We built [45 proof-spec cases](../data/kleverbench-judge-v1/README.md) from three KleverBench problems, five spec variants and three language variants. Eighteen candidate specifications faithfully state the task, and 27 do not. Eighteen of the flawed specs still prove; a prover therefore cannot catch their mismatch with the task. Every judge saw the task, program, language semantics and candidate spec, but not the label or reference spec.
 
-![One pass versus deliberation in an audit](../results/figures/06-jev-vs-llm-judges.png)
+![Jev and the Sonnet agent judge on the KleverBench proof-spec cases](../thread/04-kleverbench-judge-results.png)
 
-| Judge | Accuracy | Flawed accepted | Faithful rejected | Latency | Cost per case (OpenRouter) |
+| Judge and setup | Correct | Flawed accepted / 27 | Faithful rejected / 18 | Seconds / case | Approx. USD / case |
 |---|---:|---:|---:|---:|---:|
-| Jev | 80.0% | 0 / 27 | 9 / 18 | 1.1 s | ~$0.0006 |
-| Sonnet | 100.0% | 0 / 27 | 0 / 18 | 45.7 s | ~$0.17 |
-| Luna | 95.6% | 2 / 27 | 0 / 18 | 69.6 s | ~$0.002 |
-| Sonnet, one turn without tools | 100.0% | 0 / 27 | 0 / 18 | 42.6 s | ~$0.12 |
-| Luna, one turn without tools | 97.8% | 1 / 27 | 0 / 18 | 24.6 s | ~$0.002 |
+| Jev, one overall question | 36 / 45 | 0 | 9 | 1.1 | 0.0006 |
+| Jev, three narrower questions | 40 / 45 | 0 | 5 | Not measured separately | Not measured separately |
+| Sonnet agent, tools available | 45 / 45 | 0 | 0 | 45.7 | 0.17 |
+| Luna agent, tools available | 43 / 45 | 2 | 0 | 69.6 | 0.0018 |
+| Sonnet, one turn without tools | 45 / 45 | 0 | 0 | 42.6 | 0.12 |
+| Luna, one turn without tools | 44 / 45 | 1 | 0 | 24.6 | 0.0016 |
 
-Jev was about 40 times faster than Sonnet and 200–280 times cheaper, and its errors ran one way. Every one of its 9 acceptances was right, while 27 of its 36 rejections were right. Forty-five cases is a small sample: zero false acceptances out of 27 flawed cases still allows a true rate of about 11% (one-sided 95% bound).
+The one-question Jev result is about 40 times faster and about 280 times cheaper per case than the Sonnet agent run at the estimated list prices. The agent costs are rough because their full token breakdown was recoverable for only a subset of runs. The agent rows use the first of three runs. The three narrower Jev questions were sent together; their latency and cost were not reported separately.
 
-For an audit where accepting a flawed semantics is the expensive error, that profile suits a first stage: accept what Jev accepts with a high threshold, and send everything else to a deliberate judge. On this sample such a cascade would have sent 36 of 45 cases to the slower judge, so its main benefit is safety rather than savings. The rows are also in [results/llm-judge-audit.csv](../results/llm-judge-audit.csv).
+The five remaining Jev errors in the narrower setup are all faithful specifications in the variant whose operators have swapped meanings. Trimming the language semantics from 26 KB to about 5 KB of rules, and then to relevant rules only, did not improve Jev's accuracy. The LLM judges remained at or near the ceiling even with tools removed and the same inlined files Jev received. This is evidence that working through the language rules is the hard part for Jev here; it does not establish Jev's architecture or a general reasoning limit.
 
+Jev's zero flawed acceptances are encouraging, but 27 negative examples cannot establish a safe automatic acceptance policy. With the one-question setup it accepted only nine faithful specs and would send 36 of 45 cases to a slower judge if all other verdicts were escalated. The suite is also small and built from systematic mutants, not real agent mistakes. We need a larger, more realistic labeled set and a measured routing rule before using Jev to skip review. The [case files, saved responses, report and code](../data/kleverbench-judge-v1/README.md) are in this repository.
 ## Deliberation and a single pass
 
 Can a 2B model make these distinctions at all? We let the original Qwen3.5-2B reason before answering 30 held-out judgments, one case per semantic category and one question per primitive ([results](../research-log/reports/consistency-native-v1/RESULTS.md)).

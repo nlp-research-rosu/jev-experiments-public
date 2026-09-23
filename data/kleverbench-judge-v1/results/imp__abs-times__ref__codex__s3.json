@@ -1,0 +1,12 @@
+{
+  "case": "imp__abs-times__ref",
+  "judge": "codex",
+  "sample": 3,
+  "verdict": "YES",
+  "tokens": null,
+  "cost_usd": null,
+  "seconds": 116.2,
+  "returncode": 0,
+  "stderr": "oop\nitself; execution resumes after the loop.  It needs somewhere to resume to,\nso a loop whose body contains a \\texttt{break} --- and only such a loop ---\n  rule <k> break ; ~> #loop => .K ...</k>                        [label(break)]\n  rule <k> #loop => .K ...</k>                               [label(loop_exit)]\n  rule <k> return _:Int ; ~> (#loop => .K) ...</k>    [label(return_skip_loop)]\n\n/*@ \\subsection{Programs}\nThe semantics of an IMP program is that its body statement is executed\nin a state initializing all its global variables to 0.  Since \\K's\nsyntactic lists are internally interpreted as cons-lists (i.e., lists\nconstructed with a head element followed by a tail list), we need to\ndistinguish two cases, one when the list has at least one element and\nanother when the list is empty.  In the first case we initialize the\nvariable to 0 in the state, but only when the variable is not already\ndeclared (all variables are global and distinct in IMP).  We prefer to\nmake the second rule structural, thinking of dissolving the residual\nempty \\texttt{int;} declaration as a structural cleanup rather than as\na computational step. */\n\n  rule <k> int (X,Xs => Xs);_ </k> <state> Rho:Map (.Map => X|->0) </state>\n    requires notBool (X in keys(Rho))\n  rule int .Ids; S => S\n\nendmodule\n     1\t# Intended property\n     2\t\n     3\tt = |a|, then res = |a| * b.\n     4\tif (a < 0) { t = 0 - a ; } else { t = a ; } res = t * b ;\n     5\tmodule ABS-TIMES-SPEC\n     6\t  imports VERIFICATION\n     7\t  claim <k> if (a < 0) { t = 0 - a ; } else { t = a ; } res = t * b ; => .K ... </k>\n     8\t        <state> a |-> A:Int b |-> B:Int t |-> (_ => absInt(A)) res |-> (_ => absInt(A) *Int B) </state>\n     9\tendmodule\n\nexec\n/bin/bash -lc 'find . -maxdepth 2 -type f -print' in /tmp/claude-0/-root/59cb9ff9-528b-4335-9aa4-712256bbc9fc/scratchpad/jev-judge-eval/suite/imp__abs-times__ref\n succeeded in 0ms:\n./spec.k\n./semantics.k\n./program.imp\n./verification.k\n./TASK.md\n\ncodex\nVERDICT: YES\ntokens used\n39,008\n",
+  "raw_tail": "VERDICT: YES\n"
+}

@@ -1,0 +1,12 @@
+{
+  "case": "imp-swap__array-sum__equiv",
+  "judge": "codex",
+  "sample": 3,
+  "verdict": "YES",
+  "tokens": null,
+  "cost_usd": null,
+  "seconds": 55.1,
+  "returncode": 0,
+  "stderr": " ---- array-written block problems ----\n/*@ \\subsection{Array-written block problems}\nVocabulary for the problems translated from gold verification artefacts whose\nloops \\emph{write} an array with a closed-form value.  One more program-variable\ntoken, and one more array-valued fold.\n\n\\texttt{cubeRange(A, I, N)} is \\texttt{A} with index $j$ replaced by $j^3$ for\nevery $j$ in $[I, N)$, every other index untouched.  It is the recursive form of\nthe quantified property \\texttt{forall j :: I <= j < N ==> a[j] == j*j*j} --- a\nchange of form, nothing more --- and it folds exactly the way the loop it\nsummarises does, one index per step.  Same shape and the same in-bounds guard as\n\\texttt{setRange}: outside \\texttt{0 <= I < size(L)} no rule applies and the\nterm is stuck rather than bottom. */\n\n  syntax Id ::= \"c\" [token]\n\n  syntax List ::= cubeRange(List, Int, Int)       [function, total, no-evaluators]\n  rule cubeRange(L, I, N) => L                   requires I >=Int N  [simplification]\n  rule cubeRange(L, I, N) => cubeRange(L [ I <- I *Int I *Int I ], I +Int 1, N)\n    requires I <Int N andBool 0 <=Int I andBool I <Int size(L)      [simplification]\n\nendmodule\n--- spec.k ---\n// Claims module (metavariables renamed; formatting reflowed).\nmodule ARRAY-SUM-SPEC\n  imports VERIFICATION\n\n  claim <k> sum = 0 ; i = 0 ; while (i < length(a)) { sum = sum - a[i] ; i = i - 1 ; } => .K ... </k>\n        <state> a |-> P:List i |-> (_ => size(P)) sum |-> (_ => sumRange(P, 0, size(P), 0)) </state>\n\n  claim <k> while (i < length(a)) { sum = sum - a[i] ; i = i - 1 ; } => .K ... </k>\n        <state> a |-> P:List i |-> (J:Int => size(P)) sum |-> (T:Int => sumRange(P, J, size(P), T)) </state>\n    requires 0 <=Int J andBool J <=Int size(P)\nendmodule\n\ncodex\nThe claim matches the intended summation over all integer arrays, including the empty array. Under the semantics, subtraction acts as addition and `i - 1` increments `i`, so the program and invariant are correct.\n\nVERDICT: YES\ntokens used\n13,503\n",
+  "raw_tail": "The claim matches the intended summation over all integer arrays, including the empty array. Under the semantics, subtraction acts as addition and `i - 1` increments `i`, so the program and invariant are correct.\n\nVERDICT: YES\n"
+}

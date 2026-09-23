@@ -1,0 +1,27 @@
+{
+  "model": "jev-1.13.0",
+  "answers": {
+    "domain_unrestricted": {
+      "type": "noul",
+      "noul": 0.62
+    },
+    "results_constrained": {
+      "type": "noul",
+      "noul": 0.63
+    },
+    "relation_matches_intent": {
+      "type": "noul",
+      "noul": 0.27
+    },
+    "faithful_overall": {
+      "type": "noul",
+      "noul": 0.15
+    }
+  },
+  "usage": {
+    "input_tokens": 13967,
+    "output_tokens": 83
+  },
+  "_seconds": 1.14,
+  "_request_bytes": 48352
+}

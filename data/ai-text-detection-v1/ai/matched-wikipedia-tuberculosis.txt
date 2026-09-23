@@ -1,0 +1,10 @@
+Tuberculosis (TB) is a bacterial infection caused by *Mycobacterium tuberculosis*, and it remains one of the leading infectious causes of death worldwide, despite being both preventable and treatable.
+
+**How it spreads**
+TB is transmitted through the air when a person with active pulmonary disease coughs, sneezes, or speaks, releasing bacteria-containing droplets that others can inhale. Importantly, not everyone who is infected becomes sick right away. Many people develop what's known as latent TB, where the bacteria remain dormant in the body without causing symptoms or being contagious. Only a fraction of those with latent infections, roughly one in ten, go on to develop active disease, often when the immune system is weakened by factors like HIV, malnutrition, or heavy smoking.
+
+**Symptoms and diagnosis**
+Active TB primarily affects the lungs and classically presents with a persistent cough (sometimes with blood), fever, night sweats, and unexplained weight loss, symptoms that historically earned the disease the name "consumption." The infection can also spread beyond the lungs to affect the kidneys, spine, or brain. Diagnosis typically relies on chest X-rays, sputum tests, and in some cases blood or skin testing to detect latent infection.
+
+**Treatment and global impact**
+Treating TB usually requires a lengthy course of multiple antibiotics, often lasting six months or more, which can be difficult for patients to complete and has contributed to rising rates of drug-resistant strains. Globally, TB disproportionately affects low- and middle-income countries, with the majority of cases concentrated in parts of Asia and Africa. Public health strategies focus on early detection, consistent treatment, and vaccination with the BCG vaccine, particularly in regions where the disease remains endemic. Despite significant progress over the past two decades, TB continues to claim more than a million lives each year.

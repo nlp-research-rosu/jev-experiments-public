@@ -1,0 +1,11 @@
+**Short answer: don't do it, and here's why.**
+
+Electric kettles are designed and engineered around the behavior of water, not milk, and the two liquids behave very differently when heated. Water evaporates cleanly as it approaches boiling point, which is what allows the kettle's automatic shut-off mechanism to work. Most kettles use a small sensor, often a bimetallic strip, that detects steam rising to the top of the kettle and trips the switch to cut power once boiling is detected.
+
+Milk doesn't produce steam in the same predictable way. Instead of evaporating cleanly, the fats and proteins in milk tend to form a film on the surface as it heats, which traps steam underneath rather than letting it escape. This is exactly why milk famously "boils over" on a stovetop: pressure builds under that film until it suddenly erupts. In a kettle, this means the steam sensor may never get triggered properly, so the appliance won't shut off the way it's supposed to.
+
+There's also a real risk of scorching. Because the shut-off doesn't trigger, the heating element keeps running well past the point where it should stop, and milk solids can burn onto the element itself. Burnt milk is notoriously difficult to clean, and in some cases it can damage the element or leave a lingering burnt smell in the kettle.
+
+Most kettles do include a secondary thermal fuse as a safety backup, which will eventually cut power if the appliance gets dangerously hot, so you're unlikely to start a fire. But by that point, you've likely ruined both the milk and possibly the kettle's heating element.
+
+If you want hot milk, your best bet is a saucepan on low heat, stirring frequently, or a microwave in short bursts. Both give you much more control than a kettle ever will.

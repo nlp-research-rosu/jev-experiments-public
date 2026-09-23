@@ -1,0 +1,82 @@
+No TYPESAFE_API_KEY or OPENROUTER_API_KEY set: using cached responses only. Add a key to experiments/ai_text_detection/.env to query Jev.
+Scoring 92 samples from .\data\ai-text-detection-v1 with provider=typesafe model=jev-1.13.0...
+
+=== Samples ===
+human: 44   ai: 48   (dir: .\data\ai-text-detection-v1, provider: typesafe, model: jev-1.13.0)
+
+=== Per-signal mean (sd, n) by label ===
+human  ai_written=0.535(0.239,n=44)  tells=0.684(0.358,n=44)  staging=0.249(0.194,n=44)  rhythm=0.160(0.109,n=44)  inflation=0.148(0.101,n=44)  formatting=0.089(0.020,n=44)  chat_residue=0.055(0.064,n=44)  specifics=0.185(0.239,n=44)
+ai     ai_written=0.829(0.106,n=48)  tells=1.273(0.593,n=48)  staging=0.346(0.247,n=48)  rhythm=0.129(0.060,n=48)  inflation=0.267(0.283,n=48)  formatting=0.143(0.154,n=48)  chat_residue=0.096(0.221,n=48)  specifics=0.067(0.077,n=48)
+
+=== ROC AUC (ai = positive class) ===
+overall (final probability): 0.977
+  ai_written   0.919
+  tells        0.813
+  staging      0.631
+  rhythm       0.407
+  inflation    0.611
+  formatting   0.569
+  chat_residue 0.482
+  specifics    0.284
+
+=== Confusion matrix (verdict bands) ===
+human  likely_human=32  unclear=12  likely_ai=0  very_likely_ai=0  too_short=0
+ai     likely_human=1  unclear=17  likely_ai=9  very_likely_ai=21  too_short=0
+
+=== The key numbers ===
+Human false-positive rate (likely_ai or above): 0.0% (44 human samples), one-sided 95% upper bound 6.6%
+AI false-negative rate (read as likely_human): 2.1% (48 ai samples)
+
+=== By AI prompt style (ai/SOURCES.tsv; unlisted = stereotyped) ===
+default            n=24   meanP=0.768   flagged(likely_ai+)=54.2%
+engaging           n=9   meanP=0.926   flagged(likely_ai+)=100.0%
+stereotyped        n=8   meanP=0.985   flagged(likely_ai+)=100.0%
+casual-disguised   n=7   meanP=0.535   flagged(likely_ai+)=0.0%
+
+=== By human source (filename prefix) ===
+stackexchange      n=20   meanP=0.249   likely_human=75.0%
+wikipedia          n=15   meanP=0.296   likely_human=53.3%
+gutenberg          n=8   meanP=0.024   likely_human=100.0%
+govweb             n=1   meanP=0.075   likely_human=100.0%
+
+=== Misclassified (1) ===
+  [ai] matched-stackexchange-academia-77443.txt  p=0.245  verdict=likely_human  signals={"ai_written":0.55,"tells":0.67,"staging":0.36,"rhythm":0.11,"inflation":0.05,"formatting":0.1,"chat_residue":0.04,"specifics":0.04}
+
+=== Unclear (29) ===
+  [human] stackexchange-academia-77443.txt  p=0.403  signals={"ai_written":0.78,"tells":0.37,"staging":0.2,"rhythm":0.09,"inflation":0.06,"formatting":0.09,"chat_residue":0.04,"specifics":0.03}
+  [human] stackexchange-cooking-84325.txt  p=0.319  signals={"ai_written":0.553,"tells":0.855,"staging":0.346,"rhythm":0.162,"inflation":0.08,"formatting":0.096,"chat_residue":0.121,"specifics":0.055}
+  [human] stackexchange-diy-21461.txt  p=0.407  signals={"ai_written":0.728,"tells":0.519,"staging":0.164,"rhythm":0.115,"inflation":0.068,"formatting":0.078,"chat_residue":0.375,"specifics":0.025}
+  [human] stackexchange-travel-20208.txt  p=0.669  signals={"ai_written":0.724,"tells":0.921,"staging":0.388,"rhythm":0.122,"inflation":0.225,"formatting":0.114,"chat_residue":0.193,"specifics":0.09}
+  [human] stackexchange-workplace-124717.txt  p=0.57  signals={"ai_written":0.54,"tells":1.42,"staging":0.72,"rhythm":0.16,"inflation":0.56,"formatting":0.1,"chat_residue":0.13,"specifics":0.49}
+  [human] wikipedia-fall-of-the-berlin-wall.txt  p=0.372  signals={"ai_written":0.678,"tells":0.817,"staging":0.075,"rhythm":0.085,"inflation":0.247,"formatting":0.09,"chat_residue":0.02,"specifics":0.126}
+  [human] wikipedia-ganges.txt  p=0.478  signals={"ai_written":0.707,"tells":0.9,"staging":0.14,"rhythm":0.107,"inflation":0.241,"formatting":0.073,"chat_residue":0.023,"specifics":0.057}
+  [human] wikipedia-golden-gate-bridge.txt  p=0.33  signals={"ai_written":0.734,"tells":0.541,"staging":0.07,"rhythm":0.161,"inflation":0.171,"formatting":0.08,"chat_residue":0.023,"specifics":0.076}
+  [human] wikipedia-mount-kilimanjaro.txt  p=0.348  signals={"ai_written":0.77,"tells":0.61,"staging":0.05,"rhythm":0.14,"inflation":0.08,"formatting":0.07,"chat_residue":0.03,"specifics":0.12}
+  [human] wikipedia-poutine.txt  p=0.379  signals={"ai_written":0.703,"tells":0.651,"staging":0.088,"rhythm":0.116,"inflation":0.167,"formatting":0.084,"chat_residue":0.024,"specifics":0.113}
+  [human] wikipedia-radiohead.txt  p=0.487  signals={"ai_written":0.807,"tells":0.623,"staging":0.057,"rhythm":0.115,"inflation":0.141,"formatting":0.083,"chat_residue":0.02,"specifics":0.031}
+  [human] wikipedia-tuberculosis.txt  p=0.309  signals={"ai_written":0.806,"tells":0.213,"staging":0.053,"rhythm":0.07,"inflation":0.047,"formatting":0.067,"chat_residue":0.02,"specifics":0.027}
+  [ai] matched-gutenberg-walking-1.txt  p=0.695  signals={"ai_written":0.58,"tells":1.42,"staging":0.65,"rhythm":0.25,"inflation":0.17,"formatting":0.1,"chat_residue":0.02,"specifics":0.32}
+  [ai] matched-stackexchange-academia-92903.txt  p=0.442  signals={"ai_written":0.74,"tells":0.89,"staging":0.16,"rhythm":0.1,"inflation":0.11,"formatting":0.06,"chat_residue":0.03,"specifics":0.23}
+  [ai] matched-stackexchange-cooking-22409.txt  p=0.579  signals={"ai_written":0.82,"tells":0.9,"staging":0.18,"rhythm":0.16,"inflation":0.1,"formatting":0.07,"chat_residue":0.14,"specifics":0.29}
+  [ai] matched-stackexchange-cooking-81043.txt  p=0.347  signals={"ai_written":0.59,"tells":0.59,"staging":0.48,"rhythm":0.1,"inflation":0.08,"formatting":0.1,"chat_residue":0.04,"specifics":0.04}
+  [ai] matched-stackexchange-cooking-84325.txt  p=0.619  signals={"ai_written":0.83,"tells":0.6,"staging":0.2,"rhythm":0.09,"inflation":0.07,"formatting":0.1,"chat_residue":0.06,"specifics":0.03}
+  [ai] matched-stackexchange-diy-20876.txt  p=0.568  signals={"ai_written":0.87,"tells":0.53,"staging":0.07,"rhythm":0.12,"inflation":0.07,"formatting":0.53,"chat_residue":0.03,"specifics":0.03}
+  [ai] matched-stackexchange-diy-71591.txt  p=0.638  signals={"ai_written":0.78,"tells":0.81,"staging":0.22,"rhythm":0.07,"inflation":0.08,"formatting":0.08,"chat_residue":0.06,"specifics":0.04}
+  [ai] matched-stackexchange-english-329192.txt  p=0.719  signals={"ai_written":0.73,"tells":0.62,"staging":0.62,"rhythm":0.14,"inflation":0.12,"formatting":0.09,"chat_residue":0.05,"specifics":0.04}
+  [ai] matched-stackexchange-english-342281.txt  p=0.649  signals={"ai_written":0.84,"tells":0.55,"staging":0.28,"rhythm":0.07,"inflation":0.08,"formatting":0.08,"chat_residue":0.03,"specifics":0.06}
+  [ai] matched-stackexchange-english-395385.txt  p=0.713  signals={"ai_written":0.85,"tells":0.8,"staging":0.2,"rhythm":0.12,"inflation":0.15,"formatting":0.09,"chat_residue":0.09,"specifics":0.09}
+  [ai] matched-stackexchange-travel-38180.txt  p=0.692  signals={"ai_written":0.87,"tells":0.55,"staging":0.24,"rhythm":0.09,"inflation":0.05,"formatting":0.09,"chat_residue":0.06,"specifics":0.03}
+  [ai] matched-stackexchange-workplace-93717.txt  p=0.72  signals={"ai_written":0.53,"tells":1.14,"staging":0.82,"rhythm":0.13,"inflation":0.07,"formatting":0.06,"chat_residue":0.07,"specifics":0.08}
+  [ai] matched-wikipedia-cricket.txt  p=0.653  signals={"ai_written":0.9,"tells":0.59,"staging":0.06,"rhythm":0.1,"inflation":0.19,"formatting":0.08,"chat_residue":0.02,"specifics":0.02}
+  [ai] matched-wikipedia-office-for-national-statistics.txt  p=0.712  signals={"ai_written":0.89,"tells":0.77,"staging":0.06,"rhythm":0.08,"inflation":0.13,"formatting":0.06,"chat_residue":0.02,"specifics":0.03}
+  [ai] matched-wikipedia-poutine.txt  p=0.328  signals={"ai_written":0.54,"tells":1.14,"staging":0.24,"rhythm":0.09,"inflation":0.15,"formatting":0.09,"chat_residue":0.03,"specifics":0.1}
+  [ai] matched-wikipedia-radiohead.txt  p=0.694  signals={"ai_written":0.65,"tells":1.33,"staging":0.28,"rhythm":0.09,"inflation":0.19,"formatting":0.09,"chat_residue":0.03,"specifics":0.04}
+  [ai] matched-wikipedia-tuberculosis.txt  p=0.684  signals={"ai_written":0.88,"tells":0.69,"staging":0.09,"rhythm":0.08,"inflation":0.07,"formatting":0.1,"chat_residue":0.02,"specifics":0.02}
+
+=== Requests and cost (this run) ===
+requests: 0   cache hits: 123   dropped chunks: 0
+input tokens: 0   estimated cost: $0.000000 (at $0.042/million; cache hits are free)
+
+Per-sample results written to .\reports\ai-text-detection-v1\results.csv
+Per-chunk results written to .\reports\ai-text-detection-v1\chunks.csv
+Full report written to .\reports\ai-text-detection-v1\report.json

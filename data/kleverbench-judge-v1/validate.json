@@ -1,0 +1,272 @@
+{
+  "imp__abs-times__weakened": {
+    "case": "imp__abs-times__weakened",
+    "status": "invalid",
+    "message": "",
+    "ms": 8462
+  },
+  "imp__abs-times__ref": {
+    "case": "imp__abs-times__ref",
+    "status": "success",
+    "message": "",
+    "ms": 11514
+  },
+  "imp__abs-times__vacuous": {
+    "case": "imp__abs-times__vacuous",
+    "status": "success",
+    "message": "",
+    "ms": 11240
+  },
+  "imp__abs-times__equiv": {
+    "case": "imp__abs-times__equiv",
+    "status": "success",
+    "message": "",
+    "ms": 10756
+  },
+  "imp__abs-times__narrowed": {
+    "case": "imp__abs-times__narrowed",
+    "status": "success",
+    "message": "",
+    "ms": 15680
+  },
+  "imp__array-sum__ref": {
+    "case": "imp__array-sum__ref",
+    "status": "success",
+    "message": "",
+    "ms": 10425
+  },
+  "imp__array-sum__equiv": {
+    "case": "imp__array-sum__equiv",
+    "status": "success",
+    "message": "",
+    "ms": 10867
+  },
+  "imp__array-sum__vacuous": {
+    "case": "imp__array-sum__vacuous",
+    "status": "success",
+    "message": "",
+    "ms": 9322
+  },
+  "imp__array-sum__narrowed": {
+    "case": "imp__array-sum__narrowed",
+    "status": "success",
+    "message": "",
+    "ms": 11718
+  },
+  "imp__array-sum__weakened": {
+    "case": "imp__array-sum__weakened",
+    "status": "invalid",
+    "message": "",
+    "ms": 10843
+  },
+  "imp__gcd-euclid__ref": {
+    "case": "imp__gcd-euclid__ref",
+    "status": "success",
+    "message": "",
+    "ms": 11346
+  },
+  "imp__gcd-euclid__equiv": {
+    "case": "imp__gcd-euclid__equiv",
+    "status": "success",
+    "message": "",
+    "ms": 10264
+  },
+  "imp__gcd-euclid__weakened": {
+    "case": "imp__gcd-euclid__weakened",
+    "status": "invalid",
+    "message": "",
+    "ms": 10254
+  },
+  "imp__gcd-euclid__narrowed": {
+    "case": "imp__gcd-euclid__narrowed",
+    "status": "success",
+    "message": "",
+    "ms": 10541
+  },
+  "imp__gcd-euclid__vacuous": {
+    "case": "imp__gcd-euclid__vacuous",
+    "status": "success",
+    "message": "",
+    "ms": 10842
+  },
+  "imp-obf__abs-times__ref": {
+    "case": "imp-obf__abs-times__ref",
+    "status": "success",
+    "message": "",
+    "ms": 10252
+  },
+  "imp-obf__abs-times__equiv": {
+    "case": "imp-obf__abs-times__equiv",
+    "status": "success",
+    "message": "",
+    "ms": 22907
+  },
+  "imp-obf__abs-times__narrowed": {
+    "case": "imp-obf__abs-times__narrowed",
+    "status": "success",
+    "message": "",
+    "ms": 10502
+  },
+  "imp-obf__abs-times__vacuous": {
+    "case": "imp-obf__abs-times__vacuous",
+    "status": "success",
+    "message": "",
+    "ms": 18184
+  },
+  "imp-obf__abs-times__weakened": {
+    "case": "imp-obf__abs-times__weakened",
+    "status": "invalid",
+    "message": "",
+    "ms": 13683
+  },
+  "imp-obf__array-sum__ref": {
+    "case": "imp-obf__array-sum__ref",
+    "status": "success",
+    "message": "",
+    "ms": 12280
+  },
+  "imp-obf__array-sum__weakened": {
+    "case": "imp-obf__array-sum__weakened",
+    "status": "invalid",
+    "message": "",
+    "ms": 11452
+  },
+  "imp-obf__array-sum__vacuous": {
+    "case": "imp-obf__array-sum__vacuous",
+    "status": "success",
+    "message": "",
+    "ms": 12453
+  },
+  "imp-obf__array-sum__equiv": {
+    "case": "imp-obf__array-sum__equiv",
+    "status": "success",
+    "message": "",
+    "ms": 12110
+  },
+  "imp-obf__gcd-euclid__ref": {
+    "case": "imp-obf__gcd-euclid__ref",
+    "status": "success",
+    "message": "",
+    "ms": 9318
+  },
+  "imp-obf__array-sum__narrowed": {
+    "case": "imp-obf__array-sum__narrowed",
+    "status": "success",
+    "message": "",
+    "ms": 11490
+  },
+  "imp-obf__gcd-euclid__vacuous": {
+    "case": "imp-obf__gcd-euclid__vacuous",
+    "status": "success",
+    "message": "",
+    "ms": 11660
+  },
+  "imp-obf__gcd-euclid__equiv": {
+    "case": "imp-obf__gcd-euclid__equiv",
+    "status": "success",
+    "message": "",
+    "ms": 11804
+  },
+  "imp-obf__gcd-euclid__narrowed": {
+    "case": "imp-obf__gcd-euclid__narrowed",
+    "status": "success",
+    "message": "",
+    "ms": 9823
+  },
+  "imp-obf__gcd-euclid__weakened": {
+    "case": "imp-obf__gcd-euclid__weakened",
+    "status": "invalid",
+    "message": "",
+    "ms": 12602
+  },
+  "imp-swap__abs-times__ref": {
+    "case": "imp-swap__abs-times__ref",
+    "status": "success",
+    "message": "",
+    "ms": 10405
+  },
+  "imp-swap__abs-times__equiv": {
+    "case": "imp-swap__abs-times__equiv",
+    "status": "success",
+    "message": "",
+    "ms": 9627
+  },
+  "imp-swap__abs-times__weakened": {
+    "case": "imp-swap__abs-times__weakened",
+    "status": "invalid",
+    "message": "",
+    "ms": 10096
+  },
+  "imp-swap__abs-times__narrowed": {
+    "case": "imp-swap__abs-times__narrowed",
+    "status": "success",
+    "message": "",
+    "ms": 11084
+  },
+  "imp-swap__abs-times__vacuous": {
+    "case": "imp-swap__abs-times__vacuous",
+    "status": "success",
+    "message": "",
+    "ms": 11384
+  },
+  "imp-swap__array-sum__ref": {
+    "case": "imp-swap__array-sum__ref",
+    "status": "success",
+    "message": "",
+    "ms": 17995
+  },
+  "imp-swap__array-sum__equiv": {
+    "case": "imp-swap__array-sum__equiv",
+    "status": "success",
+    "message": "",
+    "ms": 15553
+  },
+  "imp-swap__array-sum__vacuous": {
+    "case": "imp-swap__array-sum__vacuous",
+    "status": "success",
+    "message": "",
+    "ms": 10745
+  },
+  "imp-swap__array-sum__weakened": {
+    "case": "imp-swap__array-sum__weakened",
+    "status": "invalid",
+    "message": "",
+    "ms": 10239
+  },
+  "imp-swap__array-sum__narrowed": {
+    "case": "imp-swap__array-sum__narrowed",
+    "status": "success",
+    "message": "",
+    "ms": 11761
+  },
+  "imp-swap__gcd-euclid__ref": {
+    "case": "imp-swap__gcd-euclid__ref",
+    "status": "success",
+    "message": "",
+    "ms": 12151
+  },
+  "imp-swap__gcd-euclid__equiv": {
+    "case": "imp-swap__gcd-euclid__equiv",
+    "status": "success",
+    "message": "",
+    "ms": 11951
+  },
+  "imp-swap__gcd-euclid__vacuous": {
+    "case": "imp-swap__gcd-euclid__vacuous",
+    "status": "success",
+    "message": "",
+    "ms": 11959
+  },
+  "imp-swap__gcd-euclid__weakened": {
+    "case": "imp-swap__gcd-euclid__weakened",
+    "status": "invalid",
+    "message": "",
+    "ms": 14708
+  },
+  "imp-swap__gcd-euclid__narrowed": {
+    "case": "imp-swap__gcd-euclid__narrowed",
+    "status": "success",
+    "message": "",
+    "ms": 10819
+  }
+}

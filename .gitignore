@@ -14,9 +14,12 @@ __pycache__/
 /data/raw-v0.2/
 /data/processed-v0.2/
 /checkpoints/
-/reports/
+/reports/*
+!/reports/AI_TEXT_DETECTION.md
+!/reports/ai-text-detection-v1/
 
 # Credentials
 .secrets/
 .env
 .env.*
+!.env.example

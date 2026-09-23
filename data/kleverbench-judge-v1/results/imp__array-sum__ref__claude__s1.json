@@ -1,0 +1,12 @@
+{
+  "case": "imp__array-sum__ref",
+  "judge": "claude",
+  "sample": 1,
+  "verdict": "YES",
+  "tokens": 125014,
+  "cost_usd": 0.2437454,
+  "seconds": 16.9,
+  "returncode": 0,
+  "stderr": "",
+  "raw_tail": "{\"duration_api_ms\":11352,\"stop_reason\":\"end_turn\",\"session_id\":\"35708bd9-34b4-4217-abb1-c731906fca5d\",\"total_cost_usd\":0.2437454,\"usage\":{\"input_tokens\":4,\"cache_creation_input_tokens\":55081,\"cache_read_input_tokens\":68967,\"output_tokens\":962,\"output_tokens_details\":{\"thinking_tokens\":355},\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\"service_tier\":\"standard\",\"cache_creation\":{\"ephemeral_1h_input_tokens\":55081,\"ephemeral_5m_input_tokens\":0},\"inference_geo\":\"not_available\",\"iterations\":[{\"input_tokens\":2,\"output_tokens\":357,\"cache_read_input_tokens\":48692,\"cache_creation_input_tokens\":26664,\"cache_creation\":{\"ephemeral_5m_input_tokens\":0,\"ephemeral_1h_input_tokens\":26664},\"type\":\"message\"}],\"speed\":\"standard\"},\"modelUsage\":{\"claude-sonnet-5\":{\"inputTokens\":4,\"outputTokens\":962,\"cacheReadInputTokens\":68967,\"cacheCreationInputTokens\":55081,\"webSearchRequests\":0,\"costUSD\":0.2437454,\"contextWindow\":1000000,\"maxOutputTokens\":64000,\"thinkingTokens\":355,\"canonicalModel\":\"claude-sonnet-5\",\"provider\":\"firstParty\",\"costBasis\":\"list\"}},\"permission_denials\":[],\"terminal_reason\":\"completed\",\"fast_mode_state\":\"off\",\"fast_mode_disabled_reason\":\"sdk_opt_in_required\",\"subagent_stats\":{\"spawned\":0,\"requested\":{\"background\":0,\"foreground\":0,\"unset\":0},\"started_in_background\":0,\"max_depth\":0,\"spawned_by_subagents\":0,\"completed\":0,\"failed\":0,\"killed\":{\"parent\":0,\"user\":0,\"system\":0},\"refused\":{\"depth_limit\":0,\"concurrency_limit\":0,\"budget\":0},\"by_type\":{}},\"is_error\":false,\"num_turns\":6,\"subtype\":\"success\",\"api_error_status\":null,\"result\":\"VERDICT: YES\",\"ttft_ms\":1901,\"type\":\"result\",\"duration_ms\":12282,\"uuid\":\"84ae14d9-bc40-4768-ba66-5512e25f2da5\",\"ttft_stream_ms\":1567,\"time_to_request_ms\":523,\"first_content_frame_ms\":1568,\"queued_turn_count\":0}\n"
+}

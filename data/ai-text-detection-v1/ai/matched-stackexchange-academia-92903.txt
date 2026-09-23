@@ -1,0 +1,9 @@
+As someone who has actually written and released a free textbook, I can share some perspective on why an academic might choose this path over traditional publishing.
+
+For me, the decision came down to a mix of practical and personal factors. Traditionally published academic textbooks rarely generate significant income for the author, most professors who publish through conventional academic presses earn relatively modest royalties, especially once the book has to compete with used copies and eventually goes out of print. Meanwhile, self-publishing, particularly by making the material freely available online, offers a different kind of reward: much greater reach and lasting relevance, since the material can be updated continuously rather than waiting years for a new edition.
+
+There's also a control issue. With a traditionally published book, the copyright typically transfers to the publisher, and the author has limited ability to revise, update, or adapt the material once it's out. A self-published or freely distributed textbook, by contrast, can be revised as often as needed, corrected quickly when errors are found, and adapted to reflect new developments in the field without going through a lengthy publisher approval process.
+
+For faculty who are already in a secure academic position, financial upside from textbook sales is often a secondary concern compared to other benefits: seeing the material actually used and appreciated by students and instructors elsewhere, receiving feedback that improves teaching, and contributing back to a broader culture of freely available educational resources, particularly if the author already relies heavily on open-source tools or shares that philosophy.
+
+In short, for someone motivated primarily by wanting a good, current resource for their own courses rather than by royalty income, self-publishing often makes far more sense than going through a traditional academic press.

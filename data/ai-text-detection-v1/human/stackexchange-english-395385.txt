@@ -1,0 +1,33 @@
+I think the manufacturer of your son's ball mixed in a Swedish word:
+
+I say this on the basis that:
+
+Cross-checking the translation from Swedish back into English confirmed that Swedish yxa is English axe. And indeed it is used in Swedish children's primers to illustrate the letter , as you can see from the children's book excerpt above.
+
+As for the other symbols on the ball, we can analyze which letter-symbol pairings make sense in each language. Here I've tagged each pairing with ✅ to indicate "the name a toddler would shout out for the depicted object starts with the corresponding letter", ❌ for "no, it doesn't", and ❓ for "this pairing merits further discussion".
+
+In English, the pairings are Apple✅, Bear✅, Cat✅, Dog✅, Elephant✅, Frog✅, Giraffe✅, House✅, Ice✅, Jet✅, Kangaroo✅, Lion✅, Mouse✅, Nail✅, Owl✅, Pig✅, Queen✅, Rainbow✅, Snail✅, Tiger✅, Uboat❓, Volcano✅, Worm✅, Xylophone✅, Y / axe❌, Zebra✅.
+
+In Swedish, these correspond to Äpple❌, Björn✅, Katt❌, Hund❌, Elefant✅, Groda❌, Giraff✅, Hus✅, Is✅, Jet✅, Känguru✅, Lejon✅, Mus✅, Spik❓&sup2;, Uggla❌, Gris❌, Drottning❌, Regnbåge✅, Snigel✅, Tiger✅, Ubåt✅, Vulkan✅, Mask❌&sup3;, Xylofon✅, Yxa✅, Zebra✅.
+
+As you can see, because most of these words
+
+most pairings are sensible in both languages.
+
+All told, in Swedish there are 8 words which simply do not fit, not to mention that, as @jkej points out, a Swedish ball would also have to present the letters , and , and would possibly choose to omit . This rules out the possibility that this is a ball made for the Swedish market.
+
+For English, on the other hand, outside the mysterious , all the pairings use straightforward, non-suspicious common nouns an English-speaking toddler would be familiar with4.
+
+Except for one. That U-boat is Swedish-fishy.
+
+Almost no one refers to submarines as U-boats in contemporary English. Quoting @tchrist's response to that information:
+
+Which is evidence against the maker of the ball being completely familiar with English as she is spoke.
+
+There's also positive evidence for "U" is for "U-boat" in Swedish children's primers. Quoting @jkej in the comments:
+
+And indeed it's easy to turn up Swedish pedagogical material having both = yxa and = ubåt, like this one from the Swedish site imgrum.com:
+
+But it doesn't stop there.
+
+Following @jkej's lead on Fishpond.com, I found the manufacturer is Ball, Bounce and Sport Inc.5

@@ -1,0 +1,20 @@
+{
+  "name": "jev-ai-text-detection",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "AI-written text detection with Jev: one request of 8 typed questions per chunk, one fitted logistic formula.",
+  "scripts": {
+    "eval": "tsx --env-file-if-exists=.env eval/run.ts",
+    "fit": "node eval/fit.mjs",
+    "test": "vitest run",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "engines": { "node": ">=20" },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.6.0",
+    "vitest": "^2.1.0"
+  }
+}

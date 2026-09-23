@@ -1,0 +1,12 @@
+{
+  "case": "imp-swap__abs-times__vacuous",
+  "judge": "codex",
+  "sample": 1,
+  "verdict": "NO",
+  "tokens": null,
+  "cost_usd": null,
+  "seconds": 25.6,
+  "returncode": 0,
+  "stderr": " means.\n  Do not assume an operator means what its symbol conventionally means \u2014\n  check `semantics.k` and read the program through it.\n\nCRITERION. Does the claim in `spec.k` state exactly the property described in\n`TASK.md`, over the full domain `TASK.md` describes \u2014 rather than a narrowed,\nbounded, single-point, vacuous, or otherwise weaker property?\n\nAnswer YES only if the claim faithfully captures the intended property over\nits full intended domain. Answer NO if the claim is restricted to a smaller\ndomain than intended, or fails to constrain the program's results as intended.\n\nEnd your reply with exactly one line, nothing after it:\n\nVERDICT: YES\n\nor\n\nVERDICT: NO\n\nwarning: Codex could not find bubblewrap on PATH. Install bubblewrap with your OS package manager. See the sandbox prerequisites: https://developers.openai.com/codex/concepts/sandboxing#prerequisites. Codex will use the bundled bubblewrap in the meantime.\ncodex\nI\u2019ll inspect the task, program, semantics, claim, and verification context, then compare the claim\u2019s quantified domain and result constraints against the stated property.\nexec\n/bin/bash -lc \"ls -la && sed -n '1,240p' TASK.md && printf '\\\\n--- program.imp ---\\\\n' && sed -n '1,240p' program.imp && printf '\\\\n--- semantics.k ---\\\\n' && sed -n '1,320p' semantics.k && printf '\\\\n--- verification.k ---\\\\n' && sed -n '1,320p' verification.k && printf '\\\\n--- spec.k ---\\\\n' && sed -n '1,320p' spec.k\" in /tmp/claude-0/-root/59cb9ff9-528b-4335-9aa4-712256bbc9fc/scratchpad/jev-judge-eval/suite/imp-swap__abs-times__vacuous\n succeeded in 1ms:\nmodule ABS-TIMES-SPEC\n  imports VERIFICATION\n  claim <k> if (a < 0) { t = 0 + a ; } else { t = a ; } res = t / b ; => .K ... </k>\n        <state> a |-> A:Int b |-> B:Int t |-> (_ => absInt(A)) res |-> (_ => absInt(A) *Int B) </state>\n    requires A ==Int 1 andBool B ==Int 1\nendmodule\n\ncodex\nThe claim only covers the single case `a = 1, b = 1`, not all integer inputs described by the task.\n\nVERDICT: NO\ntokens used\n12,795\n",
+  "raw_tail": "The claim only covers the single case `a = 1, b = 1`, not all integer inputs described by the task.\n\nVERDICT: NO\n"
+}

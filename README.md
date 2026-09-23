@@ -1,18 +1,26 @@
-# Building a Jev-like judge on one GPU
+# Fast judgment, and where it breaks
 
 Jev, TypeSafe's decision model, reads a record once and answers typed questions about it with probability distributions. A Noul question returns the probability that a yes/no proposition holds, a Choice question returns a distribution over named options, and a Score question returns a distribution over ordered rubric levels. Jev never generates text.
 
-This repository documents our attempt to build a comparable judge from an open 2B model on one desktop GPU. It collects the recipe, the frozen test and saved predictions, every training run with its compute, the experiments that did not work, and what the work taught us about using Jev alongside LLM judges. It is a research snapshot taken on 23 September 2026, while one experiment was still running.
+This is the reference repository for our [Jev experiment thread](thread/tweets.md). We first tried to reproduce fast decision scoring with Qwen3.5-2B on one desktop GPU. We then applied Jev to AI-written-text detection and compared it with the LLM agent judges in our KleverBench proof-spec workflow. The code, benchmark inputs and saved responses for both new studies are here, alongside the reproduction attempts and failures.
 
 This is independent work. It does not describe how Jev is built or trained; TypeSafe has not published those details, and nothing here is endorsed by TypeSafe.
 
-![Close on accuracy, far apart on confidence](results/figures/01-close-on-accuracy-far-on-confidence.png)
+![A proposed fast judgment in the intent, code, specification and proof loop](thread/01-judgment-in-the-intent-loop.png)
+
+## The result closest to our work
+
+A proof can succeed even when the specification fails to say what the task intended. We tested whether a fast judge could catch that gap on [45 KleverBench proof-spec cases](data/kleverbench-judge-v1/README.md). Eighteen specs were faithful and 27 were flawed; 18 of the flawed specs still proved. Jev 1.13.0 got 36/45 right in 1.1 seconds at about $0.0006 per case. The Sonnet agent judge used in the current workflow got 45/45 in 45.7 seconds at about $0.17 per case.
+
+Jev accepted none of the 27 flawed specs, but rejected 9 of 18 faithful ones. Asking three narrower questions in one request improved its score to 40/45, with five faithful specs still rejected. Those remaining errors cluster where familiar operators have different meanings in the formal language. Shortening the supplied rules did not fix them; Sonnet and Luna remained at or near the ceiling even without tools. This points to a reasoning gap rather than input length alone, though 45 constructed cases are too few for a deployment rule. [Method, results and saved judgments](data/kleverbench-judge-v1/README.md) explain the comparison and its limits.
+
+A second applied study used Jev in an [AI-writing detector](reports/AI_TEXT_DETECTION.md). On 92 English texts, a fitted score flagged 30/48 Claude-written samples and 0/44 human samples at a threshold selected on the same set. It missed all seven casual-style Claude samples. The [data](data/ai-text-detection-v1/README.md), [code](experiments/ai_text_detection/README.md) and [saved responses](reports/ai-text-detection-v1/) are included so this result can be checked separately from the proof-spec study.
 
 ## Headline result
 
 On a frozen, independently written test, our selected checkpoint answers 617 of 700 judgments correctly (88.1%). Jev 1.13.0 answers 678 (96.9%). The checkpoint is Qwen3.5-2B with rank-8 LoRA adapters and two small readout heads, trained for about 68 minutes on one RTX 4080: 55.6 minutes on public research datasets, then 12.8 minutes on contrastive examples written in natural language.
 
-The accuracy gap is 8.8 points. The confidence gap is far larger: our model gives 55 wrong answers with at least 90% probability, and Jev gives one.
+The accuracy gap is 8.8 points. The selected Qwen checkpoint gives 55 wrong answers with at least 90% probability, and Jev gives one. Those are subsets of the errors already counted above, not extra mistakes.
 
 | System | All 800 judgments | Wrong at ≥ 0.90 | 35 untouched families (700) | Wrong at ≥ 0.90 |
 |---|---:|---:|---:|---:|
@@ -39,7 +47,7 @@ Recompute the table from the saved predictions with `python evaluation/paired-la
 3. **Most of what we tried next did not close the gap.** Eight times more synthetic families left accuracy flat while log loss doubled. Cross-entropy plus Brier, teacher distributions from Qwen3.5-4B or Jev, and larger readout heads did not beat a calibrated baseline. Broader rubrics and natural language helped modestly. [What we tried](docs/what-we-tried.md)
 4. **Calibration fixes confidence, not decisions.** Temperature scaling cut log loss from 1.55 to 0.51 without changing a single answer.
 5. **The distinctions are reachable with deliberation.** The original Qwen3.5-2B answered all 15 of the questions whose reasoning finished within 4,096 thinking tokens; direct scoring got 9 of those and our trained judge 13. Half the questions never finished. Moving that reasoning into a single pass is the open problem. [Jev and LLMs](docs/jev-vs-llms.md)
-6. **Jev and LLM judges fail differently.** In a 45-case formal-verification audit, Jev was right on 36 in 1.1 seconds at about $0.0006 per case, never accepted a flawed semantics, and rejected half of the faithful ones. LLM judges were right on 43–45 but took 25–70 seconds. [Jev and LLMs](docs/jev-vs-llms.md)
+6. **Jev and LLM judges fail differently.** In the [45-case KleverBench proof-spec audit](data/kleverbench-judge-v1/README.md), Jev got 36 right in 1.1 seconds at about USD 0.0006 per case. It accepted no flawed specs but rejected half the faithful ones. Three narrower questions reduced that to five rejections. The Sonnet and Luna agent judges got 45 and 43 right. [Jev and LLMs](docs/jev-vs-llms.md)
 7. **Write questions for a literal reader.** Question IDs and sibling questions never reach the model; Score levels are judged one at a time; counting is unreliable. Combine several narrow questions with a rule fitted to your own labels. [Using Jev](docs/using-jev.md)
 
 ## Documents
@@ -48,11 +56,12 @@ Recompute the table from the saved predictions with `python evaluation/paired-la
 |---|---|
 | [docs/recipe.md](docs/recipe.md) | How to build a Jev-like judge: interface, model, losses, data, inference and evaluation |
 | [docs/what-we-tried.md](docs/what-we-tried.md) | Every study in order, with its question, result and lesson |
-| [docs/jev-vs-llms.md](docs/jev-vs-llms.md) | Where Jev was strong and weak in our tests, the formal-verification audit, and deliberation vs. a single pass |
+| [docs/jev-vs-llms.md](docs/jev-vs-llms.md) | Jev on our tests, the KleverBench comparison with agent judges, and deliberation vs. a single pass |
 | [docs/using-jev.md](docs/using-jev.md) | Question design, decision rules and workflows for developers using Jev |
 | [docs/references.md](docs/references.md) | The parallel-decoding demo, papers and eight community reproductions we drew on |
 | [research-log/](research-log/README.md) | Original reports and design notes, in the order the work happened |
-| [results/](results/) | Training-run ledger, Jev comparisons and the thread figures |
+| [thread/](thread/tweets.md) | Current thread text, PNG figures and editable SVG sources |
+| [results/](results/) | Training-run ledger, Jev comparisons and earlier figures |
 
 ## Compute and cost
 
@@ -69,10 +78,12 @@ Recompute the table from the saved predictions with `python evaluation/paired-la
 | `src/openjev/` | Scorer, judgment model, training losses, data preparation, consistent cached inference, CLI |
 | `experiments/` | Runners for every study, as run |
 | `tests/` | The original test suite |
-| `data/` | Small frozen datasets: the untrained diagnostic and holdouts, the upstream demo examples, the semantic-contrast diagnostic and the paired-language test |
+| `data/` | Frozen tests, plus the AI-text samples and 45 KleverBench proof-spec cases |
 | `evaluation/paired-language-v1/` | Saved predictions for the headline comparison, the contract audit and a scoring script |
 | `research-log/` | Reports and design notes copied from the research archive |
-| `results/` | CSV tables and the figures used in the announcement thread |
+| `reports/AI_TEXT_DETECTION.md` | AI-text method and results, with saved responses under reports/ai-text-detection-v1/ |
+| `thread/` | Current post text and figures; results/figures/ preserves earlier figures |
+| `results/` | CSV tables and earlier figures |
 
 ## Running the code
 
@@ -86,7 +97,7 @@ The code is published as it was run, pinned to Python 3.12, PyTorch 2.11 (CUDA 1
 
 - One training seed per arm; small, synthetic, model-written evaluation sets; repeated inspection of development data.
 - Jev results are single samples from `jev-1.13.0` at the time of each run. Jev is an external reference in these experiments, not ground truth; its own errors are documented.
-- The formal-verification audit is a separate 45-case experiment summarized here from its results table.
+- The KleverBench audit is a small, constructed 45-case study. Inputs, labels, saved judgments and scoring code are included here; the agent judges reached or nearly reached the ceiling.
 - Nothing here identifies Jev's architecture, size or training method.
 
 ## Acknowledgements and third-party material

@@ -1,0 +1,13 @@
+[Warning] Compiler: Variable 'A' defined but not used. Prefix variable name
+with underscore if this is intentional.
+	Source(/data/tasks/74212e1c-f8df-454d-bb21-d5a93f5b2726/input/spec.k)
+	Location(4,23,4,24)
+	4 |	        <state> a |-> A:List i |-> (_ => _) sum |-> (_ => _) </state>
+	  .	                      ^
+[Error] Compiler: Found variable _ on right hand side of rule, not bound on
+left hand side. Did you mean "?_"?
+	Source(/data/tasks/74212e1c-f8df-454d-bb21-d5a93f5b2726/input/spec.k)
+	Location(4,42,4,43)
+	4 |	        <state> a |-> A:List i |-> (_ => _) sum |-> (_ => _) </state>
+	  .	                                         ^
+[Error] Compiler: Had 1 structural errors.

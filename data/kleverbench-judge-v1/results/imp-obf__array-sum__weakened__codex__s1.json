@@ -1,0 +1,12 @@
+{
+  "case": "imp-obf__array-sum__weakened",
+  "judge": "codex",
+  "sample": 1,
+  "verdict": "NO",
+  "tokens": null,
+  "cost_usd": null,
+  "seconds": 506.3,
+  "returncode": 0,
+  "stderr": " preferred to make the rule below structural.\n\n\\texttt{\ud801\udd42 ;} abandons the rest of the current loop body and the loop\nitself; execution resumes after the loop.  It needs somewhere to resume to,\nso a loop whose body contains a \\texttt{\ud801\udd42} --- and only such a loop ---\nunrolls with an end-of-loop marker \\texttt{\\#loop} pushed behind it.\n\\texttt{hasBreak} looks through blocks, sequences and conditionals but stops\nat a nested \\texttt{\ud801\udd3e}: a \\texttt{\ud801\udd42} in there belongs to that loop,\nnot to this one.  A loop without a \\texttt{\ud801\udd42} unrolls exactly as it\nalways did, into exactly the same continuation, so every claim written\nbefore \\texttt{\ud801\udd42} existed still proves step for step.\n\n\\texttt{\ud801\udd42 ;} then discards the computation one \\texttt{Stmt} at a time\n--- the recursive \\texttt{\ud801\udd3e} that trails the body included, and any\nnested loop still standing in the body's tail, discarded whole and never\nentered --- until it reaches the marker, which it consumes.  Reached the\nordinary way, by the guard going false or by the body running out, the\nmarker just dissolves.\n\nOnly a \\texttt{Stmt} is discarded, so nothing crosses a function boundary:\n\\texttt{\\#done} stops the scan.  A \\texttt{\ud801\udd42} in a function body that is\nnot inside a loop \\emph{of that body}, and a \\texttt{\ud801\udd42} outside any loop,\nare therefore stuck --- there is no rule for either, which is the answer, not\nsilently continuing.  \\texttt{\ud801\udd41}, symmetrically, steps over a marker on\nits way out of a loop inside a function body.\n\nThe marker is pushed once per unrolling rather than once per loop, so a\n\\texttt{\ud801\udd42}-loop that has run $n$ iterations carries $n$ markers and the\nsurplus ones dissolve behind the one the exit consumes.  That is the price of\nkeeping the recursive occurrence spelled \\texttt{\ud801\udd3e (B) S}: a loop claim\ncloses circularly exactly when the state it returns to is the loop again,\nand a proof unrolls once before it closes, so one extra marker is all the\nprover ever sees. */\n\n  syntax KItem ::= \"#loop\"\n\ncodex\nVERDICT: NO\ntokens used\n59,150\n",
+  "raw_tail": "VERDICT: NO\n"
+}

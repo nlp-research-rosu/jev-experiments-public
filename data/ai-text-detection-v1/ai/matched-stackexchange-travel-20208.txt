@@ -1,0 +1,9 @@
+This is actually a safety requirement, not just an arbitrary airline preference, and the reasoning comes down to how emergency evacuations work.
+
+Regulatory bodies require that an aircraft be capable of being fully evacuated within 90 seconds, using only half of the available exits, in the event of an emergency. Takeoff and landing are statistically the most dangerous phases of flight, since that's when most accidents occur, so airlines prepare the cabin as if an emergency evacuation could be needed at any moment during these periods.
+
+Opening the window shades serves a few specific purposes in that context. First, it allows cabin crew to quickly assess conditions outside the aircraft, such as fire, smoke, or debris, so they can decide which exits are safe to use during an evacuation. Second, it helps passengers' eyes adjust to outside light conditions in advance, which matters because a sudden transition from a dim cabin to bright daylight (or the reverse, at night) can cause a dangerous delay if people are temporarily disoriented while trying to evacuate.
+
+This is part of a broader set of precautions taken during takeoff and landing, which also includes putting seats in the upright position, stowing tray tables, and ensuring seatbelts are fastened. All of these measures exist to minimize the time it would take to get everyone off the plane safely if something went wrong.
+
+Specific rules can vary slightly between airlines and countries, since implementation is left to individual carriers as long as they meet the underlying safety requirements, but the vast majority of airlines follow this practice as a matter of standard procedure, and flight attendants will typically remind passengers if shades haven't been opened before descent.

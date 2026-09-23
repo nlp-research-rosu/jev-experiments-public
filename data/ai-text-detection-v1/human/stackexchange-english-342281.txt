@@ -1,0 +1,15 @@
+In most varieties of English, these two words are not homophones. But there is an interesting story about why this is so.
+
+In English the alveolar fricatives /s/ and /z/ are contrastive. Notionally, the first is unvoiced and the second voiced. So we can find minimal pairs of words where the difference in voicing results in a change of meaning:
+
+The first word here is the word sue or Sue, the second is the word zoo.
+
+In a language like Spanish, there is only one alveolar fricative, /s/. This is usually voiceless (although it can become voiced in certain environments). However because there is no phoneme /z/ in Spanish, if a speaker uses a [z] instead of an [s] in a word, it will still be recognised as the same word. So, for example, English speakers of Spanish may well use a [z] in all sorts of words where a Spanish speaker would use an [s], but it will always be recognised as the Spanish phoneme /s/. In other words a Spanish speaker will always map both an [s] and a [z] sound onto the Spanish phoneme /s/.
+
+Because of this lack of contrast in Spanish, it is often difficult for Spanish speakers to differentiate between /s/ and /z/ when listening to English.
+
+Now, many English speakers will tell you that the sound at the end of the word whores is voiced. In actual fact, if it is not followed by a word beginning with a voiced sound, then the /z/ at the end of the word whores will be at least partially, and quite probably completely devoiced. We would show this in a narrow transcription by putting a little circle as a diacritic under the z:
+
+British English transcription
+
+A native English speaker will swear blind—I predict at least ten comments under this post saying exactly this—that they can hear the voicing in the sound at the end of the word whores when spoken naturally. However, if you cut that devoiced /z/ off the end of the word and play it back to them without the rest of the word they will confidently tell you that it's an /s/.

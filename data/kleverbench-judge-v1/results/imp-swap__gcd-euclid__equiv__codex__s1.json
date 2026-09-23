@@ -1,0 +1,12 @@
+{
+  "case": "imp-swap__gcd-euclid__equiv",
+  "judge": "codex",
+  "sample": 1,
+  "verdict": "YES",
+  "tokens": null,
+  "cost_usd": null,
+  "seconds": 28.4,
+  "returncode": 0,
+  "stderr": "ten block problems}\nVocabulary for the problems translated from gold verification artefacts whose\nloops \\emph{write} an array with a closed-form value.  One more program-variable\ntoken, and one more array-valued fold.\n\n\\texttt{cubeRange(A, I, N)} is \\texttt{A} with index $j$ replaced by $j^3$ for\nevery $j$ in $[I, N)$, every other index untouched.  It is the recursive form of\nthe quantified property \\texttt{forall j :: I <= j < N ==> a[j] == j*j*j} --- a\nchange of form, nothing more --- and it folds exactly the way the loop it\nsummarises does, one index per step.  Same shape and the same in-bounds guard as\n\\texttt{setRange}: outside \\texttt{0 <= I < size(L)} no rule applies and the\nterm is stuck rather than bottom. */\n\n  syntax Id ::= \"c\" [token]\n\n  syntax List ::= cubeRange(List, Int, Int)       [function, total, no-evaluators]\n  rule cubeRange(L, I, N) => L                   requires I >=Int N  [simplification]\n  rule cubeRange(L, I, N) => cubeRange(L [ I <- I *Int I *Int I ], I +Int 1, N)\n    requires I <Int N andBool 0 <=Int I andBool I <Int size(L)      [simplification]\n\nendmodule\n\n--- spec.k ---\n// Claims module (metavariables renamed; formatting reflowed).\nmodule GCD-EUCLID-SPEC\n  imports VERIFICATION\n\n  claim <k> fun s ( p , q ) { y = p % q ; return q ; } x = a ; y = b ; while (! (y == 0)) { x = s(x, y) ; } => .K ... </k>\n        <funs> .Map => s |-> fun2(p, q, { y = p % q ; return q ; }) </funs>\n        <stack> .List </stack> <ret> 0 </ret>\n        <state> a |-> P:Int b |-> Q:Int x |-> (_ => gcdSpec(P, Q)) y |-> (_ => 0) </state>\n    requires P >Int 0 andBool Q >Int 0\n\n  claim <k> while (! (y == 0)) { x = s(x, y) ; } => .K ... </k>\n        <funs> s |-> fun2(p, q, { y = p % q ; return q ; }) </funs>\n        <locals> G:Map </locals> <stack> Sv:List </stack> <ret> 0 </ret>\n        <state> a |-> _A:Int b |-> _B:Int x |-> (U:Int => gcdSpec(U, V)) y |-> (V:Int => 0) </state>\n    requires U >Int 0 andBool V >=Int 0\nendmodule\n\ncodex\nVERDICT: YES\ntokens used\n22,676\n",
+  "raw_tail": "VERDICT: YES\n"
+}

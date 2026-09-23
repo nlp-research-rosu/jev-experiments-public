@@ -1,0 +1,9 @@
+Yes, this is actually a known trick, and it works surprisingly well, though I'd recommend a few precautions before you try it.
+
+The basic idea relies on the fact that a dishwasher's rinse cycle maintains a fairly consistent water temperature, which makes it a passable substitute for a sous-vide circulator in a pinch. Salmon typically cooks well at around 50-55°C, and many dishwashers run their main wash or rinse cycle in a similar range, though this varies quite a bit by model, so results aren't perfectly predictable.
+
+To try it yourself, seal the salmon tightly in a vacuum bag or a well-sealed heavy-duty zip-top bag, pressing out as much air as possible using the water displacement method if you don't have a vacuum sealer. Place the bagged fish on the top rack, away from the direct spray of the detergent dispenser, and run a full cycle without soap, ideally using the "heated dry" or "sanitize" setting if your machine has one, since these tend to run hotter and more consistently.
+
+A few important caveats: this method is much less precise than an actual sous-vide setup, since dishwashers aren't designed to hold a specific target temperature and their cycles vary by brand, model, and even how full the machine is. There's also a real risk of your bag leaking or shifting during the wash, so double-bagging is a good idea. And obviously, run an empty cycle beforehand if there's any chance of leftover detergent residue.
+
+That said, plenty of people have reported good results, myself included. It's more of a fun kitchen experiment than a reliable everyday method, but if you're curious and don't own an immersion circulator, it's worth trying at least once.

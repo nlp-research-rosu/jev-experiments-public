@@ -1,0 +1,12 @@
+{
+  "case": "imp-swap__abs-times__ref",
+  "judge": "codex",
+  "sample": 1,
+  "verdict": "YES",
+  "tokens": null,
+  "cost_usd": null,
+  "seconds": 30.2,
+  "returncode": 0,
+  "stderr": "= 0 + a ; } else { t = a ; } res = t / b ; => .K ... </k>\n./spec.k:4:        <state> a |-> A:Int b |-> B:Int t |-> (_ => absInt(A)) res |-> (_ => absInt(A) *Int B) </state>\n./semantics.k:45:syntactic list by its unit --- \\texttt{[ .AExps ]} --- and a claim that quotes\n./semantics.k:46:a program should not have to (a claim may still write \\texttt{[ .AExps ]}: it is\n./semantics.k:100:\\texttt{?Int} is an expression standing for an arbitrary integer: a claim\n./semantics.k:214:of a scalar's \\texttt{n |-> N:Int}, so a claim binds an array exactly the way\n./semantics.k:220:applies and the computation gets stuck, so a claim about an indexing program\n./semantics.k:231:summaries a claim folds with, are not semantics: they live in the companion\n./semantics.k:265:;} is therefore how an IMP program builds the state a claim writes as\n./semantics.k:296:Dafny uses for methods.  It is what lets a claim about a call rewrite to\n./semantics.k:297:\\texttt{.K} like every other claim here: a claim whose right-hand side is a\n./semantics.k:305:\\textsf{k} cell of the frame a claim's \\texttt{...} stands for, and the\n./semantics.k:306:claim's own destination would then match the callee's body.  A pending\n./semantics.k:314:creates it.  The side condition is on \\textsf{state}, which a claim always\n./semantics.k:315:pins, never on \\textsf{locals}, which a claim mentioning no function leaves\n./semantics.k:317:always were, and every claim written before functions existed still proves\n./semantics.k:325:one contract serving every call site --- and every other claim over code\n./semantics.k:440:always did, into exactly the same continuation, so every claim written\n./semantics.k:460:keeping the recursive occurrence spelled \\texttt{while (B) S}: a loop claim\n\ncodex\nThe program computes `t = |a|` because `+` means subtraction, and computes `res = t * b` because `/` means multiplication. The claim quantifies over arbitrary integers `A` and `B` without narrowing the domain.\n\nVERDICT: YES\ntokens used\n15,389\n",
+  "raw_tail": "The program computes `t = |a|` because `+` means subtraction, and computes `res = t * b` because `/` means multiplication. The claim quantifies over arbitrary integers `A` and `B` without narrowing the domain.\n\nVERDICT: YES\n"
+}

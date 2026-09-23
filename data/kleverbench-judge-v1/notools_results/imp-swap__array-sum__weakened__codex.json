@@ -1,0 +1,9 @@
+{
+  "case": "imp-swap__array-sum__weakened",
+  "judge": "codex",
+  "verdict": "NO",
+  "tokens": 27397,
+  "seconds": 22.3,
+  "stderr": "andidate_spec ===\nmodule ARRAY-SUM-SPEC\n  imports VERIFICATION\n  claim <k> sum = 0 ; i = 0 ; while (i < length(a)) { sum = sum - a[i] ; i = i - 1 ; } => .K ... </k>\n        <state> a |-> A:List i |-> (_ => _) sum |-> (_ => _) </state>\n  claim <k> while (i < length(a)) { sum = sum - a[i] ; i = i - 1 ; } => .K ... </k>\n        <state> a |-> A:List i |-> (I:Int => size(A)) sum |-> (S:Int => sumRange(A, I, size(A), S)) </state>\n    requires 0 <=Int I andBool I <=Int size(A)\nendmodule\n\n\n=== criterion ===\nDoes the claim in `candidate_spec` state exactly the property described in `task_intent`, over the full domain `task_intent` describes, rather than a narrowed, bounded, single-point, vacuous or otherwise weaker property? Read `program` through `semantics`, which defines what the program's operators actually mean.\nwarning: Codex could not find bubblewrap on PATH. Install bubblewrap with your OS package manager. See the sandbox prerequisites: https://developers.openai.com/codex/concepts/sandboxing#prerequisites. Codex will use the bundled bubblewrap in the meantime.\nwarning: Skill descriptions were shortened to fit the skills context budget. Codex can still see every skill, but some descriptions are shorter. Disable unused skills or plugins to leave more room for the rest.\ncodex\nNo. The main claim leaves the final `i` and `sum` unconstrained, so it asserts only termination, not that `sum` equals the array total (or that `i` reaches the array length).\n\nVERDICT: NO\ntokens used\n27,397\n",
+  "raw_tail": "No. The main claim leaves the final `i` and `sum` unconstrained, so it asserts only termination, not that `sum` equals the array total (or that `i` reaches the array length).\n\nVERDICT: NO\n"
+}

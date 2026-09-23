@@ -1,0 +1,12 @@
+{
+  "case": "imp__gcd-euclid__vacuous",
+  "judge": "codex",
+  "sample": 3,
+  "verdict": "NO",
+  "tokens": null,
+  "cost_usd": null,
+  "seconds": 19.9,
+  "returncode": 0,
+  "stderr": "write} an array with a closed-form value.  One more program-variable\ntoken, and one more array-valued fold.\n\n\\texttt{cubeRange(A, I, N)} is \\texttt{A} with index $j$ replaced by $j^3$ for\nevery $j$ in $[I, N)$, every other index untouched.  It is the recursive form of\nthe quantified property \\texttt{forall j :: I <= j < N ==> a[j] == j*j*j} --- a\nchange of form, nothing more --- and it folds exactly the way the loop it\nsummarises does, one index per step.  Same shape and the same in-bounds guard as\n\\texttt{setRange}: outside \\texttt{0 <= I < size(L)} no rule applies and the\nterm is stuck rather than bottom. */\n\n  syntax Id ::= \"c\" [token]\n\n  syntax List ::= cubeRange(List, Int, Int)       [function, total, no-evaluators]\n  rule cubeRange(L, I, N) => L                   requires I >=Int N  [simplification]\n  rule cubeRange(L, I, N) => cubeRange(L [ I <- I *Int I *Int I ], I +Int 1, N)\n    requires I <Int N andBool 0 <=Int I andBool I <Int size(L)      [simplification]\n\nendmodule\n\n--- spec.k ---\nmodule GCD-EUCLID-SPEC\n  imports VERIFICATION\n  claim <k> fun s ( p , q ) { y = p % q ; return q ; } x = a ; y = b ; while (! (y == 0)) { x = s(x, y) ; } => .K ... </k>\n        <funs> .Map => s |-> fun2(p, q, { y = p % q ; return q ; }) </funs>\n        <stack> .List </stack> <ret> 0 </ret>\n        <state> a |-> A:Int b |-> B:Int x |-> (_ => gcdSpec(A, B)) y |-> (_ => 0) </state>\n    requires A >Int 0 andBool B >Int 0\n     andBool A ==Int 1 andBool B ==Int 1\n  claim <k> while (! (y == 0)) { x = s(x, y) ; } => .K ... </k>\n        <funs> s |-> fun2(p, q, { y = p % q ; return q ; }) </funs>\n        <locals> L:Map </locals> <stack> St:List </stack> <ret> 0 </ret>\n        <state> a |-> _A:Int b |-> _B:Int x |-> (X:Int => gcdSpec(X, Y)) y |-> (Y:Int => 0) </state>\n    requires X >Int 0 andBool Y >=Int 0\nendmodule\n\ncodex\nThe first claim restricts the intended domain to `A == 1` and `B == 1`, so it does not establish correctness for all positive inputs.\n\nVERDICT: NO\ntokens used\n13,232\n",
+  "raw_tail": "The first claim restricts the intended domain to `A == 1` and `B == 1`, so it does not establish correctness for all positive inputs.\n\nVERDICT: NO\n"
+}

@@ -1,0 +1,45 @@
+No TYPESAFE_API_KEY or OPENROUTER_API_KEY set: using cached responses only. Add a key to experiments/ai_text_detection/.env to query Jev.
+Scoring 19 samples from .\data\ai-text-detection-v1\ablations\markdown-stripped with provider=typesafe model=jev-1.13.0...
+
+=== Samples ===
+human: 0   ai: 19   (dir: .\data\ai-text-detection-v1\ablations\markdown-stripped, provider: typesafe, model: jev-1.13.0)
+No human samples: false-positive rate, per-signal stats and the human breakdown cannot be computed.
+
+=== Per-signal mean (sd, n) by label ===
+human  ai_written=n/a(n/a,n=0)  tells=n/a(n/a,n=0)  staging=n/a(n/a,n=0)  rhythm=n/a(n/a,n=0)  inflation=n/a(n/a,n=0)  formatting=n/a(n/a,n=0)  chat_residue=n/a(n/a,n=0)  specifics=n/a(n/a,n=0)
+ai     ai_written=0.871(0.028,n=19)  tells=1.461(0.641,n=19)  staging=0.379(0.260,n=19)  rhythm=0.137(0.081,n=19)  inflation=0.348(0.314,n=19)  formatting=0.156(0.166,n=19)  chat_residue=0.129(0.272,n=19)  specifics=0.049(0.037,n=19)
+
+=== ROC AUC (ai = positive class) ===
+overall (final probability): n/a
+  ai_written   n/a
+  tells        n/a
+  staging      n/a
+  rhythm       n/a
+  inflation    n/a
+  formatting   n/a
+  chat_residue n/a
+  specifics    n/a
+
+=== Confusion matrix (verdict bands) ===
+human  likely_human=0  unclear=0  likely_ai=0  very_likely_ai=0  too_short=0
+ai     likely_human=0  unclear=3  likely_ai=3  very_likely_ai=13  too_short=0
+
+=== The key numbers ===
+Human false-positive rate (likely_ai or above): n/a (no human samples)
+AI false-negative rate (read as likely_human): 0.0% (19 ai samples)
+
+=== By AI prompt style (ai/SOURCES.tsv; unlisted = stereotyped) ===
+stereotyped        n=19   meanP=0.883   flagged(likely_ai+)=84.2%
+
+=== Unclear (3) ===
+  [ai] matched-stackexchange-cooking-84325.txt  p=0.578  signals={"ai_written":0.83,"tells":0.56,"staging":0.17,"rhythm":0.09,"inflation":0.07,"formatting":0.07,"chat_residue":0.07,"specifics":0.03}
+  [ai] matched-stackexchange-diy-20876.txt  p=0.55  signals={"ai_written":0.85,"tells":0.57,"staging":0.07,"rhythm":0.09,"inflation":0.08,"formatting":0.09,"chat_residue":0.03,"specifics":0.03}
+  [ai] matched-wikipedia-tuberculosis.txt  p=0.651  signals={"ai_written":0.88,"tells":0.62,"staging":0.09,"rhythm":0.08,"inflation":0.07,"formatting":0.07,"chat_residue":0.02,"specifics":0.02}
+
+=== Requests and cost (this run) ===
+requests: 0   cache hits: 19   dropped chunks: 0
+input tokens: 0   estimated cost: $0.000000 (at $0.042/million; cache hits are free)
+
+Per-sample results written to .\reports\ai-text-detection-v1\ablation-markdown-stripped\results.csv
+Per-chunk results written to .\reports\ai-text-detection-v1\ablation-markdown-stripped\chunks.csv
+Full report written to .\reports\ai-text-detection-v1\ablation-markdown-stripped\report.json

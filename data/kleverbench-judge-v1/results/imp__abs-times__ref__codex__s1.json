@@ -1,0 +1,12 @@
+{
+  "case": "imp__abs-times__ref",
+  "judge": "codex",
+  "sample": 1,
+  "verdict": "YES",
+  "tokens": null,
+  "cost_usd": null,
+  "seconds": 105.9,
+  "returncode": 0,
+  "stderr": ":Stmt S2:Stmt) => hasBreak(S1) orBool hasBreak(S2)\n  rule hasBreak(if (_) B1:Block else B2:Block) => hasBreak(B1) orBool hasBreak(B2)\n  rule hasBreak(_) => false                                      [owise]\n\n  rule while (B) S => if (B) {S while (B) S} else {}\n    requires notBool hasBreak(S)                                 [label(while)]\n  rule <k> while (B) S => if (B) {S while (B) S} else {} ~> #loop ...</k>\n    requires hasBreak(S)                                   [label(while_break)]\n\n  rule <k> break ; ~> (_:Stmt => .K) ...</k>                [label(break_skip)]\n  rule <k> break ; ~> #loop => .K ...</k>                        [label(break)]\n  rule <k> #loop => .K ...</k>                               [label(loop_exit)]\n  rule <k> return _:Int ; ~> (#loop => .K) ...</k>    [label(return_skip_loop)]\n\n/*@ \\subsection{Programs}\nThe semantics of an IMP program is that its body statement is executed\nin a state initializing all its global variables to 0.  Since \\K's\nsyntactic lists are internally interpreted as cons-lists (i.e., lists\nconstructed with a head element followed by a tail list), we need to\ndistinguish two cases, one when the list has at least one element and\nanother when the list is empty.  In the first case we initialize the\nvariable to 0 in the state, but only when the variable is not already\ndeclared (all variables are global and distinct in IMP).  We prefer to\nmake the second rule structural, thinking of dissolving the residual\nempty \\texttt{int;} declaration as a structural cleanup rather than as\na computational step. */\n\n  rule <k> int (X,Xs => Xs);_ </k> <state> Rho:Map (.Map => X|->0) </state>\n    requires notBool (X in keys(Rho))\n  rule int .Ids; S => S\n\nendmodule\n\ncodex\nThe claim covers arbitrary integer values of `a` and `b`, leaves prior `t` and `res` unconstrained, and requires the final values to be `|a|` and `|a| * b`. The semantics confirms `<`, subtraction, and multiplication have the intended meanings.\n\nVERDICT: YES\ntokens used\n30,835\n",
+  "raw_tail": "The claim covers arbitrary integer values of `a` and `b`, leaves prior `t` and `res` unconstrained, and requires the final values to be `|a|` and `|a| * b`. The semantics confirms `<`, subtraction, and multiplication have the intended meanings.\n\nVERDICT: YES\n"
+}

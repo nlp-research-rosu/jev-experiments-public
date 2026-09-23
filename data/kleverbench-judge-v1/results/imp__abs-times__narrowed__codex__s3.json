@@ -1,0 +1,12 @@
+{
+  "case": "imp__abs-times__narrowed",
+  "judge": "codex",
+  "sample": 3,
+  "verdict": "NO",
+  "tokens": null,
+  "cost_usd": null,
+  "seconds": 21.3,
+  "returncode": 0,
+  "stderr": "ummaries a claim folds with, are not semantics: they live in the companion\nsemantics.k:236:    requires 0 <=Int I andBool I <Int size(L)                    [concrete]\nsemantics.k:239:    requires 0 <=Int I andBool I <Int size(L)                    [label(array_lookup)]\nsemantics.k:246:    requires 0 <=Int I andBool I <Int size(L)                    [label(array_setting)]\nsemantics.k:265:;} is therefore how an IMP program builds the state a claim writes as\nsemantics.k:296:Dafny uses for methods.  It is what lets a claim about a call rewrite to\nsemantics.k:297:\\texttt{.K} like every other claim here: a claim whose right-hand side is a\nsemantics.k:305:\\textsf{k} cell of the frame a claim's \\texttt{...} stands for, and the\nsemantics.k:306:claim's own destination would then match the callee's body.  A pending\nsemantics.k:314:creates it.  The side condition is on \\textsf{state}, which a claim always\nsemantics.k:315:pins, never on \\textsf{locals}, which a claim mentioning no function leaves\nsemantics.k:317:always were, and every claim written before functions existed still proves\nsemantics.k:325:one contract serving every call site --- and every other claim over code\nsemantics.k:338:    requires notBool (X in keys(S))                              [label(local_lookup)]\nsemantics.k:341:    requires notBool (X in keys(S))                              [label(local_setting)]\nsemantics.k:440:always did, into exactly the same continuation, so every claim written\nsemantics.k:460:keeping the recursive occurrence spelled \\texttt{while (B) S}: a loop claim\nsemantics.k:475:    requires notBool hasBreak(S)                                 [label(while)]\nsemantics.k:477:    requires hasBreak(S)                                   [label(while_break)]\nsemantics.k:498:    requires notBool (X in keys(Rho))\n\ncodex\nThe claim is restricted to `1 \u2264 A < 100`, excluding zero, negative values, and all values \u2265100. The intended property covers all integer `a` and `b`.\n\nVERDICT: NO\ntokens used\n13,609\n",
+  "raw_tail": "The claim is restricted to `1 \u2264 A < 100`, excluding zero, negative values, and all values \u2265100. The intended property covers all integer `a` and `b`.\n\nVERDICT: NO\n"
+}

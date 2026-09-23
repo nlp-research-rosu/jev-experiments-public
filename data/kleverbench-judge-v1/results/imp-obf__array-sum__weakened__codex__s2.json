@@ -1,0 +1,12 @@
+{
+  "case": "imp-obf__array-sum__weakened",
+  "judge": "codex",
+  "sample": 2,
+  "verdict": "NO",
+  "tokens": null,
+  "cost_usd": null,
+  "seconds": 62.6,
+  "returncode": 0,
+  "stderr": "> 1                             requires N ==Int 1    [simplification]\nverification.k:181:  rule tribo(N) => 1                             requires N ==Int 2    [simplification]\nverification.k:183:    requires N >Int 2                                                 [simplification]\nverification.k:190:branches leave it at its initial \\texttt{2} --- so its main claim says\nverification.k:198:  rule maxInt(A, B) => B                         requires A <=Int B    [simplification]\nverification.k:199:  rule maxInt(A, B) => A                         requires B <=Int A    [simplification]\nverification.k:229:    requires I <=Int 1 andBool 1 <=Int size(L)                      [simplification]\nverification.k:231:    requires I >Int 1 andBool I <=Int size(L)                       [simplification]\nverification.k:234:  rule peekSum(_, I) => 0                        requires I <=Int 0 [simplification]\nverification.k:236:    requires I >Int 0 andBool I <=Int size(L)\nverification.k:239:    requires I >Int 0 andBool I <=Int size(L)\nverification.k:260:reaches the term that needs it and a main claim cannot even discharge its\nverification.k:261:loop claim's \\texttt{0 <=Int I andBool I <=Int size(A) /Int 2}.  The rule\nverification.k:268:    requires M >Int 0                                              [simplification]\nverification.k:271:  rule swapEnds(L, I, N) => L                    requires I >=Int N  [simplification]\nverification.k:275:    requires I <Int N andBool 0 <=Int I andBool I <Int size(L)      [simplification]\nverification.k:294:  rule cubeRange(L, I, N) => L                   requires I >=Int N  [simplification]\nverification.k:296:    requires I <Int N andBool 0 <=Int I andBool I <Int size(L)      [simplification]\n\ncodex\nThe loop invariant is correct, but the main claim only proves termination: its wildcard state updates do not constrain the final `sum` to equal the array\u2019s element sum. Thus the intended result property is not fully stated.\n\nVERDICT: NO\ntokens used\n18,078\n",
+  "raw_tail": "The loop invariant is correct, but the main claim only proves termination: its wildcard state updates do not constrain the final `sum` to equal the array\u2019s element sum. Thus the intended result property is not fully stated.\n\nVERDICT: NO\n"
+}

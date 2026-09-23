@@ -1,0 +1,22 @@
+[Warning] Compiler: Variable 'A' defined but not used. Prefix variable name
+with underscore if this is intentional.
+	Source(/data/tasks/8abcaf2f-fd33-4d71-adf3-21f34312e33b/input/spec.k)
+	Location(4,23,4,24)
+	4 |	        <state> a |-> A:Int b |-> B:Int t |-> (_ => _) res |-> (_ => _)
+</state>
+	  .	                      ^
+[Warning] Compiler: Variable 'B' defined but not used. Prefix variable name
+with underscore if this is intentional.
+	Source(/data/tasks/8abcaf2f-fd33-4d71-adf3-21f34312e33b/input/spec.k)
+	Location(4,35,4,36)
+	4 |	        <state> a |-> A:Int b |-> B:Int t |-> (_ => _) res |-> (_ => _)
+</state>
+	  .	                                  ^
+[Error] Compiler: Found variable _ on right hand side of rule, not bound on
+left hand side. Did you mean "?_"?
+	Source(/data/tasks/8abcaf2f-fd33-4d71-adf3-21f34312e33b/input/spec.k)
+	Location(4,53,4,54)
+	4 |	        <state> a |-> A:Int b |-> B:Int t |-> (_ => _) res |-> (_ => _)
+</state>
+	  .	                                                    ^
+[Error] Compiler: Had 1 structural errors.

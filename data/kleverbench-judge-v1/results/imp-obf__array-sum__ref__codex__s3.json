@@ -1,0 +1,12 @@
+{
+  "case": "imp-obf__array-sum__ref",
+  "judge": "codex",
+  "sample": 3,
+  "verdict": "YES",
+  "tokens": null,
+  "cost_usd": null,
+  "seconds": 92.2,
+  "returncode": 0,
+  "stderr": " the variable is not already\ndeclared (all variables are global and distinct in IMP).  We prefer to\nmake the second rule structural, thinking of dissolving the residual\nempty \\texttt{int;} declaration as a structural cleanup rather than as\na computational step. */\n\n  rule <k> int (X,Xs => Xs);_ </k> <state> Rho:Map (.Map => X|->0) </state>\n    requires notBool (X in keys(Rho))\n  rule int .Ids; S => S\n\nendmodule\n\nexec\n/bin/bash -lc \"ls -la && wc -l TASK.md program.imp semantics.k verification.k spec.k && sed -n '1,100p' program.imp | od -An -tx1c\" in /tmp/claude-0/-root/59cb9ff9-528b-4335-9aa4-712256bbc9fc/scratchpad/jev-judge-eval/suite/imp-obf__array-sum__ref\n succeeded in 0ms:\ntotal 72\ndrwxr-xr-x  3 root root  4096 Sep 22 13:06 .\ndrwxr-xr-x 47 root root  4096 Sep 22 12:59 ..\ndrwxr-xr-x  3 root root  4096 Sep 22 13:06 .kprover\n-rw-r--r--  1 root root   185 Sep 22 12:59 TASK.md\n-rw-r--r--  1 root root    93 Sep 22 12:59 program.imp\n-rw-r--r--  1 root root 26227 Sep 22 12:59 semantics.k\n-rw-r--r--  1 root root   528 Sep 22 12:59 spec.k\n-rw-r--r--  1 root root 17260 Sep 22 12:59 verification.k\n    5 TASK.md\n    1 program.imp\n  501 semantics.k\n  298 verification.k\n    8 spec.k\n  813 total\n  73  75  6d  20  f0  90  94  b5  20  30  20  3b  20  69  20  f0\n   s   u   m     360 220 224 265       0       ;       i     360\n  90  94  b5  20  30  20  3b  20  f0  90  94  be  20  28  69  20\n 220 224 265       0       ;     360 220 224 276       (   i    \n  f0  90  94  b6  20  f0  90  94  bf  28  61  29  29  20  7b  20\n 360 220 224 266     360 220 224 277   (   a   )   )       {    \n  73  75  6d  20  f0  90  94  b5  20  73  75  6d  20  f0  90  94\n   s   u   m     360 220 224 265       s   u   m     360 220 224\n  b0  20  61  5b  69  5d  20  3b  20  69  20  f0  90  94  b5  20\n 260       a   [   i   ]       ;       i     360 220 224 265    \n  69  20  f0  90  94  b0  20  31  20  3b  20  7d  0a\n   i     360 220 224 260       1       ;       }  \\n\n\ncodex\nVERDICT: YES\ntokens used\n28,789\n",
+  "raw_tail": "VERDICT: YES\n"
+}

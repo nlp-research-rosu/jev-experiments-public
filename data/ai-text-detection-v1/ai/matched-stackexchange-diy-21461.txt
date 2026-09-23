@@ -1,0 +1,15 @@
+Great question! Washers might look like a simple, almost trivial piece of hardware, but they actually serve several distinct engineering purposes, and figuring out which one applies depends on the situation. Here's a rundown of the most common uses:
+
+**1. Preventing loosening (lock washers)**
+Some washers are specifically designed to resist vibration-induced loosening. These include split-ring, star, and wave designs, which create spring tension or biting edges that grip the mating surface and help keep a nut or bolt from backing out over time. They're typically placed under whichever component is more likely to rotate loose, often the nut.
+
+**2. Protecting surfaces**
+A plain flat washer can protect the material being fastened from damage caused by the rotating action of a nut or bolt head during tightening. This matters most with softer materials like aluminum, brass, or plastic, where direct contact with a turning fastener could gouge or mar the surface.
+
+**3. Distributing load**
+When fastening thin or soft material, a wider washer helps spread the clamping force of the bolt across a larger area, reducing the risk of the material deforming, cracking, or having the fastener pull straight through.
+
+**4. Preventing washer deformation**
+In some high-load situations, a large washer might itself start to dish or "mushroom" under pressure. In these cases, a second, smaller washer is sometimes added on top of the larger one to help distribute force more evenly and prevent that kind of warping.
+
+So really, there's no single universal answer, the right washer (or combination of washers) depends entirely on what you're trying to achieve: preventing loosening, protecting a surface, spreading load, or some combination of the three!

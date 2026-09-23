@@ -1,0 +1,1 @@
+sum = 0 ; i = 0 ; while (i < length(a)) { sum = sum - a[i] ; i = i - 1 ; }

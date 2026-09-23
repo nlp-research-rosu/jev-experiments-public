@@ -1,0 +1,45 @@
+file	source_url	revision_or_snapshot_date	license	word_count
+wikipedia-bologna.txt	https://en.wikipedia.org/wiki/Bologna (revision 933215454)	2019-12-30	CC BY-SA 3.0/4.0	278
+wikipedia-ganges.txt	https://en.wikipedia.org/wiki/Ganges (revision 933228615)	2019-12-30	CC BY-SA 3.0/4.0	369
+wikipedia-marie-curie.txt	https://en.wikipedia.org/wiki/Marie_Curie (revision 931687924)	2019-12-20	CC BY-SA 3.0/4.0	368
+wikipedia-siemens.txt	https://en.wikipedia.org/wiki/Siemens (revision 931362324)	2019-12-18	CC BY-SA 3.0/4.0	377
+wikipedia-glastonbury-festival.txt	https://en.wikipedia.org/wiki/Glastonbury_Festival (revision 933220152)	2019-12-30	CC BY-SA 3.0/4.0	363
+wikipedia-poutine.txt	https://en.wikipedia.org/wiki/Poutine (revision 931438379)	2019-12-18	CC BY-SA 3.0/4.0	330
+wikipedia-office-for-national-statistics.txt	https://en.wikipedia.org/wiki/Office_for_National_Statistics (revision 929519631)	2019-12-06	CC BY-SA 3.0/4.0	336
+wikipedia-golden-gate-bridge.txt	https://en.wikipedia.org/wiki/Golden_Gate_Bridge (revision 933223197)	2019-12-30	CC BY-SA 3.0/4.0	311
+wikipedia-cricket.txt	https://en.wikipedia.org/wiki/Cricket (revision 931177454)	2019-12-17	CC BY-SA 3.0/4.0	260
+wikipedia-tuberculosis.txt	https://en.wikipedia.org/wiki/Tuberculosis (revision 931563937)	2019-12-19	CC BY-SA 3.0/4.0	372
+wikipedia-radiohead.txt	https://en.wikipedia.org/wiki/Radiohead (revision 932468186)	2019-12-26	CC BY-SA 3.0/4.0	340
+wikipedia-fall-of-the-berlin-wall.txt	https://en.wikipedia.org/wiki/Fall_of_the_Berlin_Wall (revision 933237826)	2019-12-30	CC BY-SA 3.0/4.0	399
+wikipedia-kyoto.txt	https://en.wikipedia.org/wiki/Kyoto (revision 929224665)	2019-12-04	CC BY-SA 3.0/4.0	356
+wikipedia-mount-kilimanjaro.txt	https://en.wikipedia.org/wiki/Mount_Kilimanjaro (revision 932933455)	2019-12-29	CC BY-SA 3.0/4.0	266
+wikipedia-nikola-tesla.txt	https://en.wikipedia.org/wiki/Nikola_Tesla (revision 933239617)	2019-12-30	CC BY-SA 3.0/4.0	328
+stackexchange-cooking-84325.txt	https://cooking.stackexchange.com/a/84325	2017-09-12	CC BY-SA (per Stack Exchange ToS)	383
+stackexchange-cooking-81043.txt	https://cooking.stackexchange.com/a/81043	2017-04-18	CC BY-SA (per Stack Exchange ToS)	248
+stackexchange-cooking-22409.txt	https://cooking.stackexchange.com/a/22409	2012-03-19	CC BY-SA (per Stack Exchange ToS)	273
+stackexchange-travel-20208.txt	https://travel.stackexchange.com/a/20208	2013-09-02	CC BY-SA (per Stack Exchange ToS)	320
+stackexchange-travel-38180.txt	https://travel.stackexchange.com/a/38180	2014-11-03	CC BY-SA (per Stack Exchange ToS)	229
+stackexchange-travel-149371.txt	https://travel.stackexchange.com/a/149371	2019-11-06	CC BY-SA (per Stack Exchange ToS)	365
+stackexchange-english-395385.txt	https://english.stackexchange.com/a/395385	2017-06-23	CC BY-SA (per Stack Exchange ToS)	382
+stackexchange-english-342281.txt	https://english.stackexchange.com/a/342281	2016-08-11	CC BY-SA (per Stack Exchange ToS)	360
+stackexchange-english-329192.txt	https://english.stackexchange.com/a/329192	2016-06-01	CC BY-SA (per Stack Exchange ToS)	384
+stackexchange-workplace-124717.txt	https://workplace.stackexchange.com/a/124717	2018-12-14	CC BY-SA (per Stack Exchange ToS)	198
+stackexchange-workplace-145712.txt	https://workplace.stackexchange.com/a/145712	2019-09-30	CC BY-SA (per Stack Exchange ToS)	347
+stackexchange-workplace-93717.txt	https://workplace.stackexchange.com/a/93717	2017-06-27	CC BY-SA (per Stack Exchange ToS)	365
+stackexchange-diy-20876.txt	https://diy.stackexchange.com/a/20876	2012-11-20	CC BY-SA (per Stack Exchange ToS)	213
+stackexchange-diy-71591.txt	https://diy.stackexchange.com/a/71591	2015-08-10	CC BY-SA (per Stack Exchange ToS)	190
+stackexchange-diy-21461.txt	https://diy.stackexchange.com/a/21461	2012-12-12	CC BY-SA (per Stack Exchange ToS)	309
+stackexchange-academia-92903.txt	https://academia.stackexchange.com/a/92903	2017-07-09	CC BY-SA (per Stack Exchange ToS)	326
+stackexchange-academia-2221.txt	https://academia.stackexchange.com/a/2221	2012-06-29	CC BY-SA (per Stack Exchange ToS)	308
+stackexchange-academia-77443.txt	https://academia.stackexchange.com/a/77443	2016-09-27	CC BY-SA (per Stack Exchange ToS)	168
+stackexchange-parenting-19025.txt	https://parenting.stackexchange.com/a/19025	2015-03-13	CC BY-SA (per Stack Exchange ToS)	329
+stackexchange-parenting-32424.txt	https://parenting.stackexchange.com/a/32424	2017-11-23	CC BY-SA (per Stack Exchange ToS)	320
+gutenberg-essays-second-series-1.txt	https://www.gutenberg.org/ebooks/2945	public domain (pre-1929 publication)	Public Domain	306
+gutenberg-essays-second-series-2.txt	https://www.gutenberg.org/ebooks/2945	public domain (pre-1929 publication)	Public Domain	332
+gutenberg-essays-first-series-1.txt	https://www.gutenberg.org/ebooks/2944	public domain (pre-1929 publication)	Public Domain	391
+gutenberg-essays-first-series-2.txt	https://www.gutenberg.org/ebooks/2944	public domain (pre-1929 publication)	Public Domain	305
+gutenberg-essays-1.txt	https://www.gutenberg.org/ebooks/575	public domain (pre-1929 publication)	Public Domain	338
+gutenberg-essays-2.txt	https://www.gutenberg.org/ebooks/575	public domain (pre-1929 publication)	Public Domain	358
+gutenberg-walking-1.txt	https://www.gutenberg.org/ebooks/1022	public domain (pre-1929 publication)	Public Domain	185
+gutenberg-walking-2.txt	https://www.gutenberg.org/ebooks/1022	public domain (pre-1929 publication)	Public Domain	285
+govweb-grca-learn-nature-200710mtlionkit-htm.txt	https://www.nps.gov/grca/learn/nature/200710mtlionkit.htm	2019 (Wayback snapshot found via CDX search of nps.gov/grca/learn/nature/*, 2019-01-01 to 2019-12-31; exact capture day not re-verified after archive.org went temporarily offline mid-run; trailing link list/address boilerplate manually trimmed)	US Government Work (public domain)	308

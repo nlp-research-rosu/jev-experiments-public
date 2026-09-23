@@ -1,0 +1,317 @@
+[
+  {
+    "case": "imp__abs-times__ref",
+    "lane": "imp",
+    "problem": "abs-times",
+    "variant": "ref",
+    "label": "GOOD"
+  },
+  {
+    "case": "imp__abs-times__equiv",
+    "lane": "imp",
+    "problem": "abs-times",
+    "variant": "equiv",
+    "label": "GOOD"
+  },
+  {
+    "case": "imp__abs-times__vacuous",
+    "lane": "imp",
+    "problem": "abs-times",
+    "variant": "vacuous",
+    "label": "BAD"
+  },
+  {
+    "case": "imp__abs-times__weakened",
+    "lane": "imp",
+    "problem": "abs-times",
+    "variant": "weakened",
+    "label": "BAD"
+  },
+  {
+    "case": "imp__abs-times__narrowed",
+    "lane": "imp",
+    "problem": "abs-times",
+    "variant": "narrowed",
+    "label": "BAD"
+  },
+  {
+    "case": "imp__array-sum__ref",
+    "lane": "imp",
+    "problem": "array-sum",
+    "variant": "ref",
+    "label": "GOOD"
+  },
+  {
+    "case": "imp__array-sum__equiv",
+    "lane": "imp",
+    "problem": "array-sum",
+    "variant": "equiv",
+    "label": "GOOD"
+  },
+  {
+    "case": "imp__array-sum__vacuous",
+    "lane": "imp",
+    "problem": "array-sum",
+    "variant": "vacuous",
+    "label": "BAD"
+  },
+  {
+    "case": "imp__array-sum__weakened",
+    "lane": "imp",
+    "problem": "array-sum",
+    "variant": "weakened",
+    "label": "BAD"
+  },
+  {
+    "case": "imp__array-sum__narrowed",
+    "lane": "imp",
+    "problem": "array-sum",
+    "variant": "narrowed",
+    "label": "BAD"
+  },
+  {
+    "case": "imp__gcd-euclid__ref",
+    "lane": "imp",
+    "problem": "gcd-euclid",
+    "variant": "ref",
+    "label": "GOOD"
+  },
+  {
+    "case": "imp__gcd-euclid__equiv",
+    "lane": "imp",
+    "problem": "gcd-euclid",
+    "variant": "equiv",
+    "label": "GOOD"
+  },
+  {
+    "case": "imp__gcd-euclid__vacuous",
+    "lane": "imp",
+    "problem": "gcd-euclid",
+    "variant": "vacuous",
+    "label": "BAD"
+  },
+  {
+    "case": "imp__gcd-euclid__weakened",
+    "lane": "imp",
+    "problem": "gcd-euclid",
+    "variant": "weakened",
+    "label": "BAD"
+  },
+  {
+    "case": "imp__gcd-euclid__narrowed",
+    "lane": "imp",
+    "problem": "gcd-euclid",
+    "variant": "narrowed",
+    "label": "BAD"
+  },
+  {
+    "case": "imp-obf__abs-times__ref",
+    "lane": "imp-obf",
+    "problem": "abs-times",
+    "variant": "ref",
+    "label": "GOOD"
+  },
+  {
+    "case": "imp-obf__abs-times__equiv",
+    "lane": "imp-obf",
+    "problem": "abs-times",
+    "variant": "equiv",
+    "label": "GOOD"
+  },
+  {
+    "case": "imp-obf__abs-times__vacuous",
+    "lane": "imp-obf",
+    "problem": "abs-times",
+    "variant": "vacuous",
+    "label": "BAD"
+  },
+  {
+    "case": "imp-obf__abs-times__weakened",
+    "lane": "imp-obf",
+    "problem": "abs-times",
+    "variant": "weakened",
+    "label": "BAD"
+  },
+  {
+    "case": "imp-obf__abs-times__narrowed",
+    "lane": "imp-obf",
+    "problem": "abs-times",
+    "variant": "narrowed",
+    "label": "BAD"
+  },
+  {
+    "case": "imp-obf__array-sum__ref",
+    "lane": "imp-obf",
+    "problem": "array-sum",
+    "variant": "ref",
+    "label": "GOOD"
+  },
+  {
+    "case": "imp-obf__array-sum__equiv",
+    "lane": "imp-obf",
+    "problem": "array-sum",
+    "variant": "equiv",
+    "label": "GOOD"
+  },
+  {
+    "case": "imp-obf__array-sum__vacuous",
+    "lane": "imp-obf",
+    "problem": "array-sum",
+    "variant": "vacuous",
+    "label": "BAD"
+  },
+  {
+    "case": "imp-obf__array-sum__weakened",
+    "lane": "imp-obf",
+    "problem": "array-sum",
+    "variant": "weakened",
+    "label": "BAD"
+  },
+  {
+    "case": "imp-obf__array-sum__narrowed",
+    "lane": "imp-obf",
+    "problem": "array-sum",
+    "variant": "narrowed",
+    "label": "BAD"
+  },
+  {
+    "case": "imp-obf__gcd-euclid__ref",
+    "lane": "imp-obf",
+    "problem": "gcd-euclid",
+    "variant": "ref",
+    "label": "GOOD"
+  },
+  {
+    "case": "imp-obf__gcd-euclid__equiv",
+    "lane": "imp-obf",
+    "problem": "gcd-euclid",
+    "variant": "equiv",
+    "label": "GOOD"
+  },
+  {
+    "case": "imp-obf__gcd-euclid__vacuous",
+    "lane": "imp-obf",
+    "problem": "gcd-euclid",
+    "variant": "vacuous",
+    "label": "BAD"
+  },
+  {
+    "case": "imp-obf__gcd-euclid__weakened",
+    "lane": "imp-obf",
+    "problem": "gcd-euclid",
+    "variant": "weakened",
+    "label": "BAD"
+  },
+  {
+    "case": "imp-obf__gcd-euclid__narrowed",
+    "lane": "imp-obf",
+    "problem": "gcd-euclid",
+    "variant": "narrowed",
+    "label": "BAD"
+  },
+  {
+    "case": "imp-swap__abs-times__ref",
+    "lane": "imp-swap",
+    "problem": "abs-times",
+    "variant": "ref",
+    "label": "GOOD"
+  },
+  {
+    "case": "imp-swap__abs-times__equiv",
+    "lane": "imp-swap",
+    "problem": "abs-times",
+    "variant": "equiv",
+    "label": "GOOD"
+  },
+  {
+    "case": "imp-swap__abs-times__vacuous",
+    "lane": "imp-swap",
+    "problem": "abs-times",
+    "variant": "vacuous",
+    "label": "BAD"
+  },
+  {
+    "case": "imp-swap__abs-times__weakened",
+    "lane": "imp-swap",
+    "problem": "abs-times",
+    "variant": "weakened",
+    "label": "BAD"
+  },
+  {
+    "case": "imp-swap__abs-times__narrowed",
+    "lane": "imp-swap",
+    "problem": "abs-times",
+    "variant": "narrowed",
+    "label": "BAD"
+  },
+  {
+    "case": "imp-swap__array-sum__ref",
+    "lane": "imp-swap",
+    "problem": "array-sum",
+    "variant": "ref",
+    "label": "GOOD"
+  },
+  {
+    "case": "imp-swap__array-sum__equiv",
+    "lane": "imp-swap",
+    "problem": "array-sum",
+    "variant": "equiv",
+    "label": "GOOD"
+  },
+  {
+    "case": "imp-swap__array-sum__vacuous",
+    "lane": "imp-swap",
+    "problem": "array-sum",
+    "variant": "vacuous",
+    "label": "BAD"
+  },
+  {
+    "case": "imp-swap__array-sum__weakened",
+    "lane": "imp-swap",
+    "problem": "array-sum",
+    "variant": "weakened",
+    "label": "BAD"
+  },
+  {
+    "case": "imp-swap__array-sum__narrowed",
+    "lane": "imp-swap",
+    "problem": "array-sum",
+    "variant": "narrowed",
+    "label": "BAD"
+  },
+  {
+    "case": "imp-swap__gcd-euclid__ref",
+    "lane": "imp-swap",
+    "problem": "gcd-euclid",
+    "variant": "ref",
+    "label": "GOOD"
+  },
+  {
+    "case": "imp-swap__gcd-euclid__equiv",
+    "lane": "imp-swap",
+    "problem": "gcd-euclid",
+    "variant": "equiv",
+    "label": "GOOD"
+  },
+  {
+    "case": "imp-swap__gcd-euclid__vacuous",
+    "lane": "imp-swap",
+    "problem": "gcd-euclid",
+    "variant": "vacuous",
+    "label": "BAD"
+  },
+  {
+    "case": "imp-swap__gcd-euclid__weakened",
+    "lane": "imp-swap",
+    "problem": "gcd-euclid",
+    "variant": "weakened",
+    "label": "BAD"
+  },
+  {
+    "case": "imp-swap__gcd-euclid__narrowed",
+    "lane": "imp-swap",
+    "problem": "gcd-euclid",
+    "variant": "narrowed",
+    "label": "BAD"
+  }
+]

@@ -1,0 +1,22 @@
+Error processing line 4 of /usr/local/lib/python3.12/dist-packages/_cuda_bindings_redirector.pth:
+
+  Traceback (most recent call last):
+    File "<frozen site>", line 201, in addpackage
+    File "<string>", line 1, in <module>
+    File "/usr/local/lib/python3.12/dist-packages/_cuda_bindings_redirector.py", line 9, in <module>
+      import cuda
+  ModuleNotFoundError: No module named 'cuda'
+
+Remainder of file ignored
+90 invocations, 88 to run
+  10/88 last=claude:YES
+  20/88 last=claude:YES
+  30/88 last=claude:YES
+  40/88 last=claude:NO
+  50/88 last=claude:NO
+  60/88 last=codex:YES
+  70/88 last=claude:NO
+  80/88 last=claude:NO
+  88/88 last=claude:NO
+done in 8.6 min -> /tmp/claude-0/-root/59cb9ff9-528b-4335-9aa4-712256bbc9fc/scratchpad/jev-judge-eval/notools_results
+fixed CLI overhead (trivial prompt): {'claude': 41650, 'codex': 640}

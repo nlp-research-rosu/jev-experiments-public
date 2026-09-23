@@ -1,0 +1,12 @@
+{
+  "case": "imp-obf__gcd-euclid__ref",
+  "judge": "codex",
+  "sample": 3,
+  "verdict": "YES",
+  "tokens": null,
+  "cost_usd": null,
+  "seconds": 77.9,
+  "returncode": 0,
+  "stderr": " \")\" | \"#done\"\n\n  rule <k> \ud801\udd40 F:Id ( X:Id ) B:Block => .K ...</k>\n       <funs> M => M [ F <- fun1(X, B) ] </funs>                  [label(fun_decl_1)]\n  rule <k> \ud801\udd40 F:Id ( X:Id , Y:Id ) B:Block => .K ...</k>\n       <funs> M => M [ F <- fun2(X, Y, B) ] </funs>               [label(fun_decl_2)]\n\n  rule <k> X:Id => I ...</k> <locals>... X |-> I ...</locals> <state> S </state>\n    requires notBool (X in keys(S))                              [label(local_lookup)]\n  rule <k> X:Id \ud801\udd35 I:Int; => .K ...</k>\n       <locals> L => L [ X <- I ] </locals> <state> S </state>\n    requires notBool (X in keys(S))                              [label(local_setting)]\n\n  rule <k> Z:Id \ud801\udd35 F:Id ( V:Int ) ; => invoke(F, V) ~> #store(Z) ...</k>\n                                                                  [label(call_1)]\n  rule <k> Z:Id \ud801\udd35 F:Id ( V1:Int , V2:Int ) ; => invoke(F, V1, V2) ~> #store(Z) ...</k>\n                                                                  [label(call_2)]\n\n  rule <k> invoke(F:Id, V:Int) => B ~> #done ...</k>\n       <funs>... F |-> fun1(P, B) ...</funs>\n       <locals> L => P |-> V </locals>\n       <stack> .List => ListItem(L) ... </stack>                  [label(enter_1)]\n  rule <k> invoke(F:Id, V1:Int, V2:Int) => B ~> #done ...</k>\n       <funs>... F |-> fun2(P, Q, B) ...</funs>\n       <locals> L => P |-> V1 Q |-> V2 </locals>\n       <stack> .List => ListItem(L) ... </stack>                  [label(enter_2)]\n\n  rule <k> \ud801\udd41 _:Int ; ~> (_:Stmt => .K) ...</k>               [label(return_skip)]\n  rule <k> \ud801\udd41 V:Int ; ~> #done => .K ...</k>\n       <ret> _ => V </ret>\n       <locals> _ => L </locals>\n       <stack> ListItem(L) => .List ... </stack>                  [label(return)]\n\n  rule <k> #store(Z:Id) => Z \ud801\udd35 V ; ...</k> <ret> V => 0 </ret>    [label(store)]\n\n/*@ \\subsection{Boolean expressions}\n\ncodex\nThe claim correctly models the obfuscated operators and covers all positive inputs, with the loop postcondition matching `gcdSpec`.\n\nVERDICT: YES\ntokens used\n25,364\n",
+  "raw_tail": "The claim correctly models the obfuscated operators and covers all positive inputs, with the loop postcondition matching `gcdSpec`.\n\nVERDICT: YES\n"
+}

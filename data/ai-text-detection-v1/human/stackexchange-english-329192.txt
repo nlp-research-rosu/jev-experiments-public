@@ -1,0 +1,13 @@
+The PRICE vowel that we hear in the word wise, /waɪz/, has a systematic relationship with the KIT vowel which we hear in the word wizard, /'wɪzəd/. As we add syllables to the base of a word in English, we tend to reduce the length of the vowel in the base. This is so that we can accommodate the new syllables and still preserve the perceived stress timed rhythm of English. When we add syllables to a base word containing the PRICE vowel, the vowel is very likely to change to a KIT. Other pairs of long and short vowels have this same type of relationship in English.
+
+What the Original Poster is observing here is a side-effect of the way English organises stressed syllables in connected speech.
+
+English is a 'stress-timed' language. What this means is that the syllables in English utterances do not come at regular intervals in the way that they do in Japanese for example, or in Spanish. Instead English utterances give the impression that the stressed syllables come at regular intervals. In actual fact this is not strictly what's happening, in the sense that although they give this impression, the stressed syllables do not occur at strictly regular intervals at all.
+
+The upshot of this is that the following utterances, for example, will take roughly the same amount of time to pronounce in English:
+
+The first utterance there has only four syllables, but the second has fifteen. However, in normal relaxed speech, these sentences will have approximately the same duration. This is because they each have four stressed syllables:
+
+Now, if you're a native speaker, if you tap out the stressed syllables as you say the two utterances, you'll realise that the stressed syllables seem to come at regular intervals, regardless of what other material comes in between them.
+
+English has a system for enabling this to happen. One part of this system is that many grammatical words have two forms. They have a strong form which we use if these words are stressed (or stranded). They have a weak form which we use if they are not stressed. So for example, the strong form of can is /kæn/ and the weak form is /kn/ or /kən/. You will be able to hear the difference in the following examples:

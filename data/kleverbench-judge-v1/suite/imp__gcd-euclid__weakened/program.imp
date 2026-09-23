@@ -1,0 +1,1 @@
+fun s ( p , q ) { y = p % q ; return q ; } x = a ; y = b ; while (! (y == 0)) { x = s(x, y) ; }

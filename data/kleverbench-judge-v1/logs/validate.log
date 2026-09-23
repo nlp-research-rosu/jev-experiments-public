@@ -1,0 +1,57 @@
+Error processing line 4 of /usr/local/lib/python3.12/dist-packages/_cuda_bindings_redirector.pth:
+
+  Traceback (most recent call last):
+    File "<frozen site>", line 201, in addpackage
+    File "<string>", line 1, in <module>
+    File "/usr/local/lib/python3.12/dist-packages/_cuda_bindings_redirector.py", line 9, in <module>
+      import cuda
+  ModuleNotFoundError: No module named 'cuda'
+
+Remainder of file ignored
+  1/45 imp__abs-times__weakened: invalid
+  2/45 imp__abs-times__ref: success
+  3/45 imp__abs-times__vacuous: success
+  4/45 imp__abs-times__equiv: success
+  5/45 imp__abs-times__narrowed: success
+  6/45 imp__array-sum__ref: success
+  7/45 imp__array-sum__equiv: success
+  8/45 imp__array-sum__vacuous: success
+  9/45 imp__array-sum__narrowed: success
+  10/45 imp__array-sum__weakened: invalid
+  11/45 imp__gcd-euclid__ref: success
+  12/45 imp__gcd-euclid__equiv: success
+  13/45 imp__gcd-euclid__weakened: invalid
+  14/45 imp__gcd-euclid__narrowed: success
+  15/45 imp__gcd-euclid__vacuous: success
+  16/45 imp-obf__abs-times__ref: success
+  17/45 imp-obf__abs-times__equiv: success
+  18/45 imp-obf__abs-times__narrowed: success
+  19/45 imp-obf__abs-times__vacuous: success
+  20/45 imp-obf__abs-times__weakened: invalid
+  21/45 imp-obf__array-sum__ref: success
+  22/45 imp-obf__array-sum__weakened: invalid
+  23/45 imp-obf__array-sum__vacuous: success
+  24/45 imp-obf__array-sum__equiv: success
+  25/45 imp-obf__gcd-euclid__ref: success
+  26/45 imp-obf__array-sum__narrowed: success
+  27/45 imp-obf__gcd-euclid__vacuous: success
+  28/45 imp-obf__gcd-euclid__equiv: success
+  29/45 imp-obf__gcd-euclid__narrowed: success
+  30/45 imp-obf__gcd-euclid__weakened: invalid
+  31/45 imp-swap__abs-times__ref: success
+  32/45 imp-swap__abs-times__equiv: success
+  33/45 imp-swap__abs-times__weakened: invalid
+  34/45 imp-swap__abs-times__narrowed: success
+  35/45 imp-swap__abs-times__vacuous: success
+  36/45 imp-swap__array-sum__ref: success
+  37/45 imp-swap__array-sum__equiv: success
+  38/45 imp-swap__array-sum__vacuous: success
+  39/45 imp-swap__array-sum__weakened: invalid
+  40/45 imp-swap__array-sum__narrowed: success
+  41/45 imp-swap__gcd-euclid__ref: success
+  42/45 imp-swap__gcd-euclid__equiv: success
+  43/45 imp-swap__gcd-euclid__vacuous: success
+  44/45 imp-swap__gcd-euclid__weakened: invalid
+  45/45 imp-swap__gcd-euclid__narrowed: success
+
+36/45 validated successfully -> /tmp/claude-0/-root/59cb9ff9-528b-4335-9aa4-712256bbc9fc/scratchpad/jev-judge-eval/validate.json

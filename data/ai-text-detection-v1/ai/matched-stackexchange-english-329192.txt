@@ -1,0 +1,9 @@
+okay so this is actually a really common pattern in English and it's not random at all, it's tied to how English handles stress and rhythm.
+
+basically English is what linguists call a "stress-timed" language, meaning stressed syllables tend to fall at roughly even intervals, unlike syllable-timed languages like Spanish where every syllable gets roughly equal weight. so when you tack extra syllables onto a word, English kind of "compresses" things to keep that rhythm going, and part of how it does that is by shortening certain vowels.
+
+that's basically what's happening with wise -> wizard. the "eye" sound (what you'd call the PRICE vowel) is a longer, more drawn out vowel, but once you add "-ard" and it becomes wizard, the stress shifts and that vowel gets reduced down to a shorter sound closer to the "ih" in kit. it's not that the word is being mispronounced or anything weird, it's just following a pretty normal English pattern where adding syllables to a base word often shortens the vowel in that base.
+
+if you're a native speaker try saying a short sentence versus a longer one that has the same number of stressed syllables, like "cats chase mice" vs something way longer but with the same stress count, they'll usually take about the same amount of time to say out loud even though one has way more syllables total. that's the stress-timing thing in action, and it's also why English has "weak forms" of little function words like "can," "and," "the," they get squished down when unstressed so the overall rhythm stays consistent.
+
+so yeah, wise/wizard isn't some random exception, it's just a normal side effect of how English balances rhythm when you add syllables to a word.

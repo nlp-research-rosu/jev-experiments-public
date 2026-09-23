@@ -1,0 +1,10 @@
+This is a great question, and the answer says a lot about how surprisingly outdated airline IT infrastructure still is behind the scenes!
+
+**Legacy systems everywhere**
+Airlines were early adopters of electronic communication technology, but that early lead has become something of a curse. Many core systems still rely on decades-old messaging formats, most notably Type-B teletype (TTY) messaging, which was originally designed for asynchronous, low-bandwidth communication between airline systems. While there's technically a formal standard for this format, in practice it's inconsistently implemented across different Global Distribution Systems (GDSs) like Amadeus and Sabre, each of which has its own quirks and edge cases.
+
+**Where the confusion comes from**
+When a travel agent books a ticket, the agent's booking software often has to translate a passenger's name into a specific TTY-compatible format before sending it to the airline. This is where things frequently go wrong: some booking terminals require a space between a passenger's surname and title (for example, "SMITH MR JOHN"), while others parse the string differently depending on subtle formatting choices. If an agent isn't careful (or is using an older terminal emulator), a name can get mangled in a way that's invisible until you check your ticket and see it printed incorrectly.
+
+**Who's actually responsible**
+In situations like this, the mistake usually isn't intentional on anyone's part, it's more a symptom of an aging, patchwork system. The GDS provides structured data internally, but the "translation layer" between what an agent types and what actually reaches the airline is where things can break down. If you spot an error like this, it's worth asking the travel agency to double-check the exact format they used and correct it directly through their booking terminal, since fixing it retroactively is usually possible.

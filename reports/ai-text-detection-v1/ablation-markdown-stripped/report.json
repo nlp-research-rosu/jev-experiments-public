@@ -1,0 +1,204 @@
+{
+  "dir": ".\\data\\ai-text-detection-v1\\ablations\\markdown-stripped",
+  "provider": "typesafe",
+  "model": "jev-1.13.0",
+  "sampleCounts": {
+    "human": 0,
+    "ai": 19
+  },
+  "perSignalByLabel": {
+    "human": {
+      "ai_written": {
+        "mean": null,
+        "sd": null,
+        "n": 0
+      },
+      "tells": {
+        "mean": null,
+        "sd": null,
+        "n": 0
+      },
+      "staging": {
+        "mean": null,
+        "sd": null,
+        "n": 0
+      },
+      "rhythm": {
+        "mean": null,
+        "sd": null,
+        "n": 0
+      },
+      "inflation": {
+        "mean": null,
+        "sd": null,
+        "n": 0
+      },
+      "formatting": {
+        "mean": null,
+        "sd": null,
+        "n": 0
+      },
+      "chat_residue": {
+        "mean": null,
+        "sd": null,
+        "n": 0
+      },
+      "specifics": {
+        "mean": null,
+        "sd": null,
+        "n": 0
+      }
+    },
+    "ai": {
+      "ai_written": {
+        "mean": 0.871,
+        "sd": 0.028,
+        "n": 19
+      },
+      "tells": {
+        "mean": 1.461,
+        "sd": 0.641,
+        "n": 19
+      },
+      "staging": {
+        "mean": 0.379,
+        "sd": 0.26,
+        "n": 19
+      },
+      "rhythm": {
+        "mean": 0.137,
+        "sd": 0.081,
+        "n": 19
+      },
+      "inflation": {
+        "mean": 0.348,
+        "sd": 0.314,
+        "n": 19
+      },
+      "formatting": {
+        "mean": 0.156,
+        "sd": 0.166,
+        "n": 19
+      },
+      "chat_residue": {
+        "mean": 0.129,
+        "sd": 0.272,
+        "n": 19
+      },
+      "specifics": {
+        "mean": 0.049,
+        "sd": 0.037,
+        "n": 19
+      }
+    }
+  },
+  "aucOverall": null,
+  "aucPerSignal": {
+    "ai_written": null,
+    "tells": null,
+    "staging": null,
+    "rhythm": null,
+    "inflation": null,
+    "formatting": null,
+    "chat_residue": null,
+    "specifics": null
+  },
+  "confusionMatrix": {
+    "human": {
+      "likely_human": 0,
+      "unclear": 0,
+      "likely_ai": 0,
+      "very_likely_ai": 0,
+      "too_short": 0
+    },
+    "ai": {
+      "likely_human": 0,
+      "unclear": 3,
+      "likely_ai": 3,
+      "very_likely_ai": 13,
+      "too_short": 0
+    }
+  },
+  "falsePositiveRateHuman": null,
+  "falsePositiveRateHumanUpper95": null,
+  "falseNegativeRateAi": 0,
+  "misclassified": [],
+  "unclear": [
+    {
+      "file": "matched-stackexchange-cooking-84325.txt",
+      "label": "ai",
+      "words": 301,
+      "chunkCount": 1,
+      "judgedChunkCount": 1,
+      "probability": 0.578,
+      "verdict": "unclear",
+      "confidence": "low",
+      "signals": {
+        "ai_written": 0.83,
+        "tells": 0.56,
+        "staging": 0.17,
+        "rhythm": 0.09,
+        "inflation": 0.07,
+        "formatting": 0.07,
+        "chat_residue": 0.07,
+        "specifics": 0.03
+      }
+    },
+    {
+      "file": "matched-stackexchange-diy-20876.txt",
+      "label": "ai",
+      "words": 256,
+      "chunkCount": 1,
+      "judgedChunkCount": 1,
+      "probability": 0.55,
+      "verdict": "unclear",
+      "confidence": "low",
+      "signals": {
+        "ai_written": 0.85,
+        "tells": 0.57,
+        "staging": 0.07,
+        "rhythm": 0.09,
+        "inflation": 0.08,
+        "formatting": 0.09,
+        "chat_residue": 0.03,
+        "specifics": 0.03
+      }
+    },
+    {
+      "file": "matched-wikipedia-tuberculosis.txt",
+      "label": "ai",
+      "words": 289,
+      "chunkCount": 1,
+      "judgedChunkCount": 1,
+      "probability": 0.651,
+      "verdict": "unclear",
+      "confidence": "low",
+      "signals": {
+        "ai_written": 0.88,
+        "tells": 0.62,
+        "staging": 0.09,
+        "rhythm": 0.08,
+        "inflation": 0.07,
+        "formatting": 0.07,
+        "chat_residue": 0.02,
+        "specifics": 0.02
+      }
+    }
+  ],
+  "byAiStyle": [
+    {
+      "key": "stereotyped",
+      "count": 19,
+      "meanProbability": 0.883,
+      "share": 0.842
+    }
+  ],
+  "byHumanSource": [],
+  "tokens": {
+    "requests": 0,
+    "cacheHits": 19,
+    "droppedChunks": 0,
+    "inputTokens": 0,
+    "estimatedCostUsd": 0
+  }
+}

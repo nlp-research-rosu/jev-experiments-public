@@ -1,0 +1,12 @@
+{
+  "case": "imp-swap__abs-times__weakened",
+  "judge": "codex",
+  "sample": 2,
+  "verdict": "NO",
+  "tokens": null,
+  "cost_usd": null,
+  "seconds": 24.4,
+  "returncode": 0,
+  "stderr": " true\n    requires M >Int 0                                              [simplification]\n\n  syntax List ::= swapEnds(List, Int, Int)        [function, total, no-evaluators]\n  rule swapEnds(L, I, N) => L                    requires I >=Int N  [simplification]\n  rule swapEnds(L, I, N) => swapEnds(L [ I <- elem(L, size(L) -Int 1 -Int I) ]\n                                       [ size(L) -Int 1 -Int I <- elem(L, I) ],\n                                     I +Int 1, N)\n    requires I <Int N andBool 0 <=Int I andBool I <Int size(L)      [simplification]\n\n// ---- array-written block problems ----\n/*@ \\subsection{Array-written block problems}\nVocabulary for the problems translated from gold verification artefacts whose\nloops \\emph{write} an array with a closed-form value.  One more program-variable\ntoken, and one more array-valued fold.\n\n\\texttt{cubeRange(A, I, N)} is \\texttt{A} with index $j$ replaced by $j^3$ for\nevery $j$ in $[I, N)$, every other index untouched.  It is the recursive form of\nthe quantified property \\texttt{forall j :: I <= j < N ==> a[j] == j*j*j} --- a\nchange of form, nothing more --- and it folds exactly the way the loop it\nsummarises does, one index per step.  Same shape and the same in-bounds guard as\n\\texttt{setRange}: outside \\texttt{0 <= I < size(L)} no rule applies and the\nterm is stuck rather than bottom. */\n\n  syntax Id ::= \"c\" [token]\n\n  syntax List ::= cubeRange(List, Int, Int)       [function, total, no-evaluators]\n  rule cubeRange(L, I, N) => L                   requires I >=Int N  [simplification]\n  rule cubeRange(L, I, N) => cubeRange(L [ I <- I *Int I *Int I ], I +Int 1, N)\n    requires I <Int N andBool 0 <=Int I andBool I <Int size(L)      [simplification]\n\nendmodule\n--- spec.k ---\nmodule ABS-TIMES-SPEC\n  imports VERIFICATION\n  claim <k> if (a < 0) { t = 0 + a ; } else { t = a ; } res = t / b ; => .K ... </k>\n        <state> a |-> A:Int b |-> B:Int t |-> (_ => _) res |-> (_ => _) </state>\nendmodule\n\ncodex\nVERDICT: NO\ntokens used\n12,862\n",
+  "raw_tail": "VERDICT: NO\n"
+}

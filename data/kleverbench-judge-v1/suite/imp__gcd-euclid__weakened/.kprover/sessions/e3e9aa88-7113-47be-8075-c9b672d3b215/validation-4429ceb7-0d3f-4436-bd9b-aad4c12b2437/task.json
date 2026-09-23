@@ -1,0 +1,32 @@
+{
+  "createdAt": "2026-09-22T13:05:43.975504Z",
+  "error": null,
+  "finishedAt": "2026-09-22T13:05:53.989138Z",
+  "id": "4429ceb7-0d3f-4436-bd9b-aad4c12b2437",
+  "kind": "proofDryRun",
+  "result": {
+    "definitionId": "7_1_337-haskell-imp-2dda0057e541-c5b33b6741a245509fc4d4947b9646263a84af20dd4e1ccabcb41507eb59b081",
+    "valid": false
+  },
+  "semantics": {
+    "commit": "2dda0057e541",
+    "id": "imp"
+  },
+  "startedAt": "2026-09-22T13:05:50.123024Z",
+  "status": "completed",
+  "timing": {
+    "executionMilliseconds": 3866,
+    "queueMilliseconds": 6147,
+    "totalMilliseconds": 10013
+  },
+  "toolRuns": [
+    {
+      "durationMilliseconds": 2796,
+      "exitCode": 113,
+      "finishedAt": "2026-09-22T13:05:53.560868Z",
+      "outcome": "exit_error",
+      "startedAt": "2026-09-22T13:05:50.764432Z",
+      "tool": "kprove"
+    }
+  ]
+}

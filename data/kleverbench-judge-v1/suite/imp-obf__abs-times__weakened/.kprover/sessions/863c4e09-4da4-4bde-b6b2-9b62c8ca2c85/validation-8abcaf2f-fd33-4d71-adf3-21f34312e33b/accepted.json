@@ -1,0 +1,10 @@
+{
+  "createdAt": "2026-09-22T13:06:03.936814166Z",
+  "id": "8abcaf2f-fd33-4d71-adf3-21f34312e33b",
+  "kind": "proofDryRun",
+  "semantics": {
+    "commit": "051d2165c63a",
+    "id": "imp-obf"
+  },
+  "status": "queued"
+}

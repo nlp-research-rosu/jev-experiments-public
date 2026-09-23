@@ -1,0 +1,12 @@
+{
+  "case": "imp-obf__gcd-euclid__vacuous",
+  "judge": "codex",
+  "sample": 3,
+  "verdict": "NO",
+  "tokens": null,
+  "cost_usd": null,
+  "seconds": 58.2,
+  "returncode": 0,
+  "stderr": "ructurally\nerases the block constructs from the computation structure, without\nconsidering their erasure as computational steps in the resulting transition\nsystems.  You can make these rules computational (dropping the attribute\n\\texttt{structural}) if you do want these to count as computational steps. */\n\n  rule {} => .K\n  rule {S} => S\n\n/*@ \\subsubsection{Assignment}\nThe assigned variable is updated in the state.  The variable is expected\nto be declared, otherwise the semantics will get stuck.  At the same time,\nthe assignment is dissolved. */\n\n  rule <k> X \ud801\udd35 I:Int; => .K ...</k> <state>... X |-> (_ => I) ...</state>  [label(variable_setting)]\n\n/*@ \\subsubsection{Sequential composition}\nSequential composition is simply structurally translated into \\K's\nbuiltin task sequentialization operation.  You can make this rule\ncomputational (i.e., remove the \\texttt{structural} attribute) if you\nwant it to count as a computational step.  Recall that the semantics\nof a program in a programming language defined in \\K is the transition\nsystem obtained from the initial configuration holding that program\nand counting only the steps corresponding to computational rules as\ntransitions (i.e., hiding the structural rules as unobservable, or\ninternal steps). */\n\n  rule S1:Stmt S2:Stmt => S1 ~> S2\n\n/*@ \\subsubsection{Conditional}\nThe conditional statement has two semantic cases, corresponding to\nwhen its condition evaluates to \\texttt{true} or to \\texttt{false}.\nRecall that the conditional was annotated with the attribute\n\\texttt{strict(1)} in the syntax module above, so only its first\nargument is allowed to be evaluated. */\n\n  rule \ud801\udd3c (true)  S \ud801\udd3d _ => S\n  rule \ud801\udd3c (false) _ \ud801\udd3d S => S\n\n/*@ \\subsubsection{While loop and \\texttt{\ud801\udd42}}\nWe give the semantics of the \\texttt{\ud801\udd3e} loop by unrolling.\n\ncodex\nThe first claim requires `A == 1` and `B == 1`, restricting the intended domain `A > 0, B > 0` to one case. Therefore it does not establish the property generally.\n\nVERDICT: NO\ntokens used\n26,992\n",
+  "raw_tail": "The first claim requires `A == 1` and `B == 1`, restricting the intended domain `A > 0, B > 0` to one case. Therefore it does not establish the property generally.\n\nVERDICT: NO\n"
+}

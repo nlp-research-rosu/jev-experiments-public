@@ -1,0 +1,12 @@
+{
+  "case": "imp-swap__abs-times__vacuous",
+  "judge": "codex",
+  "sample": 2,
+  "verdict": "NO",
+  "tokens": null,
+  "cost_usd": null,
+  "seconds": 17.2,
+  "returncode": 0,
+  "stderr": "Sum(A, I)} is the source's \\texttt{peekSum(v, i)}: the sum of the\nelements of $A[0..I)$ that are at least as large as every element before them.\nThe source spells that test as the predicate \\texttt{isPeek(v, j)},\n\\texttt{forall k :: 0<=k<j ==> v[j]>=v[k]}; here it is\n\\texttt{prefixMax(A, J) <=Int elem(A, J)} --- the same function of\n\\texttt{(A, J)}, on concrete inputs as well as symbolic ones\n(\\texttt{tests/test\\_kexpr.py} evaluates both against the source definitions).\n\nEach step rule carries the in-bounds guard the indexed statements do, for the\nsame reason the range folds above do: outside it the term is stuck, never\nbottom. */\n\n  syntax Int ::= prefixMax(List, Int)              [function, total, no-evaluators]\n  rule prefixMax(L, I) => elem(L, 0)\n    requires I <=Int 1 andBool 1 <=Int size(L)                      [simplification]\n  rule prefixMax(L, I) => maxInt(elem(L, I -Int 1), prefixMax(L, I -Int 1))\n    requires I >Int 1 andBool I <=Int size(L)                       [simplification]\n\n  syntax Int ::= peekSum(List, Int)                [function, total, no-evaluators]\n  rule peekSum(_, I) => 0                        requires I <=Int 0 [simplification]\n  rule peekSum(L, I) => elem(L, I -Int 1) +Int peekSum(L, I -Int 1)\n    requires I >Int 0 andBool I <=Int size(L)\n     andBool prefixMax(L, I -Int 1) <=Int elem(L, I -Int 1)         [simplification]\n  rule peekSum(L, I) => peekSum(L, I -Int 1)\n    requires I >Int 0 andBool I <=Int size(L)\n     andBool elem(L, I -Int 1) <Int prefixMax(L, I -Int 1)          [simplification]\n--- spec.k\nmodule ABS-TIMES-SPEC\n  imports VERIFICATION\n  claim <k> if (a < 0) { t = 0 + a ; } else { t = a ; } res = t / b ; => .K ... </k>\n        <state> a |-> A:Int b |-> B:Int t |-> (_ => absInt(A)) res |-> (_ => absInt(A) *Int B) </state>\n    requires A ==Int 1 andBool B ==Int 1\nendmodule\n\ncodex\nNO: the claim restricts the domain to `a = 1` and `b = 1`, rather than all integer values described by the task.\n\nVERDICT: NO\ntokens used\n10,382\n",
+  "raw_tail": "NO: the claim restricts the domain to `a = 1` and `b = 1`, rather than all integer values described by the task.\n\nVERDICT: NO\n"
+}

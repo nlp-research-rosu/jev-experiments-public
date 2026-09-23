@@ -1,0 +1,12 @@
+{
+  "case": "imp__array-sum__narrowed",
+  "judge": "codex",
+  "sample": 2,
+  "verdict": "NO",
+  "tokens": null,
+  "cost_usd": null,
+  "seconds": 28.9,
+  "returncode": 0,
+  "stderr": "l elem(L, I -Int 1) <Int prefixMax(L, I -Int 1)          [simplification]\n\n/*@ \\subsection{Array-input block B}\nVocabulary added for the problems translated from the array-input gold block\nB (2026-09-02).  No new program-variable token was needed: the block's one\nadmitted problem uses \\texttt{a} and \\texttt{i}, both already declared above.\n\n\\texttt{swapEnds(A, I, N)} is \\texttt{A} with, for every $j$ in\n$[I, N)$, the elements at $j$ and at $\\texttt{size}(A) - 1 - j$ exchanged;\noutside those pairs every index keeps the value it had.  It is the\nindex-recursive form of the element-wise ``reversed'' postcondition an\nin-place reverse states: with $N = \\texttt{size}(A)/2$ and $I = 0$ it is the\nreversal of \\texttt{A}.  Like the other list-valued folds it carries no\naccumulator beyond the list itself, and its step is guarded by the same\nin-bounds condition the indexed statements carry --- the mirror index\n$\\texttt{size}(L) - 1 - I$ is in range whenever $I$ is.\n\nOne encoding lemma comes with it.  A loop whose bound is \\texttt{length(a) /\n2} puts \\texttt{size(A) /Int 2} where the existing \\texttt{size} lemmas\nexpect a bare \\texttt{size(A)}, so ``a length is never negative'' no longer\nreaches the term that needs it and a main claim cannot even discharge its\n--- spec.k ---\nmodule ARRAY-SUM-SPEC\n  imports VERIFICATION\n  claim <k> sum = 0 ; i = 0 ; while (i < length(a)) { sum = sum + a[i] ; i = i + 1 ; } => .K ... </k>\n        <state> a |-> A:List i |-> (_ => size(A)) sum |-> (_ => sumRange(A, 0, size(A), 0)) </state>\n    requires size(A) <Int 100\n  claim <k> while (i < length(a)) { sum = sum + a[i] ; i = i + 1 ; } => .K ... </k>\n        <state> a |-> A:List i |-> (I:Int => size(A)) sum |-> (S:Int => sumRange(A, I, size(A), S)) </state>\n    requires 0 <=Int I andBool I <=Int size(A)\nendmodule\n\ncodex\nThe claim is restricted by `requires size(A) <Int 100`, excluding valid arrays of length 100 or more. Thus it does not cover the full intended domain.\n\nVERDICT: NO\ntokens used\n18,208\n",
+  "raw_tail": "The claim is restricted by `requires size(A) <Int 100`, excluding valid arrays of length 100 or more. Thus it does not cover the full intended domain.\n\nVERDICT: NO\n"
+}

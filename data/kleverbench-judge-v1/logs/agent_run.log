@@ -1,0 +1,39 @@
+Error processing line 4 of /usr/local/lib/python3.12/dist-packages/_cuda_bindings_redirector.pth:
+
+  Traceback (most recent call last):
+    File "<frozen site>", line 201, in addpackage
+    File "<string>", line 1, in <module>
+    File "/usr/local/lib/python3.12/dist-packages/_cuda_bindings_redirector.py", line 9, in <module>
+      import cuda
+  ModuleNotFoundError: No module named 'cuda'
+
+Remainder of file ignored
+270 invocations, 0 already done, 270 to run at concurrency 6
+  10/270  last=codex:YES  eta 40.9 min
+  20/270  last=claude:NO  eta 26.7 min
+  30/270  last=claude:YES  eta 21.6 min
+  40/270  last=codex:YES  eta 23.7 min
+  50/270  last=claude:NO  eta 24.0 min
+  60/270  last=claude:YES  eta 23.7 min
+  70/270  last=codex:YES  eta 25.2 min
+  80/270  last=claude:NO  eta 24.4 min
+  90/270  last=claude:YES  eta 22.8 min
+  100/270  last=codex:YES  eta 21.3 min
+  110/270  last=codex:NO  eta 19.5 min
+  120/270  last=codex:NO  eta 18.0 min
+  130/270  last=codex:YES  eta 17.7 min
+  140/270  last=claude:NO  eta 16.5 min
+  150/270  last=claude:YES  eta 15.8 min
+  160/270  last=claude:NO  eta 15.1 min
+  170/270  last=codex:NO  eta 14.1 min
+  180/270  last=claude:YES  eta 12.7 min
+  190/270  last=codex:NO  eta 11.3 min
+  200/270  last=codex:NO  eta 9.9 min
+  210/270  last=claude:NO  eta 8.4 min
+  220/270  last=claude:YES  eta 7.0 min
+  230/270  last=claude:NO  eta 5.6 min
+  240/270  last=claude:YES  eta 4.3 min
+  250/270  last=claude:NO  eta 2.9 min
+  260/270  last=claude:NO  eta 1.4 min
+  270/270  last=codex:NO  eta 0.0 min
+done in 38.5 min -> /tmp/claude-0/-root/59cb9ff9-528b-4335-9aa4-712256bbc9fc/scratchpad/jev-judge-eval/results
