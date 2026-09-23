@@ -10,7 +10,7 @@ This is independent work. It does not describe how Jev is built or trained; Type
 
 ## Headline result
 
-On a frozen test written before training, our selected checkpoint answers 617 of 700 judgments correctly (88.1%). Jev 1.13.0 answers 678 (96.9%). The checkpoint is Qwen3.5-2B with rank-8 LoRA adapters and two small readout heads, trained for about 68 minutes on one RTX 4080: 55.6 minutes on public research datasets, then 12.8 minutes on contrastive examples written in natural language.
+On a frozen, independently written test, our selected checkpoint answers 617 of 700 judgments correctly (88.1%). Jev 1.13.0 answers 678 (96.9%). The checkpoint is Qwen3.5-2B with rank-8 LoRA adapters and two small readout heads, trained for about 68 minutes on one RTX 4080: 55.6 minutes on public research datasets, then 12.8 minutes on contrastive examples written in natural language.
 
 The accuracy gap is 8.8 points. The confidence gap is far larger: our model gives 55 wrong answers with at least 90% probability, and Jev gives one.
 
