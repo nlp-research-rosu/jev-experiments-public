@@ -42,7 +42,7 @@ Jev's single-question verdict got 36/45 right in 1.1 seconds at about $0.0006 pe
 
 Three narrower Jev questions improved the result to 40/45, with five faithful specs still rejected. That is a striking speed and cost advantage, but not yet the accuracy we need to replace the LLM judge.
 
-![On 45 cases judging whether formal specs capture stated intent, Jev answered 36 correctly in 1.1 seconds at about 0.0006 US dollars per case, accepting no flawed specs but rejecting 9 of 18 faithful ones. The Sonnet agent judge answered all 45 correctly in 45.7 seconds at about 0.17 dollars per case. Three narrower Jev questions improved accuracy to 40 of 45, with five faithful specs still rejected.](04-kleverbench-judge-results.png)
+![On 45 cases judging whether formal specs capture stated intent, higher correct counts are better; lower counts of flawed specs accepted, faithful specs rejected, time and cost are better. Jev answered 36 correctly in 1.1 seconds at about 0.0006 US dollars per case, accepting no flawed specs but rejecting 9 of 18 faithful ones. The Sonnet agent judge answered all 45 correctly in 45.7 seconds at about 0.17 dollars per case. Three narrower Jev questions improved accuracy to 40 of 45, with five faithful specs still rejected.](04-kleverbench-judge-results.png)
 
 ## 5/5
 
