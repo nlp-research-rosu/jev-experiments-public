@@ -28,7 +28,7 @@ On a separate 1,500-case retention set, Qwen's correct answers held steady acros
 
 We then tried Jev in a different applied setting: an AI-writing detector. It answers eight questions about each text chunk; a fitted rule combines four answers into a score.
 
-On 92 English texts, it flagged 30/48 Claude-written samples and 0/44 human samples at the chosen threshold. But that threshold was selected on the same small set, and none of seven Claude texts prompted to sound casual were flagged. The full report includes the texts, saved responses and evaluation code.
+On 92 English texts, it flagged 30/48 Claude-written samples and 0/44 human samples at the chosen threshold. But that threshold was selected on the same small set. In an in-sample style breakdown, none of seven Claude texts prompted to sound casual were flagged. The full report includes the texts, saved responses and evaluation code.
 
 That gave us a useful lesson about turning fast judgments into decisions: the question design and the cases you test can change the story. Our next test was closer to the work we actually want to do.
 

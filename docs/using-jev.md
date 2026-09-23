@@ -22,7 +22,7 @@ Practices that held up in our experiments and in Slop Alarm, a separate project 
 
 ## Turning probabilities into decisions
 
-**Do not rely on one headline question.** The [AI-text detection study](../reports/AI_TEXT_DETECTION.md) combined four of eight Jev answers into a fitted score. On 92 English texts, it flagged 30 of 48 Claude-written samples and none of 44 human samples at the chosen threshold. That threshold was selected on the same small set, and all seven casual-style Claude samples were missed. The saved responses and evaluation code are included so the tradeoff can be checked.
+**Do not rely on one headline question.** The [AI-text detection study](../reports/AI_TEXT_DETECTION.md) combined four of eight Jev answers into a fitted score. On 92 English texts, it flagged 30 of 48 Claude-written samples and none of 44 human samples at the chosen threshold. That threshold was selected on the same small set, and an in-sample style breakdown missed all seven casual-style Claude samples. The saved responses and evaluation code are included so the tradeoff can be checked.
 
 **Fit weights and thresholds to your own labels,** hold out related samples together, and keep human-written calibration text verifiably human.
 
