@@ -10,7 +10,7 @@ intent ↔ {code + spec + proof}
 
 Proof tools can check whether a formal claim holds. They cannot tell us whether that claim says what a person meant. Today, an LLM judge or a person has to review that gap, often repeatedly.
 
-Could a fast decision model take on some of that work? We started with a quick reproduction, then tested Jev on an applied task and finally on proof specifications from KleverBench.
+Could a fast decision model take on some of that work? We started with a quick reproduction, then tested Jev on an applied task and finally on proof specifications from our in-house verification-focused benchmark.
 
 ![The proposed intent loop connects human requirements to code, specification and proof. A decision-model judgment would ask whether the formal meaning captures the intent; formal proof tools separately check whether the claims hold.](01-judgment-in-the-intent-loop.png)
 
@@ -34,13 +34,13 @@ That gave us a useful lesson about turning fast judgments into decisions: the qu
 
 ## 4/5
 
-In KleverBench, we asked whether a candidate proof specification states what the task intended. We built 45 cases from three programs, three language variants and five spec variants: 18 faithful, 27 flawed. Eighteen of the flawed specs still prove, so proof success alone cannot catch them.
+In our in-house verification benchmark KleverBench, we asked whether a candidate proof specification states what the task intended. We built 45 cases from three programs, three language variants and five spec variants: 18 faithful, 27 flawed. Eighteen of the flawed specs still prove, so proof success alone cannot catch them.
 
 Jev's single-question verdict got 36/45 right in 1.1 seconds at about $0.0006 per case. Our Sonnet agent judge got 45/45 in 45.7 seconds at about $0.17; Luna got 43/45 in 69.6 seconds at about $0.0018. Jev accepted none of the 27 flawed specs, but rejected 9 of the 18 faithful ones.
 
 Three narrower Jev questions improved the result to 40/45, with five faithful specs still rejected. That is a striking speed and cost advantage, but not yet the accuracy we need to replace the LLM judge.
 
-![On 45 KleverBench proof-spec cases, Jev answered 36 correctly in 1.1 seconds at about 0.0006 US dollars per case, accepting no flawed specs but rejecting 9 of 18 faithful ones. The Sonnet agent judge answered all 45 correctly in 45.7 seconds at about 0.17 dollars per case. Three narrower Jev questions improved accuracy to 40 of 45, with five faithful specs still rejected.](04-kleverbench-judge-results.png)
+![On 45 cases judging whether formal specs capture stated intent, Jev answered 36 correctly in 1.1 seconds at about 0.0006 US dollars per case, accepting no flawed specs but rejecting 9 of 18 faithful ones. The Sonnet agent judge answered all 45 correctly in 45.7 seconds at about 0.17 dollars per case. Three narrower Jev questions improved accuracy to 40 of 45, with five faithful specs still rejected.](04-kleverbench-judge-results.png)
 
 ## 5/5
 
